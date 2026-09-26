@@ -56,6 +56,10 @@
 |---|---|---|
 | ![Setup](assets/screenshot-setup.png) | ![Login](assets/screenshot-login.png) | ![Users](assets/screenshot-users.png) |
 
+| Social links (Telegram + GitHub on every page) |
+|---|
+| ![Social](assets/screenshot-social.png) |
+
 </details>
 
 ### 🚀 Quick Start
