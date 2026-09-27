@@ -16,7 +16,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "5.2.0",   /*P127:version*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "5.3.0",   /*P129:version*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -3852,6 +3852,7 @@ FX.store = (() => {
     }
     accInvalidate(uid); accInvalidate(row.username);
     if (row.uuid) accInvalidate(row.uuid);
+    try { if (globalThis.__sfSubCachePurge) globalThis.__sfSubCachePurge(); } catch (e) {}   // P129: کش ساب بعد از ویرایش کاربر خالی می‌شود
   }
   async function deleteAccount(db, uid) {
     const row = await db.prepare("SELECT username FROM users WHERE username = ? COLLATE NOCASE OR uuid = ?").bind(uid, String(uid).toLowerCase()).first();
@@ -11468,7 +11469,8 @@ function buildShards(account, host, opts = {}) {
       .filter((x) => x && x !== "ir-wg");
     // ═══ P78 فاز ۶ + P122 «کیوریشن»: خودکار = ۸ کشور برترِ تازه (نه ۵۵ کشور) — پایان ساب‌های ۶۸کانفیگی ═══
     // P125 (zqg-muka7myr): «-» = بدون لوکیشنِ واقعی — هیچ کشوری تزریق نمی‌شود (خروج مستقیم ورکر)
-    const noneLoc = String(account.loc || "").trim() === "-" || String(account.loc || "").trim() === "none";
+    const noneLoc = String(account.loc || "").trim() === "-" || String(account.loc || "").trim() === "none";   /*P129:noloc*/
+    if (noneLoc) locs.length = 0;   // P129: «-» دیگر هرگز وارد مسیر/نام کانفیگ نمی‌شود (رفع نشت ["-"] از locList)
     if (!noneLoc && !locs.length && !op && Array.isArray(opts.defaultLocs) && opts.defaultLocs.length) {
       locs.push(...opts.defaultLocs.filter((c) => c && c !== "ir-wg").slice(0, 8));
     }
@@ -12436,7 +12438,7 @@ function buildShards(account, host, opts = {}) {
     // ═══ P70 فاز ۷ (zq-mug6dyqp): کش پایداری ساب ═══
     // بدنه (لینک‌ها) ۱۰ دقیقه پایدار می‌ماند تا کلاینت‌ها به‌خاطر تغییر آدرس/ترکیب،
     // اتصال مجدد نزنند (ریشهٔ «اتصال‌های مکرر»). هدر مصرف همیشه تازه می‌ماند.
-    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0);   // P127:tundefault
+    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0) + "|l" + (account.loc || "");   // P127:tundefault + P129: loc در کلید کش — تغییر لوکیشن فوری اعمال می‌شود
     let body, ctype = "text/plain; charset=utf-8";
     const cHit = SUB_CACHE.get(ckey);
     if (cHit && Date.now() - cHit.t < 10 * 60 * 1000) { body = cHit.body; ctype = cHit.ctype; }   // پایدار — بدون churn
@@ -12956,8 +12958,9 @@ FX.warp = (() => {
     const parts = endpoint.split(":"); const srv = parts[0]; const port = parts[1] || "2408";
     const dns = o.dns || DNS;
     const addr6 = w.v6 ? (w.v4 + "/32, " + w.v6 + "/128") : (w.v4 + "/32");
-    const wg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
-    const awg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "S1 = 0", "S2 = 0", "Jc = 4", "Jmin = 40", "Jmax = 70", "H1 = 1", "H2 = 2", "H3 = 3", "H4 = 4", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
+    const rb = reservedBytes(w.reserved);   /*P129:warpres*/ // روش Oblivion/Aether — Reserved در همهٔ فرمت‌ها
+    const wg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "", "[Peer]", "PublicKey = " + w.serverPub, "Reserved = " + rb.join(", "), "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
+    const awg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "S1 = 0", "S2 = 0", "Jc = 4", "Jmin = 40", "Jmax = 70", "H1 = 1", "H2 = 2", "H3 = 3", "H4 = 4", "", "[Peer]", "PublicKey = " + w.serverPub, "Reserved = " + rb.join(", "), "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
     const lastConfig = JSON.stringify({
       hostName: srv, port: parseInt(port) || 2408,
       client_ip: w.v4, client_priv_key: w.keys.privateKey, client_pub_key: w.keys.publicKey,
@@ -12970,7 +12973,6 @@ FX.warp = (() => {
       defaultContainer: "amnezia-wireguard", description: "WARP — سوپر فلش", name: "WARP فلش",
     });
     const vpnUrl = "vpn://" + b64url(amneziaJson);
-    const rb = reservedBytes(w.reserved);
     const singbox = JSON.stringify({
       type: "wireguard", tag: "warp-out", mtu: 1280,
       address: w.v6 ? [w.v4 + "/32", w.v6 + "/128"] : [w.v4 + "/32"],
@@ -16193,6 +16195,10 @@ async function shimUserReset(request, env, uid) {
     if (path === "/api/setup" && method === "POST") return setup(request, env);
     if (path === "/api/login" && method === "POST") return login(request, env);
     if (path === "/api/recover" && method === "POST") return recover(request, env);
+    // ═══ P128 (zq-mukd06v5): WARP عمومی — صفحهٔ /warp قول «بدون ثبت‌نام» می‌دهد؛
+    // پشت auth ادمین بود = دکمهٔ کاربران همیشه «خطا: unauthorized» می‌داد.
+    // محافظت: گیت (بدون کوکی، غریبه‌ها فقط سایت دکوی را می‌بینند) + کول‌داون/سقف ساعتی خود apiHandle. ═══
+    if (path === "/api/warp" && (method === "POST" || method === "GET")) return FX.warp.apiHandle(request, env);
 
     // QR renderer (auth): /api/qr?d=<text>[&f=png]
     if (path === "/api/qr" && method === "GET") {
@@ -16230,8 +16236,6 @@ async function shimUserReset(request, env, uid) {
     // carries; absent keys keep their defaults)
     if (path === "/api/settings" && method === "GET") return settingsBridge(env);
     if (path === "/api/settings" && method === "POST") return settingsBridge(request, env);
-    // ═══ P119 «سپر وایرگارد»: مولد کانفیگ WARP/WireGuard/AmneziaWG ═══
-    if (path === "/api/warp" && (method === "POST" || method === "GET")) return FX.warp.apiHandle(request, env);
 
 
     if (path === "/api/tunnel/set" && method === "POST") return tunnelPost(request, env);
