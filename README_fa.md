@@ -9,7 +9,7 @@
 <img src="assets/banner.png" alt="بنر پنل فلش" />
 
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
-[![Version](https://img.shields.io/badge/build-3.21.0-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
+[![Version](https://img.shields.io/badge/build-3.22.0-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
 
 [English 🇬🇧](README.md)
 
