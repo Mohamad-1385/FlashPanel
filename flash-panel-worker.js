@@ -13,7 +13,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "3.18.5",   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "3.18.7",   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -193,6 +193,13 @@ FX.BOOT = {
     "gemini.google.com", "bard.google.com", "aistudio.google.com",
     "generativelanguage.googleapis.com", "accounts.google.com",
     "copilot.microsoft.com",
+    // P116 «تندر۲» (muj4axvi+muj5qy3k+muj78fd4): Google-wide — همهٔ دامنه‌های
+    // پشتیبان جمنای/گوگل (clients6، oauth2، content-push، gstatic، ggpht…) هم
+    // مسیر AIDirect می‌گیرند: بدون DoH-per-connection (سریع‌تر) + رفتار یکسان
+    // روی همهٔ کانفیگ‌ها (لوکیشن‌دار هم) — رلهٔ CF-SNI-only هرگز گوگل را نمی‌کشد
+    "google.com", "googleapis.com", "googleusercontent.com", "gstatic.com",
+    "ggpht.com", "withgoogle.com",
+    "microsoft.com", "live.com", "bing.com",
   ],
   aiCfDomains: [               // exit class 2: relay (CF-hosted AI sites)
     "openai.com", "chatgpt.com", "api.openai.com", "cdn.auth0.com",
@@ -5643,6 +5650,7 @@ SF.SUPER.SPEED = (() => {
 
   // ── تنظیم تطبیقی چانک ادغام‌گرها (فقط با بهبود ≥۱۵٪ — محدودهٔ امن) ──
   let lastTuneAt = 0;
+  let tuneDnStreak = 0, tuneUpStreak = 0;   // P116 «تندر۲+»: تنزل فقط پس از ۲ اندازه‌گیری پیاپی (ضد-نوسان)
   async function maybeTuneChunks(env, fresh) {
     const now = Date.now();
     if (now - lastTuneAt < 600000) return null;   // حداکثر هر ۱۰ دقیقه
@@ -5655,14 +5663,21 @@ SF.SUPER.SPEED = (() => {
       let changed = [];
       // دانلود: KB/s واقعی → اندازهٔ چانک پیشنهادی (نسبی به خط مبنا ۶۴KB@۴MB/s)
       const dlKbps = down.parallel2x512KB && down.parallel2x512KB.kbps ? down.parallel2x512KB.kbps : down.serial1MB.kbps;
-      if (dlKbps >= 4600) { const want = 65536 * 4; if ((globalThis.SF_TUNING || {}).downCap !== want) { tuning.downCap = want; changed.push("downCap→256KB"); } }   // P104 «موشک»: سقف ۲۵۶KB — فریم‌های بزرگ‌تر روی خطوط سریع؛ امن با فشار-برگشتی رودبار
-      else if (dlKbps >= 2300) { const want = 65536 * 3; if ((globalThis.SF_TUNING || {}).downCap !== want) { tuning.downCap = want; changed.push("downCap→192KB"); } }   // P104: باند میانی
-      else if (dlKbps < 1500) { const want = 32768; if ((globalThis.SF_TUNING || {}).downCap !== want) { tuning.downCap = want; changed.push("downCap→32KB"); } }
+      // P116 «تندر۲+» (muj5ukux): ضد-نوسان — ارتقا فوری، تنزل فقط پس از ۲ اندازه‌گیری پیاپی
+      const dlCur = (globalThis.SF_TUNING || {}).downCap || 131072;
+      const dlWant = dlKbps >= 4600 ? 65536 * 4 : dlKbps >= 2300 ? 65536 * 3 : dlKbps < 1500 ? 32768 : dlCur;
+      if (dlWant !== dlCur) {
+        if (dlWant > dlCur) { tuning.downCap = dlWant; changed.push("downCap->" + (dlWant / 1024) + "KB"); tuneDnStreak = 0; }
+        else if (++tuneDnStreak >= 2) { tuning.downCap = dlWant; changed.push("downCap->" + (dlWant / 1024) + "KB (anti-flap)"); tuneDnStreak = 0; }
+      } else tuneDnStreak = 0;
       // آپلود: KB/s واقعی → اندازهٔ batch پیشنهادی
       if (up && up.ok && up.kbps != null) {
-        if (up.kbps >= 2300) { const want = 65536; if ((globalThis.SF_TUNING || {}).upBatch !== want) { tuning.upBatch = want; changed.push("upBatch→64KB"); } }   // P104 «موشک»: بچ بزرگ‌تر آپلود (۴ برابرِ مرز خطر ۲۵۶KB فاصله)
-        else if (up.kbps >= 1200) { const want = 32768; if ((globalThis.SF_TUNING || {}).upBatch !== want) { tuning.upBatch = want; changed.push("upBatch→32KB"); } }   // P104: باند میانی
-        else if (up.kbps < 700) { const want = 12288; if ((globalThis.SF_TUNING || {}).upBatch !== want) { tuning.upBatch = want; changed.push("upBatch→12KB"); } }
+        const upCur = (globalThis.SF_TUNING || {}).upBatch || 20480;
+        const upWant = up.kbps >= 2300 ? 65536 : up.kbps >= 1200 ? 32768 : up.kbps < 700 ? 12288 : upCur;
+        if (upWant !== upCur) {
+          if (upWant > upCur) { tuning.upBatch = upWant; changed.push("upBatch->" + (upWant / 1024) + "KB"); tuneUpStreak = 0; }
+          else if (++tuneUpStreak >= 2) { tuning.upBatch = upWant; changed.push("upBatch->" + (upWant / 1024) + "KB (anti-flap)"); tuneUpStreak = 0; }
+        } else tuneUpStreak = 0;
       }
       if (!changed.length) return null;
       tuning.at = now;
@@ -7698,6 +7713,34 @@ FX.proto = (() => {
     return 0;                                   // not relayable
   }
 
+  // ═══ P116 «تندر۲» (muj4axvi + muj5qy3k + muj7bcn3): نگهبان حامل Oblivion ═══
+  // ریشهٔ قطعی «پیام جمنای نمی‌ره»: ورکر به IPهای خود کلادفلر وصل نمی‌شود
+  // (loop-block) — اندپوینت‌های WARP (engage.cloudflareclient.com + مرزهای
+  // 162.159/188.114) از دید ورکر همیشه مرده‌اند: chainDial باز می‌شود و وسط
+  // استریم می‌میرد («Stream was cancelled» — تأیید زندهٔ P116 روی ۴ پورت).
+  // این مسیرِ مرده قبلاً در زنجیرهٔ AI فعال بود → هر اتصال جمنای کاربر
+  // چند ثانیه معطل RST می‌ماند → «پیام می‌فرستم نمی‌ره». حالا حامل ob فقط
+  // با تأیید واقعی عبور می‌کند: میزبان CF = فوری رد (loop-block)؛ میزبان
+  // دیگر (VPS کاربر) = obEgress واقعی با کش ۱۰ دقیقه‌ای.
+  function obIsCfEndpointSF(host) {
+    const h = String(host || "").trim().toLowerCase();
+    if (!h) return true;
+    if (/(^|\.)cloudflareclient\.com$/.test(h) || /(^|\.)cloudflare\.com$/.test(h)) return true;
+    if (/^\d+\.\d+\.\d+\.\d+$/.test(h)) { try { return ipInCfRanges(h); } catch (e) { return true; } }
+    return false;
+  }
+  let obCarrierCacheSF = { key: "", t: 0, ok: false };
+  async function obCarrierOk(env, obCfg) {
+    if (!obCfg || !obCfg.enabled) return false;
+    const host = String(obCfg.host || "");
+    if (obIsCfEndpointSF(host)) return false;          // loop-block — فوری، بدون پروب
+    const key = host + ":" + (obCfg.port || 0);
+    if (obCarrierCacheSF.key === key && Date.now() - obCarrierCacheSF.t < 600000) return obCarrierCacheSF.ok;
+    let ok = false;
+    try { const r = await obEgress(obCfg); ok = !!(r && r.ok); } catch (e) { ok = false; }
+    obCarrierCacheSF = { key, t: Date.now(), ok };
+    return ok;
+  }
   async function connectTarget(env, host, port, opts = {}) {
     // (0) v2.9.0 «تندر»: ad & tracker refusal — the suffix match runs FIRST
     //     (pure CPU, zero cost for normal traffic) and the setting is read
@@ -7760,7 +7803,7 @@ FX.proto = (() => {
       // P68 فاز ۵ «مگا-سوپر»: مسیر Oblivion — SOCKS5 بیرونی می‌تواند به IPهای CF هم وصل شود
       try {
         const tunOb = (await getTunnel(env)).ob;
-        if (tunOb && tunOb.enabled) {
+        if (tunOb && tunOb.enabled && (await obCarrierOk(env, tunOb))) {   // P116 «تندر۲»: فقط حاملِ تأییدشدهٔ واقعی
           try { return { socket: await chainDial({ type: tunOb.kind, host: tunOb.host, port: tunOb.port, user: tunOb.user, pass: tunOb.pass }, host, port), via: "oblivion:" + (tunOb.mode || "warp") }; } catch (e) {}
         }
       } catch (e) {}
@@ -7796,7 +7839,7 @@ FX.proto = (() => {
       // وقتی رلهٔ رأی‌گرفته از گوگل در دسترس نیست → عبور واقعی از SOCKS5 مسیر Oblivion
       try {
         const tunOb2 = (await getTunnel(env)).ob;
-        if (tunOb2 && tunOb2.enabled) {
+        if (tunOb2 && tunOb2.enabled && (await obCarrierOk(env, tunOb2))) {   // P116 «تندر۲»: فقط حاملِ تأییدشدهٔ واقعی
           try { return { socket: await chainDial({ type: tunOb2.kind, host: tunOb2.host, port: tunOb2.port, user: tunOb2.user, pass: tunOb2.pass }, host, port), via: "oblivion:" + (tunOb2.mode || "warp") }; } catch (e) {}
         }
       } catch (e) {}
@@ -13879,10 +13922,12 @@ async function sfApi(request, env) {
       const ci = c.lastIndexOf(":");
       const host = c.slice(0, ci), port = Number(c.slice(ci + 1)) || 0;
       if (!host || !port) continue;
-      if (isCfEndpointSF(host)) {   // ← فیکس P85: CF = تأیید مرورگر، نه تست ورکر
-        results.push({ host, port, kind: "warp", ok: true, ms: null, cf: true, why: "اندپوینت Cloudflare/WARP — پینگ واقعی از مرورگر (جستجوی منابع جهانی)؛ از ورکر تست‌پذیر نیست (loop-block)" });
-        winner = results[results.length - 1];
-        break;
+      if (isCfEndpointSF(host)) {   // P116 «تندر۲»: تست واقعی حامل از خود ورکر — پایان برندهٔ جعلی
+        const egC = await FX.proto.obEgress({ kind: "socks5", host, port, user: "", pass: "" }).catch(() => null);
+        const okC = !!(egC && egC.ok);
+        results.push({ host, port, kind: "warp", ok: okC, ms: okC && egC.ms != null ? egC.ms : null, cf: true, egress: okC ? { cc: egC.cc, ip: egC.ip } : null, why: okC ? ("حامل واقعی از ورکر تأیید شد — خروجی: " + egC.cc + " " + egC.ip) : "از ورکر قابل‌حمل نیست (loop-block: IPهای کلادفلر) — پینگ واقعی از مرورگر خودت (جستجوی منابع جهانی)؛ کانفیگ WireGuard برای دستگاه خودت" });
+        if (okC) { winner = results[results.length - 1]; break; }
+        continue;
       }
       for (const kind of ["socks5", "http"]) {
         const r = await FX.proto.tunnelProbe({ kind, host, port });
@@ -13956,7 +14001,9 @@ async function sfApi(request, env) {
       } catch (eCf) { isCfEp = false; }
     }
     const test = isCfEp
-      ? { ok: true, ms: null, cf: true, note: "اندپوینت Cloudflare/WARP — از ورکر تست‌پذیر نیست (loop-block)؛ پینگ واقعی از مرورگر خودت در «جستجوی منابع جهانی» تأیید شده" }
+      ? await (async () => { const egT = await FX.proto.obEgress(cfg).catch(() => null); return egT && egT.ok
+          ? { ok: true, ms: egT.ms, cf: true, egress: { cc: egT.cc, ip: egT.ip }, note: "حامل واقعی از ورکر تأیید شد — خروجی: " + egT.cc + " (" + egT.ip + ")" }
+          : { ok: false, ms: null, cf: true, carrier: false, note: "اندپوینت Cloudflare/WARP: ورکر به IPهای کلادفلر وصل نمی‌شود (loop-block) — به‌عنوان حامل مسیر AI بی‌اثر است و روتینگ خودکار از آن عبور نمی‌کند. پینگ واقعی از مرورگر خودت (جستجوی منابع جهانی) و کانفیگ WireGuard همین صفحه (اپ Oblivion روی دستگاه خودت) کار می‌کنند." }; })()
       : await FX.proto.tunnelProbe(cfg);
     tun[cc] = cfg;
     await coreSet(env, "tunnelcfg", JSON.stringify(tun));
@@ -13976,7 +14023,9 @@ async function sfApi(request, env) {
           const nn = (((+cfM[1] << 24) | (+cfM[2] << 16) | (+cfM[3] << 8) | +cfM[4]) >>> 0);
           try { cfEp = (DESKTOP_CFG.CF_RANGES || []).some((cid) => { const [cip, cbits] = String(cid).split("/"); const pp = cip.split(".").map(Number); const base = (((pp[0] << 24) | (pp[1] << 16) | (pp[2] << 8) | pp[3]) >>> 0); const size = String(cbits) === "0" ? 4294967295 : (Math.pow(2, 32 - +cbits) - 1) >>> 0; return nn >= base && nn <= ((base + size) >>> 0); }); } catch (eCf) { cfEp = false; }
         }
-        return cfEp ? { ok: true, ms: null, cf: true, note: "اندپوینت Cloudflare/WARP — تأیید مرورگر (جستجوی جهانی)" } : FX.proto.tunnelProbe(hCfg);
+        return cfEp
+          ? { ok: false, ms: null, cf: true, carrier: false, note: "اندپوینت CF/WARP از ورکر قابل‌حمل نیست (loop-block: IPهای کلادفلر) — مسیر AI خودکار از آن عبور نمی‌کند؛ پینگ مرورگر و کانفیگ WireGuard از دستگاه خودت کار می‌کنند" }
+          : FX.proto.tunnelProbe(hCfg);
       })()) } : { enabled: false };
     }
     // P68 فاز ۵: خروجی واقعی مسیر Oblivion (کشور واقعی WARP/Psiphon) — برای مگا-سوپر ذخیره می‌شود
@@ -15692,6 +15741,23 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
     try {
       await ensureReady(env);
       await FX.store.flushUsage(env.DB);
+      // ═══ P116 «تندر۲+» (muj4bct1+muj5ukux+muj5tu3q): بنچمارک و تیونینگ تطبیقی سبک ═══
+      // P112 (heavy_cron=off) به‌طور ناخواسته بنچ/تیون سرعت را هم کشت — موشک P104
+      // هرگز روشن نمی‌شد و پنل روی پیش‌فرض 128KB می‌ماند. حالا این بلوک در مسیر
+      // همیشه‌روشن است: بنچ هر ۶ تیک (~۱۸ دقیقه، فقط fetch — بدون خواندن D1 سنگین)
+      // + هیدرات هر تیک + تیون فقط با تغییر ردهٔ واقعی (ضد-نوسان T2).
+      try {
+        if (!((globalThis.SF_TUNNELS && globalThis.SF_TUNNELS.n) > 0)) {   // تونل زنده → بنچ به تیک بعدی (سرعت کاربر قربانی نمی‌شود)
+          await SF.SUPER.SPEED.hydrateTuning(env);
+          const cyc6 = Number((await FX.store.getCore(env.DB, "sf_speed_tick")) || 0) || 0;
+          await FX.store.setCore(env.DB, "sf_speed_tick", String((cyc6 + 1) % 6));
+          if (cyc6 === 0) {
+            const dbL = await SF.SUPER.SPEED.downloadBenchmark(env);
+            const ubL = await SF.SUPER.SPEED.uploadBenchmark(env);
+            await SF.SUPER.SPEED.maybeTuneChunks(env, { down: dbL, up: ubL });
+          }
+        }
+      } catch (e) { /* never crash cron */ }
       // ═══ P70 فاز ۷ (zq-mug8ulcr): کرونِ آگاه از ترافیک ═══
       // اگر تونل زنده روی این isolate فعال است، پروب‌های سنگین (کشف رله + چرخهٔ
       // ارکستراتور) به کرون بعدی موکول می‌شوند — سرعت کاربر هرگز قربانی نمی‌شود.
