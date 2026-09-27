@@ -11,7 +11,7 @@
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
 [![D1 Database](https://img.shields.io/badge/Cloudflare-D1-0051C3?style=flat-square&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/d1/)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/Mohamadaghilibot)
-[![Version](https://img.shields.io/badge/build-3.18.5-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
+[![Version](https://img.shields.io/badge/build-3.18.7-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
 [![License: Proprietary](https://img.shields.io/badge/license-FLASH%20Panel-red?style=flat-square)](LICENSE)
 
 [فارسی 🇮🇷](#-فارسی) · [English 🇬🇧](#-english)
@@ -23,25 +23,6 @@
 ## 🇬🇧 English
 
 **FLASH Panel** turns a free Cloudflare account into a full-featured personal proxy server: multi-protocol configs (VLESS / VMess / Trojan / Shadowsocks — WS, XHTTP & gRPC transports), 25+ country exit locations, an advanced WARP endpoint engine, a live radar scanner, and a Telegram bot that manages everything from your pocket — all in **one single Worker file + one D1 database**, no VPS needed.
-
-
-### 🥇 Why Flash? — what no other panel has
-
-> **Every core part is custom-built** — the transfer core, the worker, the protocols engine, the scanner, the paths. Zero code copied from any other project, zero dependencies.
-
-| | Exclusive | Details |
-|---|---|---|
-| 🌊 | **Roodbar transfer engine** | Real backpressure (768 KB HWM) + a 12 MB informed-kill guard. The only panel combining large frames AND backpressure — neither edgetunnel nor BPB have both (verified in our research phase) |
-| 🚀 | **Rocket engine** | 256 KB down-coalescing cap (4× standard) + 64 KB up-batches — saturates free-tier links without stalling |
-| 🌀 | **155 official WARP endpoints** | 43 engage ports + 28 Cloudflare IPs × 4 ports · two-phase browser scanner (29 hosts × 22 official ports) |
-| ✅ | **Tested-configs-only law** | Every WARP/WireGuard/AmneziaWG config is created with a REAL registration + live ping test — untested configs are never delivered |
-| 📉 | **Real-world ping < 120 ms** | Iranian users typically measure **under 120 ms** (at best around **90 ms**) after one tap of "Best Ping" — the panel keeps only relays that actually pass |
-| 👻 | **GHOST stealth** | The panel is 100% invisible to strangers — decoy site + invisible API + secret gate |
-| 🤖 | **AI assistant inside Telegram** | Natural chat + it performs 0-to-100 panel operations from plain Persian sentences |
-| 🌙 | **24/7 Guardian failover** | If the main bot server ever goes down, a Cloudflare twin takes over automatically — management never stops |
-| 🛠 | **100% custom core** | Protocol core, worker, routing paths, scoring algorithms — all hand-built for this panel |
-
-> ⚠️ **The current build is BETA — the main release has not been unveiled yet.** Everything works and ships daily improvements; the official unveiling is coming.
 
 ### ✨ Highlights
 
@@ -134,25 +115,6 @@ This repository is **source-available, NOT open-source**. See [LICENSE](LICENSE)
 ## 🇮🇷 فارسی
 
 **پنل فلش** یک حساب رایگان کلادفلر را به یک سرور پروکسی کامل شخصی تبدیل می‌کند: کانفیگ‌های چند-پروتکله (VLESS / VMess / Trojan / Shadowsocks با ترنسپورت‌های WS و XHTTP و gRPC)، خروجی ۲۵+ کشور، موتور اندپوینت WARP، اسکنر رادار زنده و یک ربات تلگرام که همه‌چیز را از جیب شما مدیریت می‌کند — همه در **یک فایل ورکر + یک دیتابیس D1**، بدون نیاز به سرور.
-
-
-### 🥇 چرا فلش؟ — چیزی که هیچ پنل دیگری ندارد
-
-> **همه‌چیز این پنل کاستوم ساخته شده** — هستهٔ انتقال، ورکر، موتور پروتکل‌ها، اسکنر، مسیرها. هیچ کدی از پروژهٔ دیگری کپی نشده؛ صفر وابستگی.
-
-| | انحصاری | توضیح |
-|---|---|---|
-| 🌊 | **موتور رودبار** | فشار-برگشتی واقعی (HWM ۷۶۸KB) + گارد ۱۲ مگابایتی «کیل بااطلاع» — تنها پنلی که هم فریم بزرگ و هم بک‌پرشر را با هم دارد (نه edgetunnel و نه BPB — تأییدشده در فاز تحقیق) |
-| 🚀 | **موتور موشک** | سقف ادغام دانلود ۲۵۶KB (۴× استاندارد) + دستهٔ آپلود ۶۴KB — اشباع لینک بدون انجماد |
-| 🌀 | **۱۵۵ اندپوینت رسمی WARP** | ۴۳ پورت engage + ۲۸ IP کلادفلر × ۴ پورت · اسکنر دو-فازی مرورگری (۲۹ هاست × ۲۲ پورت رسمی) |
-| ✅ | **قانون «فقط کانفیگ تست‌شده»** | هر کانفیگ WARP/WireGuard/AmneziaWG با ثبت‌نام واقعی + تست پینگ زنده ساخته می‌شود — کانفیگ تست‌نشده هرگز ارسال نمی‌شود |
-| 📉 | **پینگ واقعی زیر ۱۲۰** | تجربهٔ کاربران ایران معمولاً **زیر ۱۲۰ میلی‌ثانیه** و در بهترین حالت حدود **۹۰ میلی‌ثانیه** بعد از یک بار «بهترین پینگ» — پنل فقط رله‌های پاس‌شده را نگه می‌دارد |
-| 👻 | **حالت شبح GHOST** | پنل برای غریبه‌ها ۱۰۰٪ نامرئی — سایت نمایشی + API نامرئی + گیت مخفی |
-| 🤖 | **دستیار هوشمند داخل تلگرام** | گفتگوی طبیعی + انجام ۰ تا ۱۰۰ کارهای پنل با فارسی خودمونی |
-| 🌙 | **نگهبان ۲۴/۷** | اگر سرور ربات اصلی قطع شود، جانشین کلادفلری خودکار فعال می‌شود — مدیریت هرگز قطع نمی‌شود |
-| 🛠 | **هستهٔ ۱۰۰٪ کاستوم** | هستهٔ پروتکل، ورکر، مسیرها، الگوریتم امتیازدهی — همه دست‌ساز همین پنل |
-
-> ⚠️ **نسخهٔ فعلی بتا است — نسخهٔ اصلی هنوز رونمایی نشده.** همهٔ امکانات کار می‌کنند و روزانه بهتر می‌شوند؛ رونمایی رسمی به‌زودی.
 
 ### ✨ امکانات کلیدی
 
