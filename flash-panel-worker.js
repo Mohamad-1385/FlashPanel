@@ -16568,6 +16568,7 @@ FX.router = (() => {
         FX.engines.tunnels++;
         if (early && early.length) FX.engines.earlyData++;   // v2.15: 0-RTT handshake counter
         maybeFlush(env, ctx);
+        maybeHealth(env, ctx);   // P122: تازه‌سازی فرصت‌طلب — مستقل از کرون
         maybePrefetch(env, ctx);                              // v2.15: keep the DNS answer cache warm
         const hdrs = early ? { "sec-websocket-protocol": earlyHeader } : undefined;
         return new Response(null, { status: 101, webSocket: pair[0], ...(hdrs ? { headers: hdrs } : {}) });
@@ -16588,6 +16589,7 @@ FX.router = (() => {
           return new Response("inactive", { status: 403 });
         }
         if (rest.endsWith("/qr")) return FX.subx.qrSvg(request, env, account, url.hostname);
+        maybeHealth(env, ctx);   // P122: هر fetch ساب کلاینت واقعی است — تازه‌سازی فرصت‌طلب
         return FX.subx.serve(request, env, account, url.hostname);
       }
 
@@ -16650,6 +16652,31 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
   // real traffic (no cron dependency): the first tunnel of any minute kicks
   // a background sweep that re-warms the hot-domain answer cache via
   // waitUntil — never on the request's critical path.
+  // ═══ P122 «سلامت فرصت‌طلب»: تازه‌سازی سبک رله‌ها روی خودِ ترافیک واقعی ═══
+  // درس زندهٔ P122: کرونِ گاه‌به‌گاه کافی نیست (قحطی ۶۴ساعت). هر ۱۰ دقیقه حداکثر
+  // یک‌بار — روی اولین تونل/ساب بعد از آن — ۲ کشور + بذر TGD در پس‌زمینه (waitUntil)،
+  // هرگز روی مسیر بحرانی کاربر. با ترافیک ربات‌ها و کاربران، relay_state همیشه تازه می‌ماند.
+  let lastHealthSweep = 0;
+  function maybeHealth(env, ctx) {
+    try {
+      const now = Date.now();
+      if (now - lastHealthSweep < 10 * 60000) return;
+      lastHealthSweep = now;
+      const p = (async () => {
+        try {
+          const catH = await FX.proto.locCatalog(env);
+          if (!catH || !catH.length) return;
+          let ciH = Number((await FX.store.getCore(env.DB, "relay_cron_cursor")) || 0) || 0;
+          if (ciH >= catH.length) ciH = 0;
+          const twoH = catH.slice(ciH, ciH + 2).map((c) => c.id);   // ۲ کشور روی ترافیک (سبک)
+          for (const cc of twoH) { try { await FX.proto.discoverCountryRelaysSF(env, cc); } catch (e) {} }
+          await FX.store.setCore(env.DB, "relay_cron_cursor", String(ciH + 2 >= catH.length ? 0 : ciH + 2));
+        } catch (e) {}
+        try { await SF.SUPER.TGD.seedSweep(env); } catch (e) {}
+      })();
+      if (ctx && ctx.waitUntil) { try { ctx.waitUntil(p.catch(() => {})); } catch (e) {} }
+    } catch (e) {}
+  }
   function maybePrefetch(env, ctx) {
     try {
       const p = FX.proto.dnsPrefetchSweep();
@@ -16684,15 +16711,18 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       // ═══ P122 «نگهبان سلامت» — رفرش سبک رله‌ها هر تیک، حتی با تونل زنده ═══
       // درس P122 (دادهٔ D1): تونل‌زنده + heavy_cron کل تازه‌سازی را قفل کرده بود —
       // relay_state در ۶۴ ساعت فقط ۱ بار تازه شد (ru)؛ ۵۵ کشور کهنه + ۲۴ بدون داده.
+      // P122: TGD اولِ کرون — بودجهٔ تازه (قبلاً بنچ/ارکستراتور می‌خوردند و بذر تلگرام تشنه می‌ماند)
+      try { const tgdN = await SF.SUPER.TGD.seedSweep(env); if (tgdN) { try { await FX.store.logEvent(env.DB, "cron", "P122 TGD بذر: " + tgdN + " DC"); } catch (eL) {} } } catch (e) { try { await FX.store.logEvent(env.DB, "cron", "P122 TGD خطا: " + String((e && e.message) || e).slice(0, 120)); } catch (eL) {} }
       try {
         const catH = await FX.proto.locCatalog(env);
         let ciH = Number((await FX.store.getCore(env.DB, "relay_cron_cursor")) || 0) || 0;
         if (ciH >= catH.length) ciH = 0;
         const threeH = catH.slice(ciH, ciH + 3).map((c) => c.id);   // ۳ کشور/تیک — ۷۹ کشور ≈ ۶.۶ ساعت چرخهٔ کامل
-        for (const cc of threeH) { try { await FX.proto.discoverCountryRelaysSF(env, cc); } catch (e) {} }
+        let okN = 0;
+        for (const cc of threeH) { try { await FX.proto.discoverCountryRelaysSF(env, cc); okN++; } catch (e) {} }
         await FX.store.setCore(env.DB, "relay_cron_cursor", String(ciH + 3 >= catH.length ? 0 : ciH + 3));
-      } catch (e) { /* never crash cron */ }
-      try { await SF.SUPER.TGD.seedSweep(env); } catch (e) {}   // P122: بذر ۵ DC رسمی — tgd:best هرگز خالی/کهنه نمی‌ماند
+        try { await FX.store.logEvent(env.DB, "cron", "P122 سلامت: " + threeH.join(",") + " ✓" + okN); } catch (eL) {}
+      } catch (e) { try { await FX.store.logEvent(env.DB, "cron", "P122 خطا: " + String((e && e.message) || e).slice(0, 120)); } catch (eL) {} }
       if ((globalThis.SF_TUNNELS && globalThis.SF_TUNNELS.n) > 0) {
         try { await FX.store.logEvent(env.DB, "cron", "heavy deferred — light refresh done (tunnels " + globalThis.SF_TUNNELS.n + ")"); } catch (e) {}
       } else if (String(await FX.store.getCore(env.DB, "heavy_cron") || "on") === "on") {   // P112 «صرفه‌جویی»: فقط موج کشف + ارکستراتور دروازه دارند
