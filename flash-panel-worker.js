@@ -16,7 +16,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "5.3.0",   /*P129:version*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "5.4.0",   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -11789,21 +11789,33 @@ function buildShards(account, host, opts = {}) {
       tls: { enabled: true, server_name: host, alpn: ["http/1.1"] },
       tcp_fast_open: true,   // P127: TFO روی لاین گیمینگ/تلگرام/یوتیوب
     } : null;
+    // ═══ P130b «جمنای زنده»: WARP اختصاصی کاربر — ساختار endpoint سطح‌بالا (sing-box 1.12+؛ باینری واقعی 1.14 outbounds را رد می‌کند) ═══
+    // فقط کلاینت‌های 1.12+ (sb12)؛ قدیمی‌ها به‌لطف بدون warp می‌مانند. urltest اگر وارپ مردود شود به تونل برمی‌گردد.
+    const warpOut = (opts.warp && opts.warp.priv && opts.sb12) ? {
+      type: "wireguard", tag: "fl-warp",
+      address: opts.warp.v6 ? [opts.warp.v4 + "/32", opts.warp.v6 + "/128"] : [opts.warp.v4 + "/32"],
+      private_key: opts.warp.priv,
+      peers: [{ address: opts.warp.epHost, port: opts.warp.epPort || 2408, public_key: opts.warp.serverPub, allowed_ips: ["0.0.0.0/0", "::/0"], persistent_keepalive_interval: 25, reserved: opts.warp.reserved }],
+    } : null;
+    // گروه زندهٔ جمنای: WARP برنده (وقتی UDP زنده است) وگرنه سقوط خودکار به تونل ورکر
+    const aiWarpGroup = (warpOut && aiOut) ? { type: "urltest", tag: "fl-ai-live", url: "https://www.gstatic.com/generate_204", interval: "1m", tolerance: 100, interrupt_exist_connections: false, outbounds: ["fl-warp", "fl-ai"] } : null;
     return JSON.stringify({
       // ═══ P123-MEGA M10: پروفایل TUN (?tun=1) — تماس تلگرام از طریق TURN-over-TCP زنده می‌شود (تحقیق P123-R2) ═══
       ...(opts.tun ? { inbounds: [
         { type: "tun", tag: "fl-tun", address: ["172.19.0.1/30"], mtu: 9000, auto_route: true, strict_route: true },
         { type: "mixed", tag: "fl-mixed", listen: "127.0.0.1", listen_port: 2080 },
       ] } : {}),
+      ...(warpOut ? { endpoints: [warpOut] } : {}),   // P130b «جمنای زنده»: endpoint وایرگارد — سطح‌بالا (نه داخل outbounds)
       outbounds: [
         // v1.8.0 «مسیر آتر» /*P123F:tun*/: fl-auto — urltest خودکار؛ همیشه کم‌پینگ‌ترین مسیر
         // v1.9.0: tolerance 75 = یک آی‌پی لحظه‌ای بهتر دیگه باعث سوییچ و قطعی
         // نمی‌شه؛ فقط افت واقعی. interrupt = سوییچ فوری بدون انتظار سوکت‌های مرده.
-        { type: "urltest", tag: "fl-auto", url: "https://www.gstatic.com/generate_204", interval: "3m", tolerance: 75, interrupt_exist_connections: true, outbounds: [...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : [])] },
-        { type: "selector", tag: "⚡ فلش | FLASH", outbounds: ["fl-auto", ...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), "fl-emergency", "direct"], interrupt_exist_connections: false },   // P127: اضطراری بدون ورکر در دسترس
+        { type: "urltest", tag: "fl-auto", url: "https://www.gstatic.com/generate_204", interval: "3m", tolerance: 75, interrupt_exist_connections: true, outbounds: [...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), ...(warpOut ? ["fl-warp"] : [])] },
+        { type: "selector", tag: "⚡ فلش | FLASH", outbounds: ["fl-auto", ...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), ...(warpOut ? ["fl-warp", "fl-ai-live"] : []), "fl-emergency", "direct"], interrupt_exist_connections: false },   // P127: اضطراری بدون ورکر در دسترس
         ...outbounds,
         ...(aiOut ? [aiOut] : []),
         ...(gameOut2 ? [gameOut2] : []),
+        ...(aiWarpGroup ? [aiWarpGroup] : []),   // P130b «جمنای زنده» — خود fl-warp در endpoints است
         // ═══ P127 «فلاش‌پلاس»: خروجی اضطراری بدون ورکر — مستقیم + فرگمنت جهانی (route-options)؛ اگر روزی دامنهٔ ورکر فیلتر شد همین مسیر کار می‌کند ═══
         { type: "direct", tag: "fl-emergency" },
         { type: "direct", tag: "direct" },
@@ -11835,6 +11847,7 @@ function buildShards(account, host, opts = {}) {
           ...(opts.stealth >= 1 && opts.sb12 ? [{ action: "route-options", tls_fragment: true, tls_fragment_fallback_delay: "100ms" }] : []),
           { outbound: "fl-quic", network: "udp" },   // P99 «پایدار»: همهٔ UDP غیر-DNS محلی می‌میرد (QUIC + UDP تلگرام در t=0) → بی‌درنگ TCP — پایان قطع‌ووصلی؛ DNS داخلی sing-box سالم است
           ...(opts.adblock !== false ? [{ outbound: "fl-adblock", domain_suffix: FX.BOOT.adBlockSuffixes }] : []),
+          ...(warpOut ? [{ outbound: (aiOut ? "fl-ai-live" : "fl-warp"), domain_suffix: FX.BOOT.aiDirectDomains }] : []),   // P130 «جمنای زنده»: خانوادهٔ گوگل/جمنای → WARP (fallback خودکار به تونل)
           { outbound: "fl-ai", domain_suffix: aiList() },
           // v1.6.0 «همه‌کاره»: گیم‌ها → لاین گیمینگ کم‌پینگ
           ...(gameOut2 ? [{ outbound: "fl-game", domain_suffix: FX.BOOT.gameSuffixes }] : []),
@@ -11923,12 +11936,15 @@ function buildShards(account, host, opts = {}) {
       // v1.8.0 «مسیر آتر»: FL-AUTO — url-test خودکار؛ همیشه کم‌پینگ‌ترین
       // کانفینگ انتخاب می‌شود و با افت کیفیت، بدون قطعی سوییچ می‌کند
       `  - {name: FL-AUTO, type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 180, tolerance: 60, proxies: [${names.map((n) => JSON.stringify(n)).join(", ")}]}`,
-      `  - {name: ${JSON.stringify(FLASHGRP)}, type: select, proxies: [FL-AUTO, ${names.map((n) => JSON.stringify(n)).join(", ")}]}`,
+      `  - {name: ${JSON.stringify(FLASHGRP)}, type: select, proxies: [FL-AUTO, ${names.map((n) => JSON.stringify(n)).join(", ")}${opts.warp ? ", FL-WARP" : ""}]}`,
+      ...(opts.warp ? [`  - {name: FL-WARP, type: wireguard, server: ${opts.warp.epHost}, port: ${opts.warp.epPort || 2408}, private-key: ${opts.warp.priv}, public-key: ${opts.warp.serverPub}, ip: ${opts.warp.v4}, allowed-ips: ['0.0.0.0/0', '::/0'], reserved: [${(opts.warp.reserved || [0, 0, 0]).join(", ")}], udp: true, mtu: 1280}`] : []),   // P130 «جمنای زنده»
       "rules:",
       // P70 فاز ۱۰ (mugdaqwh): QUIC (UDP 443) فوری REJECT — بدون انتظار timeout؛ یوتیوب/گوگل روی HTTP2/TCP
       "  - NETWORK,udp,REJECT",   // P99 «پایدار»: همهٔ UDP محلی می‌میرد (DNS داخلی fake-ip سالم) — تلگرام/QUIC بی‌درنگ TCP — پایان قطع‌ووصلی
       // v2.9.0 «تندر»: ads/trackers REJECT client-side (zero traffic)
       ...(opts.adblock !== false ? FX.BOOT.adBlockSuffixes.map((d) => `  - DOMAIN-SUFFIX,${d},REJECT`) : []),
+      // P130 «جمنای زنده»: خانوادهٔ گوگل/جمنای → WARP اختصاصی کاربر
+      ...(opts.warp ? FX.BOOT.aiDirectDomains.map((d) => `  - DOMAIN-SUFFIX,${d},FL-WARP`) : []),
       // AI sites → the Gemini-optimized proxy (falls into the group for manual pick too)
       ...aiList().map((d) => `  - DOMAIN-SUFFIX,${d},${JSON.stringify(aiName)}`),
       // v1.6.0 «همه‌کاره»: گیم‌ها → لاین گیمینگ کم‌پینگ
@@ -12155,6 +12171,18 @@ function buildShards(account, host, opts = {}) {
       g.streamSettings.sockopt = { ...KASOCK, tcpKeepAliveInterval: 10, tcpKeepAliveIdle: 20, tcpFastOpen: true, tcpconcurrent: true };
       return g;
     })();
+    // ═══ P130 «جمنای زنده»: خروجی WARP (پروتکل wireguard در Xray ≥1.8 — v2rayNG فعلی پشتیبانی می‌کند) ═══
+    const warpOutX = (opts.warp && opts.warp.priv) ? ({
+      tag: "warp",
+      protocol: "wireguard",
+      settings: {
+        secret: opts.warp.priv,
+        address: opts.warp.v6 ? [opts.warp.v4 + "/32", opts.warp.v6 + "/128"] : [opts.warp.v4 + "/32"],
+        peers: [{ publicKey: opts.warp.serverPub, endpoint: opts.warp.epHost + ":" + (opts.warp.epPort || 2408), keepAlive: 25 }],
+        kernelMode: false,
+        reserved: opts.warp.reserved,
+      },
+    }) : null;
     return JSON.stringify({
       log: { loglevel: "warning" },
       // v2.6.2: 1MB buffers + instant close + fast handshake (see pack note)
@@ -12173,6 +12201,7 @@ function buildShards(account, host, opts = {}) {
         ...quantums,
         ...(vmessOut ? [vmessOut] : []),   // v2.14 «ادغام»: vmess alternate
         aiOut,
+        ...(warpOutX ? [warpOutX] : []),   // P130 «جمنای زنده»: خروجی WARP کاربر
         // v1.6.0 «همه‌کاره»: لاین گیمینگ — IP کم‌پینگ + keepalive تهاجمی ۱۰s +
         // TCP Fast Open برای اولین RTT (دانلود آپدیت‌ها و لاگین سریع‌تر)
         ...(gameOut ? [gameOut] : []),
@@ -12215,6 +12244,8 @@ function buildShards(account, host, opts = {}) {
           { type: "field", outboundTag: "game", domain: FX.BOOT.tgDomains.map((d) => "domain:" + d) },
           // P127 «فلاش‌پلاس»: یوتیوب/استریم روی لاین گیمینگ — شروع پخش سریع‌تر
           { type: "field", outboundTag: "game", domain: FX.BOOT.ytSuffixes.map((d) => "domain:" + d) },   // P127:ytspeed
+          // P130 «جمنای زنده»: خانوادهٔ گوگل/جمنای → WARP مستقیم کلاینت (خروجی = IP مصرف‌کننده کلادفلر؛ گوگل دیگر sorry نمی‌دهد)
+          ...(warpOutX ? [{ type: "field", outboundTag: "warp", domain: FX.BOOT.aiDirectDomains.map((d) => "domain:" + d) }] : []),
           // v2.6.1: AI/Google domains → the Gemini-optimized colo first, main tunnel as fallback
           { type: "field", outboundTag: "ai", domain: FX.BOOT.aiDomains.map((d) => "domain:" + d) },
           // v2.7.0 «سیمرغ»: DNS (UDP :53) rides the tunnel's TCP-DNS bridge —
@@ -12259,6 +12290,33 @@ function buildShards(account, host, opts = {}) {
       return rec;
     } catch (e) { return (ECH_MEM.pem && ECH_MEM.host === host) ? ECH_MEM : { pem: "", b64: "", t: 0, host: "" }; }
   }
+
+  // ═══ P130 «جمنای زنده» — هویت WARP اختصاصی هر کاربر (یک‌بار ثبت، کش D1 تا ۳۰ روز) ═══
+  // ریشهٔ جمنای: خروجی ورکر = IP دیتاسنتر کلادفلر → گوگل همیشه /sorry می‌دهد (تست تجربی P116).
+  // راه‌حل: WARP مستقیم داخل کانفیگ کاربر (UDP خام) — خروجی WARP = IP مصرف‌کننده کلادفلر؛ جمنای باز است.
+  // نکتهٔ معماری: هویت per-user است — WireGuard برای هر کلید عمومی فقط «یک» اندپوینت فعال سمت سرور نگه
+  // می‌دارد؛ کلید مشترک بین چند کاربر = flapping و قطعی (به همین دلیل اشتراکی نمی‌شود).
+  let WARP_REG_FAIL = { t: 0, n: 0 };
+  async function getWarpForUser(env, account) {
+    try {
+      const key = "warp:" + account.uid;
+      let rec = null;
+      try { rec = JSON.parse((await FX.store.getCore(env.DB, key)) || "null"); } catch (e) {}
+      if (rec && rec.priv && rec.v4 && Date.now() - (rec.at || 0) < 30 * 86400000) return rec;
+      // محافظ سهمیهٔ ثبت‌نام: حداکثر ۲۰ تلاش ناموفق در ساعت per-isolate
+      const now = Date.now();
+      if (now - WARP_REG_FAIL.t > 3600000) WARP_REG_FAIL = { t: now, n: 0 };
+      if (WARP_REG_FAIL.n >= 20) return rec || null;
+      const w = await FX.warp.register();
+      const rb = (typeof FX.warp.reservedBytes === "function" && FX.warp.reservedBytes(w.reserved)) || [0, 0, 0];
+      rec = { priv: w.keys.privateKey, pub: w.keys.publicKey, v4: w.v4, v6: w.v6 || "", serverPub: w.serverPub, reserved: Array.isArray(rb) ? rb : [0, 0, 0], at: Date.now() };
+      try { await FX.store.setCore(env.DB, key, JSON.stringify(rec)); } catch (e) {}
+      return rec;
+    } catch (e) {
+      WARP_REG_FAIL.n++;
+      return null;
+    }
+  }
   async function serve(request, env, account, host) {
     const url = new URL(request.url);
     const format = (url.searchParams.get("f") || url.searchParams.get("format") || "").toLowerCase();
@@ -12286,7 +12344,7 @@ function buildShards(account, host, opts = {}) {
     const tunP127 = url.searchParams.get("tun");
     const tunOn = tunP127 === "1" ? true : tunP127 === "0" ? false : true;   // P127:tundefault /*P123F:svparams*/
     let opts = { operator: opKey, ip, ssOk, tpath, frag, sb12, ech: echOn, tun: tunOn, stealth };   // P125:stealth
-    if (opts.ech && sb12) opts.echCfg = await getEch(env, host);   // P125: PEM + b64 تازهٔ دامنه
+    if (opts.ech) opts.echCfg = await getEch(env, host);   // P130b: ECH برای همهٔ فرمت‌های TLS — xjson (v2rayNG) هم echConfigList می‌گیرد (قبلاً فقط sb12 — شکاف آمادگی بدون دامنه)
     // ═══ P123-MEGA M16: مجموعهٔ IPهای مرده (خودترمیم پین‌ها) + ثبت کشور کاربر (OPT) ═══
     try { FX.MEGA.setDead(JSON.parse((await gc(env, "dead_entries")) || "[]")); } catch (e) {}
     try { await FX.MEGA.noteUserCf(env, account, request); } catch (e) {}
@@ -12422,6 +12480,18 @@ function buildShards(account, host, opts = {}) {
     }
 
     const pick = format || (ua.includes("sing-box") || ua.includes("singbox") ? "singbox" : ua.includes("clash") || ua.includes("stash") ? "clash" : "v2ray");
+    // ═══ P130 «جمنای زنده»: هویت WARP اختصاصی کاربر — فقط در فرمت‌های کامل (?warp=0 خاموش می‌کند) ═══
+    const warpP130 = url.searchParams.get("warp");
+    if (warpP130 !== "0" && (pick === "singbox" || pick === "clash" || pick === "xjson")) {
+      try {
+        const wu = await getWarpForUser(env, account);
+        if (wu && wu.priv) {
+          const ep = FX.warp.randomEndpoint();
+          const epP = ep.split(":");
+          opts.warp = { ...wu, ep, epHost: epP[0], epPort: parseInt(epP[1]) || 2408 };
+        }
+      } catch (e) {}
+    }
     // ═══ P70 فاز ۷ (zq-mug8yskx): رتبه‌بندی پورت‌ها از اندازه‌گیری واقعی ═══
     // هر پورتی که در speed_results دادهٔ واقعی دارد، بر اساس میانگین تأخیر مرتب
     // می‌شود — سریع‌ترین پورت اول (برای اینترنت ایران: 443/2053/2083/8443 بسته به تجربه).
@@ -12438,7 +12508,7 @@ function buildShards(account, host, opts = {}) {
     // ═══ P70 فاز ۷ (zq-mug6dyqp): کش پایداری ساب ═══
     // بدنه (لینک‌ها) ۱۰ دقیقه پایدار می‌ماند تا کلاینت‌ها به‌خاطر تغییر آدرس/ترکیب،
     // اتصال مجدد نزنند (ریشهٔ «اتصال‌های مکرر»). هدر مصرف همیشه تازه می‌ماند.
-    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0) + "|l" + (account.loc || "");   // P127:tundefault + P129: loc در کلید کش — تغییر لوکیشن فوری اعمال می‌شود
+    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0) + "|l" + (account.loc || "") + "|w" + (opts.warp ? 1 : 0);   // P127:tundefault + P129: loc + P130: warp در کلید کش
     let body, ctype = "text/plain; charset=utf-8";
     const cHit = SUB_CACHE.get(ckey);
     if (cHit && Date.now() - cHit.t < 10 * 60 * 1000) { body = cHit.body; ctype = cHit.ctype; }   // پایدار — بدون churn
@@ -12465,6 +12535,7 @@ function buildShards(account, host, opts = {}) {
     if (remain) headers["x-fl-remaining"] = String(remain);
     // v1.8.0 «مسیر آتر»: pool size riding this sub (verification + client info)
     if (opts.aterIps && opts.aterIps.length) headers["x-fl-ater"] = String(opts.aterIps.length);
+    if (opts.warp) headers["x-fl-warp"] = opts.warp.ep;   // P130 «جمنای زنده» — نشانگر زندهٔ WARP در پاسخ
     return new Response(body, { headers });
   }
 
@@ -12919,9 +12990,10 @@ FX.warp = (() => {
   const EP_PORTS = [2408, 500, 854, 859, 864, 878, 880, 890, 894, 903, 908, 928, 934, 939, 942, 943, 945, 946, 955, 968, 987, 988, 1002, 1010, 1014, 1018, 1070, 1074, 1180, 1387, 1701, 1843, 2371, 2506, 3138, 3476, 3581, 3854, 4177, 4198, 4233, 4500, 5279, 5956, 7103, 7152, 7156, 7281, 7559, 8319, 8742, 8854, 8886];
   const rand = (a) => a[Math.floor(Math.random() * a.length)];
   function randomEndpoint() {
-    const base = rand(EP_HOSTS);
-    const host = /^\d/.test(base) ? base + "." + Math.floor(Math.random() * 256) : base;
-    return host + ":" + rand(EP_PORTS);
+    // P130 «وارپ وصل نشد»: فقط IP خام — engage.cloudflareclient.com در ایران DNS-مسموم است و ۱ از ۸ کانفیگ‌ها را می‌کشت
+    const ipOnly = EP_HOSTS.filter((h) => /^\d/.test(h));
+    const base = rand(ipOnly.length ? ipOnly : EP_HOSTS);
+    return base + "." + Math.floor(Math.random() * 256) + ":" + rand(EP_PORTS);
   }
   function b64url(s) { return X.b64(new Uint8Array([...s].map((c) => c.charCodeAt(0)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
   function reservedBytes(r) {
@@ -12932,18 +13004,18 @@ FX.warp = (() => {
   async function register() {
     const keys = X.keyPair();
     const r1 = await fetch(CF_BASE + "/reg", {
-      method: "POST", headers: CF_HEADERS,
+      method: "POST", headers: CF_HEADERS, signal: AbortSignal.timeout(12000),
       body: JSON.stringify({ install_id: "", tos: new Date().toISOString(), key: keys.publicKey, fcm_token: "", type: "ios", locale: "en_US" }),
-    });
+    });   /*P130:warpfix*/
     if (!r1.ok) throw new Error("WARP register: HTTP " + r1.status);
     const d1 = await r1.json();
     const id = d1.result && d1.result.id, token = d1.result && d1.result.token;
     if (!id || !token) throw new Error("WARP register: پاسخ ناقص");
     const r2 = await fetch(CF_BASE + "/reg/" + id, {
-      method: "PATCH",
+      method: "PATCH", signal: AbortSignal.timeout(12000),
       headers: Object.assign({}, CF_HEADERS, { Authorization: "Bearer " + token }),
       body: JSON.stringify({ warp_enabled: true }),
-    });
+    });   /*P130:warpfix*/
     if (!r2.ok) throw new Error("WARP enable: HTTP " + r2.status);
     const d2 = await r2.json();
     const res = d2.result || d2;
@@ -12959,8 +13031,8 @@ FX.warp = (() => {
     const dns = o.dns || DNS;
     const addr6 = w.v6 ? (w.v4 + "/32, " + w.v6 + "/128") : (w.v4 + "/32");
     const rb = reservedBytes(w.reserved);   /*P129:warpres*/ // روش Oblivion/Aether — Reserved در همهٔ فرمت‌ها
-    const wg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "", "[Peer]", "PublicKey = " + w.serverPub, "Reserved = " + rb.join(", "), "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
-    const awg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "S1 = 0", "S2 = 0", "Jc = 4", "Jmin = 40", "Jmax = 70", "H1 = 1", "H2 = 2", "H3 = 3", "H4 = 4", "", "[Peer]", "PublicKey = " + w.serverPub, "Reserved = " + rb.join(", "), "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
+    const wg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "# P130: اگر وصل نشد فقط Endpoint را عوض کنید — پورت‌های جایگزین: 500/854/4500/894/2408", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");   /*P130:warpfix*/
+    const awg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "S1 = 0", "S2 = 0", "Jc = 4", "Jmin = 40", "Jmax = 70", "H1 = 1", "H2 = 2", "H3 = 3", "H4 = 4", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");   /*P130:warpfix*/
     const lastConfig = JSON.stringify({
       hostName: srv, port: parseInt(port) || 2408,
       client_ip: w.v4, client_priv_key: w.keys.privateKey, client_pub_key: w.keys.publicKey,
@@ -12973,14 +13045,16 @@ FX.warp = (() => {
       defaultContainer: "amnezia-wireguard", description: "WARP — سوپر فلش", name: "WARP فلش",
     });
     const vpnUrl = "vpn://" + b64url(amneziaJson);
-    const singbox = JSON.stringify({
-      type: "wireguard", tag: "warp-out", mtu: 1280,
-      address: w.v6 ? [w.v4 + "/32", w.v6 + "/128"] : [w.v4 + "/32"],
-      private_key: w.keys.privateKey,
-      peers: [{ address: srv, port: parseInt(port) || 2408, public_key: w.serverPub, allowed_ips: ["0.0.0.0/0", "::/0"], persistent_keepalive_interval: 25, reserved: rb.join(", ") }],
-      detour: "direct",
+    const singbox = JSON.stringify({   /*P130b:warpfix — ساختار endpoints (باینری واقعی 1.14 outbounds را رد می‌کند)*/
+      log: { level: "warn" },
+      inbounds: [{ type: "tun", tag: "fl-tun", address: ["172.19.0.1/30"], mtu: 1280, auto_route: true, strict_route: true }],
+      endpoints: [
+        { type: "wireguard", tag: "warp-out", address: w.v6 ? [w.v4 + "/32", w.v6 + "/128"] : [w.v4 + "/32"], private_key: w.keys.privateKey, peers: [{ address: srv, port: parseInt(port) || 2408, public_key: w.serverPub, allowed_ips: ["0.0.0.0/0", "::/0"], persistent_keepalive_interval: 25, reserved: rb }] },
+      ],
+      outbounds: [{ type: "direct", tag: "direct" }],
+      route: { rules: [{ outbound: "direct", ip_is_private: true }], final: "warp-out" },
     }, null, 2);
-    const clash = ["proxies:", '- name: "WARP-AWG"', "  type: wireguard", "  private-key: " + w.keys.privateKey, "  server: " + srv, "  port: " + port, "  ip: " + w.v4, "  ipv6: " + w.v6, "  public-key: " + w.serverPub, "  allowed-ips: ['0.0.0.0/0', '::/0']", "  reserved: [" + rb.join(", ") + "]", "  udp: true", "  mtu: 1280", "  remote-dns-resolve: true", "  dns: [" + dns + "]", "  amnezia-wg-option:", "   jc: 4", "   jmin: 40", "   jmax: 70", "   s1: 0", "   s2: 0", "   h1: 1", "   h2: 2", "   h3: 3", "   h4: 4"].join("\n");
+    const clash = ["mixed-port: 7890", "allow-lan: false", "mode: rule", "log-level: warning", "proxies:", '- name: "WARP-AWG"', "  type: wireguard", "  private-key: " + w.keys.privateKey, "  server: " + srv, "  port: " + port, "  ip: " + w.v4, "  ipv6: " + w.v6, "  public-key: " + w.serverPub, "  allowed-ips: ['0.0.0.0/0', '::/0']", "  reserved: [" + rb.join(", ") + "]", "  udp: true", "  mtu: 1280", "  remote-dns-resolve: true", "  dns: [" + dns + "]", "  amnezia-wg-option:", "   jc: 4", "   jmin: 40", "   jmax: 70", "   s1: 0", "   s2: 0", "   h1: 1", "   h2: 2", "   h3: 3", "   h4: 4", "proxy-groups:", '  - name: "WARP"', "    type: select", "    proxies: [WARP-AWG]", "rules:", "  - MATCH,WARP"].join("\n");   /*P130:warpfix*/
     return { wg, awg, vpnUrl, singbox, clash, endpoint, meta: { v4: w.v4, v6: w.v6, serverPub: w.serverPub, reserved: rb } };
   }
 
@@ -13070,7 +13144,8 @@ footer{text-align:center;color:var(--mut);font-size:.8em;padding:16px 0 6px}
 <button class="gen" id="gen" onclick="gen()">⚡ ساخت کانفیگ WARP (یک کلیک)</button>
 <div class="note" id="intro">
 <b>راهنمای سریع:</b> دکمهٔ بالا را بزن — یک حساب WARP واقعی برای شما ساخته می‌شود (نه اشتراکی).
-✅ <b>تست واقعی + پیشنهادی ما:</b> کانفیگ «امزینز‌WG» روی اینترنت ایران وصل می‌شود (تأیید شده) — وایرگارد خام در بعضی اپراتورها DPI-بلاک است.
+✅ <b>پیشنهادی ما:</b> اول «امزینگ‌WG» را امتحان کنید — امضای وایرگارد را در برابر DPI مخفی می‌کند (Jc=4). اگر وصل نشد «🎲 اندپوینت تصادفی» را بزنید (IP خام + پورت تازه) و در اپ رسمی WireGuard حتماً تب «وایرگارد خام» را بردارید (فیلدهای اضافی را رد می‌کند).
+⚠️ <b>صادقانه:</b> اگر اپراتور شما UDP خارجی را کامل بسته باشد هیچ کانفیگ وایرگاردی وصل نمی‌شود — در آن صورت کانفیگ‌های اصلی پنل (TCP 443) کار می‌کنند و جمنای هم از مسیر WARP داخلی همان کانفیگ‌ها زنده است (نسخهٔ 5.4.0+).
 برای <b>عبور مطمئن‌تر از فیلترینگ</b> کانفیگ «امزینگ‌WG» را در اپ AmneziaVPN بگیرید — دستکارسنجی آمار جعلی را دور می‌زند (Jc=4).
 لینک <b>vpn://</b> را با اپ امزینگ باز کنید تا یک‌ضرب اضافه شود. هیچ چیزی لازم نیست وارد کنید.
 </div>
@@ -13095,7 +13170,7 @@ footer{text-align:center;color:var(--mut);font-size:.8em;padding:16px 0 6px}
 <div class="meta" id="meta"></div>
 <pre id="txt"></pre>
 </div>
-<footer>🛡 سپر وایرگارد · ` + brand + ` · v3.22.0 — پروتکل wgcf + فرمت رسمی امزینگ · رایگان برای همیشه</footer>
+<footer>🛡 سپر وایرگارد · ` + brand + ` · v5.4.0 — پروتکل wgcf + فرمت رسمی امزینگ · رایگان برای همیشه</footer>
 <script>
 var D=null,cur="wg";
 function fa(n){return String(n).replace(/\\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]})}
@@ -13143,7 +13218,7 @@ var m=document.getElementById("meta");m.innerHTML+=" 🎲";
     return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
   }
 
-  return { register, build, apiHandle, randomEndpoint, page, EP_HOSTS, EP_PORTS };
+  return { register, build, apiHandle, randomEndpoint, reservedBytes, page, EP_HOSTS, EP_PORTS };   /*P130:warpfix*/
 })();
 FX.api = (() => {
   const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...headers } });
