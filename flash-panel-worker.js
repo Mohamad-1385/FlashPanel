@@ -13,7 +13,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "3.19.1",   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "3.19.2",   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -154,7 +154,7 @@ FX.BOOT = {
   // DEFAULT is the v2.0.0 classic pair — 443 (TLS) + 80 (plain) — which proved
   // the fastest, most compatible profile on Iranian ISPs
   pickerPorts: [443, 80, 2053, 2083, 2087, 2096, 8443, 8080, 8880, 2052],   // P56-B: ماتریس کامل ۱۰ پورت (پروفایل P52 به صورت پیش‌فرض)
-  defaultPorts: "443,8443,2053,2083,2087,2096,80,8080,8880,2052",   // P56-B: ماتریس کامل (TLS-اول + دنبالهٔ plain)
+  defaultPorts: "443,8443",   // P117 فاز ۶ «روش نوا»: فقط پورت‌های اثبات‌شده — ماتریس ۱۰پورتی P56-B از طریق انتخابگر/اکانت موجود در دسترس است
   // v2.7.1 «طوفان» (TOOFAN): Gemini-friendly CF edge
   // ranges. For LOCATION users the effective entry-IP pool is STABLY
   // reordered so IPs inside these ranges come FIRST — YouTube/Google traffic
@@ -4594,7 +4594,7 @@ SF.SUPER = (() => {
   // استخراج مقصدهای واقعی از دادهٔ زندهٔ D1 — هیچ مقصدی ساخته نمی‌شود
   async function configTargets(env, host) {
     const out = { host: host || null, addrmode: "worker", users: 0, countries: 0, targets: [], byKind: {}, note: "تمام مقصدها از دادهٔ واقعی (کاربران · استخرها · رله‌ها · دامنهٔ ورکر) استخراج شده‌اند — بدون هیچ مقصد ساختگی" };
-    try { out.addrmode = (await FX.store.getCore(env.DB, "addrmode")) || "worker"; } catch (e) {}
+    try { out.addrmode = (await FX.store.getCore(env.DB, "addrmode")) || "auto"; } catch (e) {}   // P117 «تندر۳»
     const reg = new Map();
     const add = (addr, source, isRelay) => {
       const raw = String(addr || "").trim();
@@ -10932,7 +10932,7 @@ function buildShards(account, host, opts = {}) {
     const waUser = !!(account.wa || opts.wa === 1 || opts.wa === true);
     // P56-B «آدرس ورکر»: تنظیم addrmode (شهاب v2.6.2 — تا امروز مرده بود) زنده شد.
     // worker = همهٔ کانفیگ‌ها مستقیم آدرس ورکر (تنها 🎯 اختصاصیِ صریح ادمین بالاتر است)
-    const addrmode = String(opts.addrmode || "worker").toLowerCase();
+    const addrmode = String(opts.addrmode || "auto").toLowerCase();   // P117 «تندر۳»: auto = استخر نوا (قبلاً worker بود)
     let pool = [];
     let forceHost = false;
     // ⚡ v1.9.0 «فلاش رید»: THE ATER PATH NOW COVERS THE WORKER ADDRESS TOO —
@@ -10957,7 +10957,12 @@ function buildShards(account, host, opts = {}) {
     }
     else if (opts.ips && opts.ips.length > 1) pool = opts.ips.slice(0, 8);   // v2.5 spread — revived
     else if (opts.ip) pool = [opts.ip];              // explicit ?ip= param
-    else forceHost = true;                           // v1.1.0: the worker domain is THE default
+    // ═══ P117 فاز ۶ «روش نوا» (mujcftsv+mujghzzl): پیش‌فرض = استخر anycast ═══
+    // ریشهٔ قطعی‌های چنددقیقه‌ای تلگرام و مرگ استریم جمنای: دامنهٔ workers.dev در ایران
+    // DNS-بلاک/SNI-فیلتر است. نوا (تنها پنل پایدار کاربر) به IP خام anycast وصل می‌شود و
+    // SNI/Host همان دامنهٔ ورکر می‌ماند — حالا پیش‌فرض فلش هم همین است (استخر ۶۴IP سازگار با ISPهای ایران).
+    else if (Array.isArray(FX.BOOT.defaultIps) && FX.BOOT.defaultIps.length) pool = FX.BOOT.defaultIps.slice(0, 12);   // روش نوا — ۱۲ IP چرخشی
+    else forceHost = true;                           // آخرین fallback: استخر هم نبود
     // v2.7.1 «طوفان» gemini boost (kept): Gemini-friendly CF ranges first for
     // location users — YouTube/Google lands on a Google-adjacent colo
     if (locs.length && opts.geminiBoost !== false && pool.length > 1) {
@@ -11685,7 +11690,7 @@ function buildShards(account, host, opts = {}) {
     } catch (e) {}
     // v2.6.2 «شهاب»: global addressing mode (auto | worker | pool) — set from
     // the radar page's «آدرس‌دهی کانفیگ‌ها» card
-    try { opts.addrmode = (await gc(env, "addrmode")) || "worker"; } catch (e) {}
+    try { opts.addrmode = (await gc(env, "addrmode")) || "auto"; } catch (e) {}   // P117 «تندر۳»: هماهنگ با پیش‌فرض جدید
     try { opts.userIpMode = account.ip_mode || (await gc(env, "ip_mode")) || "rotate"; } catch (e) {}   // P56-E: حالت آی‌پی هر کاربر
     try { opts.panelName = (await gc(env, "panel_name")) || ""; } catch (e) {}   // P68 فاز ۷: نام پنل در اسم کانفیگ‌ها
     // v2.7.1 «طوفان»: Gemini boost + 443-first for LOCATION users (default ON,
@@ -11801,8 +11806,8 @@ function buildShards(account, host, opts = {}) {
   // used by the panel API "individual configs" list
   async function linksFor(env, account, host, opts = {}) {
     const [tpath, ssOk] = await Promise.all([getTpath(env), FX.proto.probeSS()]);
-    let addrmode = "worker";
-    try { addrmode = (await gc(env, "addrmode")) || "worker"; } catch (e) {}
+    let addrmode = "auto";
+    try { addrmode = (await gc(env, "addrmode")) || "auto"; } catch (e) {}   // P117 «تندر۳»
     let userIpMode = "rotate";
     try { userIpMode = account.ip_mode || (await gc(env, "ip_mode")) || "rotate"; } catch (e) {}   // P56-E
     let geminiBoost = true, loc443 = true;
@@ -13173,7 +13178,7 @@ async function sfApi(request, env) {
     let history = [];
     try { history = JSON.parse((await coreGet(env, "radar_history")) || "[]") || []; } catch (e) {}
     // v2.6.2 «شهاب»: global addressing mode (auto | worker | pool)
-    const addrmode = (await coreGet(env, "addrmode")) || "worker";
+    const addrmode = (await coreGet(env, "addrmode")) || "auto";   // P117 «تندر۳»
     // v2.7.1 «طوفان»: fold the two TOOFAN switches into the radar payload (one roundtrip)
     // v2.9.0 «تندر»: …plus the adblock switch
     // v2.10 «هسته فلش»: …plus the exit-IP mode (fixed | rotate)
