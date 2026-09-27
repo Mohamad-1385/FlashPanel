@@ -13,7 +13,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "3.21.0",   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "3.22.0",   // P119 «سپر وایرگارد»: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -12105,6 +12105,294 @@ a{color:var(--gold);text-decoration:none;border:1px solid #33363c;border-radius:
 
 /* ═════════ 07-api.js ═════════ */
 // 07-api — admin REST API (session cookie or X-Bolt-Key bot auth)
+// ═══ P119 «سپر وایرگارد» v3.22.0 — WARP/WireGuard/AmneziaWG روی ورکر ═══
+// تحقیق جهانی گیت‌هاب: wgcf ★8.7K (پروتکل) + ژنراتور سرو‌رلس ★1K (ثبت‌نام بدون وابستگی)
+// + WARP-Clash-API ★8.8K (فرمتها) + امزینگ رسمی ★15.2K (فرمت vpn://)
+// X25519 = پورت دقیق tweetnacl (راستی‌آزمایی‌شده با Node crypto — ۶/۶)
+FX.warp = (() => {
+  const X = (() => {
+    function gf(init) { const r = new Float64Array(16); if (init) for (let i = 0; i < init.length; i++) r[i] = init[i]; return r; }
+    const _121665 = gf([0xdb41, 1]);
+    const _9 = new Uint8Array(32); _9[0] = 9;
+    function car25519(o) { let c = 1; for (let i = 0; i < 16; i++) { const v = o[i] + c + 65535; c = Math.floor(v / 65536); o[i] = v - c * 65536; } o[0] += c - 1 + 37 * (c - 1); }
+    function sel25519(p, q, b) { const c = ~(b - 1); for (let i = 0; i < 16; i++) { const t = c & (p[i] ^ q[i]); p[i] ^= t; q[i] ^= t; } }
+    function pack25519(o, n) { const m = gf(), t = gf(); for (let i = 0; i < 16; i++) t[i] = n[i]; car25519(t); car25519(t); car25519(t); for (let j = 0; j < 2; j++) { m[0] = t[0] - 0xffed; for (let i = 1; i < 15; i++) { m[i] = t[i] - 0xffff - ((m[i - 1] >> 16) & 1); m[i - 1] &= 0xffff; } m[15] = t[15] - 0x7fff - ((m[14] >> 16) & 1); const b = (m[15] >> 16) & 1; m[14] &= 0xffff; sel25519(t, m, 1 - b); } for (let i = 0; i < 16; i++) { o[2 * i] = t[i] & 0xff; o[2 * i + 1] = t[i] >> 8; } }
+    function unpack25519(o, n) { for (let i = 0; i < 16; i++) o[i] = n[2 * i] + (n[2 * i + 1] << 8); o[15] &= 0x7fff; }
+    function A(o, a, b) { for (let i = 0; i < 16; i++) o[i] = a[i] + b[i]; }
+    function Z(o, a, b) { for (let i = 0; i < 16; i++) o[i] = a[i] - b[i]; }
+    function M(o, a, b) { const t = new Float64Array(31); for (let i = 0; i < 16; i++) for (let j = 0; j < 16; j++) t[i + j] += a[i] * b[j]; for (let i = 0; i < 15; i++) t[i] += 38 * t[i + 16]; for (let i = 0; i < 16; i++) o[i] = t[i]; car25519(o); car25519(o); }
+    function S(o, a) { M(o, a, a); }
+    function inv25519(o, i) { const c = gf(); for (let a = 0; a < 16; a++) c[a] = i[a]; for (let a = 253; a >= 0; a--) { S(c, c); if (a !== 2 && a !== 4) M(c, c, i); } for (let a = 0; a < 16; a++) o[a] = c[a]; }
+    function sm(q, n, p) {
+      const z = new Uint8Array(32), x = new Float64Array(80); let r, i;
+      const a = gf(), b = gf(), c = gf(), d = gf(), e = gf(), f = gf();
+      for (i = 0; i < 31; i++) z[i] = n[i];
+      z[31] = (n[31] & 127) | 64; z[0] &= 248;
+      unpack25519(x, p);
+      for (i = 0; i < 16; i++) { b[i] = x[i]; d[i] = a[i] = c[i] = 0; }
+      a[0] = d[0] = 1;
+      for (i = 254; i >= 0; --i) {
+        r = (z[i >>> 3] >>> (i & 7)) & 1;
+        sel25519(a, b, r); sel25519(c, d, r);
+        A(e, a, c); Z(a, a, c); A(c, b, d); Z(b, b, d);
+        S(d, e); S(f, a);
+        M(a, c, a); M(c, b, e);
+        A(e, a, c); Z(a, a, c);
+        S(b, a); Z(c, d, f);
+        M(a, c, _121665); A(a, a, d);
+        M(c, c, a); M(a, d, f);
+        M(d, b, x); S(b, e);
+        sel25519(a, b, r); sel25519(c, d, r);
+      }
+      for (i = 0; i < 16; i++) { x[i + 16] = a[i]; x[i + 32] = c[i]; x[i + 48] = b[i]; x[i + 64] = d[i]; }
+      const x32 = x.subarray(32), x16 = x.subarray(16);
+      inv25519(x32, x32); M(x16, x16, x32); pack25519(q, x16); return 0;
+    }
+    function b64(u8) { let s = ""; for (let i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]); return btoa(s); }
+    function keyPair() {
+      const seed = new Uint8Array(32);
+      crypto.getRandomValues(seed);
+      const pub = new Uint8Array(32);
+      sm(pub, seed, _9);
+      return { privateKey: b64(seed), publicKey: b64(pub) };
+    }
+    return { keyPair, b64 };
+  })();
+
+  const CF_BASE = "https://api.cloudflareclient.com/v0i1909051800";
+  const CF_HEADERS = { "User-Agent": "okhttp/3.12.1", "Content-Type": "application/json" };
+  const WARP_PUB = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=";
+  const DNS = "1.1.1.1, 1.0.0.1";
+  const EP_HOSTS = ["engage.cloudflareclient.com", "162.159.192", "162.159.193", "162.159.195", "162.159.198", "188.114.96", "188.114.97", "188.114.98"];
+  const EP_PORTS = [2408, 500, 854, 859, 864, 878, 880, 890, 894, 903, 908, 928, 934, 939, 942, 943, 945, 946, 955, 968, 987, 988, 1002, 1010, 1014, 1018, 1070, 1074, 1180, 1387, 1701, 1843, 2371, 2506, 3138, 3476, 3581, 3854, 4177, 4198, 4233, 4500, 5279, 5956, 7103, 7152, 7156, 7281, 7559, 8319, 8742, 8854, 8886];
+  const rand = (a) => a[Math.floor(Math.random() * a.length)];
+  function randomEndpoint() {
+    const base = rand(EP_HOSTS);
+    const host = /^\d/.test(base) ? base + "." + Math.floor(Math.random() * 256) : base;
+    return host + ":" + rand(EP_PORTS);
+  }
+  function b64url(s) { return X.b64(new Uint8Array([...s].map((c) => c.charCodeAt(0)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+  function reservedBytes(r) {
+    if (!r) return [0, 0, 0];
+    try { const s = atob(r.replace(/-/g, "+").replace(/_/g, "/")); return [s.charCodeAt(0) || 0, s.charCodeAt(1) || 0, s.charCodeAt(2) || 0]; } catch (e) { return [0, 0, 0]; }
+  }
+
+  async function register() {
+    const keys = X.keyPair();
+    const r1 = await fetch(CF_BASE + "/reg", {
+      method: "POST", headers: CF_HEADERS,
+      body: JSON.stringify({ install_id: "", tos: new Date().toISOString(), key: keys.publicKey, fcm_token: "", type: "ios", locale: "en_US" }),
+    });
+    if (!r1.ok) throw new Error("WARP register: HTTP " + r1.status);
+    const d1 = await r1.json();
+    const id = d1.result && d1.result.id, token = d1.result && d1.result.token;
+    if (!id || !token) throw new Error("WARP register: پاسخ ناقص");
+    const r2 = await fetch(CF_BASE + "/reg/" + id, {
+      method: "PATCH",
+      headers: Object.assign({}, CF_HEADERS, { Authorization: "Bearer " + token }),
+      body: JSON.stringify({ warp_enabled: true }),
+    });
+    if (!r2.ok) throw new Error("WARP enable: HTTP " + r2.status);
+    const d2 = await r2.json();
+    const res = d2.result || d2;
+    const iface = res.config && res.config.interface, peers = (res.config && res.config.peers) || [];
+    if (!iface || !iface.addresses || !iface.addresses.v4) throw new Error("WARP enable: کانفیگ ناقص");
+    return { keys, id, token, v4: iface.addresses.v4, v6: iface.addresses.v6 || "", serverPub: (peers[0] && peers[0].public_key) || WARP_PUB, reserved: res.config.client_id || "" };
+  }
+
+  function build(w, opts) {
+    const o = opts || {};
+    const endpoint = o.endpoint || randomEndpoint();
+    const parts = endpoint.split(":"); const srv = parts[0]; const port = parts[1] || "2408";
+    const dns = o.dns || DNS;
+    const addr6 = w.v6 ? (w.v4 + "/32, " + w.v6 + "/128") : (w.v4 + "/32");
+    const wg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
+    const awg = ["[Interface]", "PrivateKey = " + w.keys.privateKey, "Address = " + addr6, "DNS = " + dns, "MTU = 1280", "S1 = 0", "S2 = 0", "Jc = 4", "Jmin = 40", "Jmax = 70", "H1 = 1", "H2 = 2", "H3 = 3", "H4 = 4", "", "[Peer]", "PublicKey = " + w.serverPub, "AllowedIPs = 0.0.0.0/0, ::/0", "Endpoint = " + endpoint, "PersistentKeepalive = 25"].join("\n");
+    const lastConfig = JSON.stringify({
+      hostName: srv, port: parseInt(port) || 2408,
+      client_ip: w.v4, client_priv_key: w.keys.privateKey, client_pub_key: w.keys.publicKey,
+      server_pub_key: w.serverPub, allowed_ips: ["0.0.0.0/0", "::/0"],
+      persistent_keep_alive: "25", mtu: "1280",
+      Jc: "4", Jmin: "40", Jmax: "70", S1: "0", S2: "0", H1: "1", H2: "2", H3: "3", H4: "4",
+    });
+    const amneziaJson = JSON.stringify({
+      containers: [{ server_ip: srv, default_container: "amnezia-wireguard", containers: [{ server_ip: srv, name: "amnezia-wireguard", proto: "amnezia-wireguard", port: String(parseInt(port) || 2408), transport_proto: "udp", last_config: lastConfig }] }],
+      defaultContainer: "amnezia-wireguard", description: "WARP — سوپر فلش", name: "WARP فلش",
+    });
+    const vpnUrl = "vpn://" + b64url(amneziaJson);
+    const rb = reservedBytes(w.reserved);
+    const singbox = JSON.stringify({
+      type: "wireguard", tag: "warp-out", mtu: 1280,
+      address: w.v6 ? [w.v4 + "/32", w.v6 + "/128"] : [w.v4 + "/32"],
+      private_key: w.keys.privateKey,
+      peers: [{ address: srv, port: parseInt(port) || 2408, public_key: w.serverPub, allowed_ips: ["0.0.0.0/0", "::/0"], persistent_keepalive_interval: 25, reserved: rb.join(", ") }],
+      detour: "direct",
+    }, null, 2);
+    const clash = ["proxies:", '- name: "WARP-AWG"', "  type: wireguard", "  private-key: " + w.keys.privateKey, "  server: " + srv, "  port: " + port, "  ip: " + w.v4, "  ipv6: " + w.v6, "  public-key: " + w.serverPub, "  allowed-ips: ['0.0.0.0/0', '::/0']", "  reserved: [" + rb.join(", ") + "]", "  udp: true", "  mtu: 1280", "  remote-dns-resolve: true", "  dns: [" + dns + "]", "  amnezia-wg-option:", "   jc: 4", "   jmin: 40", "   jmax: 70", "   s1: 0", "   s2: 0", "   h1: 1", "   h2: 2", "   h3: 3", "   h4: 4"].join("\n");
+    return { wg, awg, vpnUrl, singbox, clash, endpoint, meta: { v4: w.v4, v6: w.v6, serverPub: w.serverPub, reserved: rb } };
+  }
+
+  // ─── لیمیت‌کننده: هر هویت ۶۰ث + سقف جهانی ۱۲۰ ثبت‌نام/ساعت ───
+  const perKey = new Map(); const glob = { hour: (new Date()).getHours(), n: 0 };
+  function allowed(key) {
+    const now = Date.now();
+    const last = perKey.get(key) || 0;
+    if (now - last < 60000) return { ok: false, wait: Math.ceil((60000 - (now - last)) / 1000) };
+    const h = (new Date()).getHours();
+    if (h !== glob.hour) { glob.hour = h; glob.n = 0; }
+    if (glob.n >= 120) return { ok: false, wait: -1 };
+    perKey.set(key, now);
+    if (perKey.size > 4000) perKey.clear();
+    glob.n++;
+    return { ok: true };
+  }
+
+  async function apiHandle(request, env) {
+    // هویت: نشست اگر بود وگرنه IP
+    let key = "ip:" + (request.headers.get("cf-connecting-ip") || "0");
+    try {
+      const sid = request.headers.get("cookie") || "";
+      const m = sid.match(/fl_sid=([^;]+)/);
+      if (m) key = "sid:" + m[1].slice(0, 24);
+    } catch (e) {}
+    const lim = allowed(key);
+    if (!lim.ok) {
+      return new Response(JSON.stringify({ ok: false, error: lim.wait < 0 ? "hour-limit" : "cooldown", wait: lim.wait }), { status: 429, headers: { "content-type": "application/json" } });
+    }
+    const w = await register();
+    const fmts = build(w);
+    let qrWg = "", qrAwg = "";
+    try { qrWg = FX.qr.png(fmts.wg, { px: 8, border: 3, level: "L" }); } catch (e) {}
+    try { qrAwg = FX.qr.png(fmts.awg, { px: 6, border: 3, level: "L" }); } catch (e) {}
+    return new Response(JSON.stringify({
+      ok: true, endpoint: fmts.endpoint,
+      wg: fmts.wg, awg: fmts.awg, vpnUrl: fmts.vpnUrl, singbox: fmts.singbox, clash: fmts.clash,
+      qrWgB64: qrWg ? X.b64(new Uint8Array(qrWg)) : "", qrAwgB64: qrAwg ? X.b64(new Uint8Array(qrAwg)) : "",
+      meta: fmts.meta, at: Date.now(),
+    }), { headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  }
+
+
+  // ─── صفحهٔ /warp — RTL فارسی، هم‌سبک پنل، بدون وابستگی خارجی ───
+  function page(env) {
+    let brand = "فلش";
+    try { brand = (env && env.PANEL_NAME) || "فلش"; } catch (e) {}
+    const html = `<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سپر وایرگارد — ` + brand + `</title>
+<style>
+:root{--gold:#f5a623;--bg:#0d1117;--card:#161b22;--card2:#1c2128;--bd:#30363d;--txt:#e6edf3;--mut:#8b949e;--ok:#2fd575;--red:#f85149}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Vazirmatn,Tahoma,'Noto Sans SC',sans-serif;background:var(--bg);color:var(--txt);line-height:1.9;padding:18px;max-width:860px;margin:0 auto}
+.hero{text-align:center;padding:34px 16px;background:linear-gradient(135deg,#1a1005,#161b22 60%);border:1px solid var(--gold);border-radius:18px;margin-bottom:20px}
+.hero h1{color:var(--gold);font-size:1.6em;margin-bottom:6px}
+.hero p{color:var(--mut);font-size:.92em}
+.badge{display:inline-block;margin-top:10px;background:rgba(245,166,35,.14);border:1px solid var(--gold);color:var(--gold);border-radius:99px;padding:3px 16px;font-size:.82em}
+.gen{display:block;width:100%;margin:18px 0;padding:16px;font-size:1.1em;font-weight:700;color:#1a1005;background:linear-gradient(135deg,#f5a623,#ffca55);border:none;border-radius:14px;cursor:pointer;font-family:inherit}
+.gen:disabled{opacity:.55;cursor:wait}
+.note{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;color:var(--mut);font-size:.88em;margin-bottom:18px}
+.note b{color:var(--txt)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1;min-width:96px;padding:10px 8px;text-align:center;background:var(--card);border:1px solid var(--bd);border-radius:12px;cursor:pointer;font-size:.86em;color:var(--mut)}
+.tab.on{border-color:var(--gold);color:var(--gold);background:rgba(245,166,35,.08)}
+.qrbox{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-bottom:14px}
+.qrbox img{width:230px;height:230px;border-radius:10px;background:#fff;padding:8px}
+.acts{display:flex;flex-direction:column;gap:10px;flex:1;min-width:220px}
+.act{display:flex;gap:8px;flex-wrap:wrap}
+.btn{padding:10px 16px;border-radius:11px;border:1px solid var(--bd);background:var(--card2);color:var(--txt);cursor:pointer;font-size:.88em;font-family:inherit;text-decoration:none;display:inline-block}
+.btn:hover{border-color:var(--gold)}
+.btn.pri{background:var(--gold);color:#1a1005;font-weight:700;border-color:var(--gold)}
+pre{background:#0a0d12;border:1px solid var(--bd);border-radius:12px;padding:14px;overflow:auto;direction:ltr;text-align:left;font-size:.78em;white-space:pre-wrap;word-break:break-all;max-height:340px;margin-bottom:14px}
+.meta{color:var(--mut);font-size:.84em;margin-bottom:14px}
+.meta b{color:var(--ok)}
+.err{background:rgba(248,81,73,.1);border:1px solid var(--red);color:var(--red);border-radius:12px;padding:12px;margin-bottom:14px;display:none}
+.hide{display:none}
+footer{text-align:center;color:var(--mut);font-size:.8em;padding:16px 0 6px}
+</style></head><body>
+<div class="hero">
+<h1>🛡 سپر وایرگارد</h1>
+<p>کانفیگ رایگان WARP کلادفلر — وایرگارد، امزینگ‌WG ضد فیلتر، لینک مستقیم اپ امزینگ، sing-box و کلش</p>
+<span class="badge">رایگان · بدون ثبت‌نام · آمادهٔ استفاده</span>
+</div>
+<div class="err" id="err"></div>
+<button class="gen" id="gen" onclick="gen()">⚡ ساخت کانفیگ WARP (یک کلیک)</button>
+<div class="note" id="intro">
+<b>راهنمای سریع:</b> دکمهٔ بالا را بزن — یک حساب WARP واقعی برای شما ساخته می‌شود (نه اشتراکی).
+برای <b>آیفون/اندروید/ویندوز</b> کانفیگ «وایرگارد» را با QR بگیرید (اپ WireGuard).
+برای <b>عبور مطمئن‌تر از فیلترینگ</b> کانفیگ «امزینگ‌WG» را در اپ AmneziaVPN بگیرید — دستکارسنجی آمار جعلی را دور می‌زند (Jc=4).
+لینک <b>vpn://</b> را با اپ امزینگ باز کنید تا یک‌ضرب اضافه شود. هیچ چیزی لازم نیست وارد کنید.
+</div>
+<div id="out" class="hide">
+<div class="tabs">
+<div class="tab on" data-f="wg" onclick="pick(this)">وایرگارد</div>
+<div class="tab" data-f="awg" onclick="pick(this)">امزینگ‌WG ⭐</div>
+<div class="tab" data-f="vpn" onclick="pick(this)">لینک امزینگ</div>
+<div class="tab" data-f="singbox" onclick="pick(this)">sing-box</div>
+<div class="tab" data-f="clash" onclick="pick(this)">کلش</div>
+</div>
+<div class="qrbox" id="qrwrap">
+<img id="qr" alt="QR">
+<div class="acts">
+<a class="btn pri" id="dl" download="warp-flash.conf">⬇ دانلود فایل کانفیگ</a>
+<button class="btn" onclick="cp()">📋 کپی</button>
+<a class="btn hide" id="vpnopen" href="#">🚀 باز کردن در اپ امزینگ</a>
+<button class="btn" onclick="spin()">🎲 اندپوینت تصادفی</button>
+<a class="btn" href="/warp" onclick="location.reload();return false">🔄 کانفیگ تازه</a>
+</div>
+</div>
+<div class="meta" id="meta"></div>
+<pre id="txt"></pre>
+</div>
+<footer>🛡 سپر وایرگارد · ` + brand + ` · v3.22.0 — پروتکل wgcf + فرمت رسمی امزینگ · رایگان برای همیشه</footer>
+<script>
+var D=null,cur="wg";
+function fa(n){return String(n).replace(/\\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]})}
+async function gen(){
+var b=document.getElementById("gen");b.disabled=true;b.textContent="⏳ در حال ساخت حساب WARP…";
+try{
+var r=await fetch("/api/warp",{method:"POST"});
+var j=await r.json();
+if(!j.ok){throw new Error(j.error==="cooldown"?("⏱ صبر کن "+fa(j.wait)+" ثانیه و دوباره بزن"):(j.error==="hour-limit"?"سقف ساعتی ساخت حساب پر شده — کمی بعد امتحان کن":"خطا: "+j.error))}
+D=j;document.getElementById("out").classList.remove("hide");
+document.getElementById("intro").classList.add("hide");
+pick(document.querySelector(".tab.on"));
+var m=document.getElementById("meta");
+m.innerHTML="✅ ساخته شد · IP داخلی: <b>"+j.meta.v4+"</b> · اندپوینت: <b>"+j.endpoint+"</b> · سرور: <b>"+(j.meta.serverPub.slice(0,12))+"…</b>";
+}catch(e){var el=document.getElementById("err");el.style.display="block";el.textContent="⚠ "+e.message}
+b.disabled=false;b.textContent="⚡ ساخت کانفیگ WARP (یک کلیک)";
+}
+function pick(t){
+cur=t.getAttribute("data-f");
+var all=document.querySelectorAll(".tab");for(var i=0;i<all.length;i++)all[i].classList.remove("on");
+t.classList.add("on");
+var qr=document.getElementById("qr"),vp=document.getElementById("vpnopen"),dl=document.getElementById("dl");
+if(cur==="vpn"){qr.parentElement.style.display="none";vp.classList.remove("hide");vp.href=D.vpnUrl;vp.textContent="🚀 باز کردن در اپ امزینگ ("+fa(D.vpnUrl.length)+" کاراکتر)";dl.style.display="none"}
+else{qr.parentElement.style.display="flex";vp.classList.add("hide");dl.style.display="inline-block";
+qr.src=cur==="awg"?("data:image/png;base64,"+D.qrAwgB64):("data:image/png;base64,"+D.qrWgB64);
+dl.setAttribute("download",cur==="awg"?"warp-amnezia.conf":(cur==="singbox"?"warp-singbox.json":(cur==="clash"?"warp-clash.yaml":"warp-wireguard.conf")))}
+document.getElementById("txt").textContent=cur==="wg"?D.wg:(cur==="awg"?D.awg:(cur==="vpn"?D.vpnUrl:(cur==="singbox"?D.singbox:D.clash)));
+}
+function cp(){
+var t=document.getElementById("txt").textContent;
+if(navigator.clipboard)navigator.clipboard.writeText(t);
+else{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");document.body.removeChild(a)}
+}
+function spin(){
+if(!D)return;
+var h=["engage.cloudflareclient.com","162.159.192."+Math.floor(Math.random()*256),"162.159.193."+Math.floor(Math.random()*256),"162.159.195."+Math.floor(Math.random()*256),"188.114.96."+Math.floor(Math.random()*256)];
+var p=[2408,500,854,859,864,878,880,890,894,928,934,942,943,945,955,968,987,1002,1010,1014,1070,1074,1701,1843,2371,2506,3138,3476,3581,3854,4177,4198,4233,4500,5279,7103,7152,7156,8319,8742,8854,8886];
+D.wg=D.wg.replace(/Endpoint = .*/, "Endpoint = "+h[Math.floor(Math.random()*h.length)]+":"+p[Math.floor(Math.random()*p.length)]);
+D.awg=D.awg.replace(/Endpoint = .*/, D.wg.match(/Endpoint = .*/)[0]);
+D.clash=D.clash.replace(/  server: .*\n  port: .*/, D.wg.match(/Endpoint = (.*)/)[1].replace(/^(.+):(\\d+)$/,"  server: $1\\n  port: $2"));
+pick(document.querySelector(".tab.on"));
+var m=document.getElementById("meta");m.innerHTML+=" 🎲";
+}
+</script></body></html>`;
+    return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
+  }
+
+  return { register, build, apiHandle, randomEndpoint, page, EP_HOSTS, EP_PORTS };
+})();
 FX.api = (() => {
   const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...headers } });
   const bad = (error, status = 400) => json({ ok: false, error }, status);
@@ -15072,6 +15360,10 @@ async function shimUserReset(request, env, uid) {
     // carries; absent keys keep their defaults)
     if (path === "/api/settings" && method === "GET") return settingsBridge(env);
     if (path === "/api/settings" && method === "POST") return settingsBridge(request, env);
+    // ═══ P119 «سپر وایرگارد»: مولد کانفیگ WARP/WireGuard/AmneziaWG ═══
+    if (path === "/api/warp" && (method === "POST" || method === "GET")) return FX.warp.apiHandle(request, env);
+
+
     if (path === "/api/tunnel/set" && method === "POST") return tunnelPost(request, env);
     if (path === "/api/tunnel/auto-ob" && method === "POST") return tunnelAutoOb(request, env);   // P78 فاز ۵
     if (path === "/api/stats" && method === "GET") return stats(env);
@@ -15859,6 +16151,14 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       // a "Disallow: /" on a public gallery would be an odd fingerprint)
       if (path === "/robots.txt") return new Response("User-agent: *\nAllow: /\n", { headers: { "content-type": "text/plain; charset=utf-8" } });
 
+      // P117 فاز ۸ + P118 فاز ۷ فیکس: PWA + صفحهٔ وضعیت عمومی — باید قبل از gate
+      // باشند! (بازدیدکنندهٔ عمومی بدون کوکی gate است — /status و فایل‌های PWA
+      // عمومی‌اند؛ قبلاً بعد از gate بودند = 404 برای همهٔ بیرونی‌ها)
+      if (path === "/manifest.webmanifest") return FX.ui.pwaManifest(env);
+      if (path === "/sw.js") return FX.ui.pwaSw();
+      if (path === "/pwa-icon-192.png" || path === "/pwa-icon-512.png") return FX.ui.pwaIcon(path);
+      if (path === "/status") return FX.ui.publicStatus(env);
+
       // ── gate check: no cookie → decoy site (root) / site 404 (deep links);
       // API with bot key passes ──
       const hasBotKey = !!request.headers.get(FX.BOOT.botKeyHeader);
@@ -15867,13 +16167,12 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       }
 
       if (path.startsWith("/api/")) return FX.api.handle(request, env, ctx);
-        // P117 فاز ۸ (پیشنهاد ۴+۸): PWA + صفحهٔ وضعیت عمومی
-        if (path === "/manifest.webmanifest") return FX.ui.pwaManifest(env);
-        if (path === "/sw.js") return FX.ui.pwaSw();
-        if (path === "/pwa-icon-192.png" || path === "/pwa-icon-512.png") return FX.ui.pwaIcon(path);
-        if (path === "/status") return FX.ui.publicStatus(env);
 
       // panel UI (gated)
+      // ═══ P119: صفحهٔ WARP — بعد از gate (کاربران پنل) ═══
+      if (path === "/warp") return FX.warp.page(env);
+
+
       if (path === "/" || path === "/index.html") {
         return new Response(await FX.ui.shell(env, url), { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "private, max-age=90" } });   // P70 فاز ۱۲: لود تکراری از کش — no-store بود و هر بار ۳۰۰KB دانلود می‌شد
       }
