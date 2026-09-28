@@ -1,3 +1,4 @@
+/* build 7222a24f1b3704e4294c900f · 2026-09-28T06:26:11.777Z P137 سوپر مگا */
 /* P110-C «موشک‌خانه» (zq-muiet770+muietzwu+muiesjr1): اسکنر اندپوینت دو-فازی (۲۹ هاست × ۲۲ پورت) + ۱۵۵ اندپوینت رسمی سرور + خروجی غیر ایران · /* build p81f4-2026-09-25T20:12 · v3.10.2-p81c فقط آدرس ورکر واقعی · based on v3.10.1-p81b */
 /* FLASH v2 Carbon — generated 2026-09-22T03:17:37.055Z */
 import { connect } from "cloudflare:sockets";
@@ -16,7 +17,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "5.6.1",   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "5.8.0"   /*P137:5.8.0 «سوپر مگا»: ضدتبلیغ ۱۲۷ دامنه + ۱۳ سرویس AI تازه (Grok/DeepSeek/Mistral/Qwen/NotebookLM/LMArena/Poe/You/Character/HuggingFace) با دسته‌بندی DNS-راستی‌آزمایی + استخر IP بهینه ۱۰تایی*/   /*P137:5.7.0 «تندر خودکار»: v4-first (سنتری‌باکس+کلش) + راهنمای سوپر سرعت خودکار — بدون هیچ فعال‌سازی دستی*/   /*P136:5.6.2 «روش زئوس»: جمنای از تونل عادی — حذف مسیر WARP مردهٔ کلاینت + پیش‌فرض سنتری‌باکس = تونل*/,   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -190,6 +191,10 @@ FX.BOOT = {
     "openai.com", "chatgpt.com", "api.openai.com", "cdn.auth0.com",
     "claude.ai", "anthropic.com",
     "perplexity.ai", "midjourney.com",
+    // P137 «سوپر مگا»: ۱۳ سرویس AI تازه (کلاس‌بندی با DNS زنده)
+    "x.ai", "grok.com", "chat.deepseek.com", "api.deepseek.com",
+    "chat.mistral.ai", "chat.qwen.ai", "notebooklm.google.com", "notebooklm.google",
+    "lmarena.ai", "poe.com", "you.com", "huggingface.co", "character.ai",
   ],
   aiDirectDomains: [           // exit class 1: worker egress (non-CF hosts)
     "gemini.google.com", "bard.google.com", "aistudio.google.com",
@@ -202,10 +207,15 @@ FX.BOOT = {
     "google.com", "googleapis.com", "googleusercontent.com", "gstatic.com",
     "ggpht.com", "withgoogle.com",
     "microsoft.com", "live.com", "bing.com",
+    // P137 «سوپر مگا»: DeepSeek/Qwen/NotebookLM/HuggingFace — DNS-راستی‌آزمایی غیر-CF
+    "chat.deepseek.com", "api.deepseek.com", "chat.qwen.ai",
+    "notebooklm.google.com", "notebooklm.google", "huggingface.co",
   ],
   aiCfDomains: [               // exit class 2: relay (CF-hosted AI sites)
     "openai.com", "chatgpt.com", "api.openai.com", "cdn.auth0.com",
     "claude.ai", "anthropic.com", "perplexity.ai", "midjourney.com",
+    // P137 «سوپر مگا»: Grok/Mistral/LMArena/Poe/You/Character — DNS-راستی‌آزمایی CF-میزبان
+    "x.ai", "grok.com", "chat.mistral.ai", "lmarena.ai", "poe.com", "you.com", "character.ai",
   ],
   // relays VERIFIED (real-browser TLS roundtrip through the live tunnel) to
   // carry CF-hosted AI sites; the election checks TCP health live and picks
@@ -248,6 +258,8 @@ FX.BOOT = {
   aiOptimizedIps: [
     "104.16.106.177", "104.17.92.44", "104.18.7.133",
     "104.19.194.9", "172.67.183.5", "104.16.132.201",
+    // P137 «سوپر مگا»: +۴ کاندیدای anycast رنج‌های گوگل-پسند
+    "104.19.255.51", "104.27.39.113", "104.16.85.9", "104.17.10.88",
   ],
   dnsTcpTarget: { host: "8.8.4.4", port: 53 },   // v2.6.1: UDP→TCP DNS bridge target (live-proven)
   // v2.6.2 «شهاب»: bridge fallback chain — if 8.8.4.4 is slow/refused, the
@@ -337,6 +349,18 @@ FX.BOOT = {
     "indexexchange.com", "adtech.com", "anetwork.ir", "adro.co",
     // Iranian ad networks
     "yektanet.com", "sabavision.com",
+    // P137 «سوپر مگا»: موج تازه — ۴۵ دامنهٔ تبلیغ/ردیاب/تلمتری خالص (بدون لاگین/پرداخت/CDN)
+    "clarity.ms", "amplitude.com", "mixpanel.com", "segment.io", "segment.com",
+    "hotjar.com", "mouseflow.com", "fullstory.com", "logrocket.io", "nr-data.net",
+    "ads.linkedin.com", "analytics.linkedin.com", "ads.pinterest.com", "ct.pinterest.com",
+    "ads.reddit.com", "ads.facebook.com",
+    "rtbhouse.com", "yieldlab.net", "triplelift.com", "gumgum.com", "lockerdome.com",
+    "sonobi.com", "richaudience.com", "e-planning.net", "smartclip.net", "unrulymedia.com",
+    "appsflyer.com", "kochava.com", "adjust.com", "singular.net",
+    "freewheel.com", "integralads.com",
+    "coinhive.com", "popcash.net", "propellerads.com", "adcash.com", "hilltopads.net", "exoclick.com",
+    "ads.microsoft.com", "an.yandex.ru", "adfox.ru", "adriver.ru",
+    "adeventtracker.spotify.com", "aan.amazon.com", "ads.amazon.com",
   ],
   // ═══ v1.6.0 «همه‌کاره» — Iranian direct routing + gaming lane ═══
   // سرویس‌های ایرانی پرکاربرد: با تونل وصل باشی هم مستقیم باز می‌شوند
@@ -393,7 +417,7 @@ FX.BOOT = {
   // an info entry). The OLD tip told users to enable Mux=8 — the exact
   // opposite of the no-mux speed contract; users who followed it got
   // head-of-line blocking (slow Telegram, buffering YouTube).
-  subSpeedTip: "⚡ سوپر فلش: Mux خاموش بمونه · پشت هر کانفیگ ۱۰٬۰۰۰ موتور سوپر هست · تبلیغات خودکار مسدود می‌شن",
+  subSpeedTip: "⚡ سوپر سرعت خودکار: کانفیگ کامل (xjson) همه‌چیز روشن دارد — Mux ۸ + 0-RTT + بافر ۲MB + تبلیغ‌شکن · لینک‌ها هم ed و ضدتبلیغ خودکار دارند",
   lockLimit: 5,
   lockMs: 10 * 60 * 1000,
   sessionTtlMs: 12 * 3600 * 1000,
@@ -11751,6 +11775,7 @@ function buildShards(account, host, opts = {}) {
       const tag = `fl-${s.proto}-${s.tls ? "tls" : "80"}-${si}${s.cc ? "-" + s.cc : ""}`;   // P125: ایندکس یکتا — تگ تکراری کلاینت‌های sing-box را می‌کشت
       const common = {
         tag,
+        domain_strategy: "prefer_ipv4",   // P137 «تندر خودکار»: v4 اول — بدون مکث تلاش IPv6 (مسیر مردهٔ موبایل ایران)
         server: s.addr || (opts.ip || host), server_port: s.port,
       };
       if (s.svc) Object.assign(common, { transport: { type: "grpc", service: s.svc } });   // v2.13 «کوانتوم» gRPC
@@ -11769,6 +11794,7 @@ function buildShards(account, host, opts = {}) {
     const aiOut = firstTls ? {
       tag: "fl-ai", type: firstTls.proto === "trojan" ? "trojan" : "vless",
       ...(firstTls.proto === "trojan" ? { password: account.uuid } : { uuid: account.uuid }),
+      domain_strategy: "prefer_ipv4",   // P137: v4-first
       server: aiAddr, server_port: firstTls.port,
       transport: { type: "ws", path: firstTls.path, max_early_data: 2560, early_data_header_name: "Sec-WebSocket-Protocol", headers: { Host: host } },
       tls: { enabled: true, server_name: host, alpn: ["http/1.1"] },
@@ -11778,6 +11804,7 @@ function buildShards(account, host, opts = {}) {
     const gameOut2 = firstTls ? {
       tag: "fl-game", type: firstTls.proto === "trojan" ? "trojan" : "vless",
       ...(firstTls.proto === "trojan" ? { password: account.uuid } : { uuid: account.uuid }),
+      domain_strategy: "prefer_ipv4",   // P137: v4-first
       server: gameAddrPick(opts, firstTls.addr || (opts.ip || host)), server_port: firstTls.port,
       transport: { type: "ws", path: firstTls.path, max_early_data: 2560, early_data_header_name: "Sec-WebSocket-Protocol", headers: { Host: host } },
       tls: { enabled: true, server_name: host, alpn: ["http/1.1"] },
@@ -11794,7 +11821,7 @@ function buildShards(account, host, opts = {}) {
     // P133 فاز ۲ (zq-mukhpp1y): گروه جمنای = selector با WARP پیش‌فرض —
     // urltest همیشه تونل مستقیم را برنده می‌کرد (پینگ پایین‌تر) ولی خروجی مستقیم =
     // دیتاسنتر کلادفلر = /sorry گوگل. WARP اول؛ اگر کاربر بخواهد دستی به fl-ai سوییچ می‌کند.
-    const aiWarpGroup = (warpOut && aiOut) ? { type: "selector", tag: "fl-ai-live", outbounds: ["fl-warp", "fl-ai"], default: "fl-warp", interrupt_exist_connections: false } : null;
+    const aiWarpGroup = (warpOut && aiOut) ? { type: "selector", tag: "fl-ai-live", outbounds: ["fl-warp", "fl-ai"], default: "fl-ai", interrupt_exist_connections: false } : null;   // P136 روش زئوس: پیش‌فرض = تونل؛ WARP فقط انتخاب دستی
     return JSON.stringify({
       // ═══ P123-MEGA M10: پروفایل TUN (?tun=1) — تماس تلگرام از طریق TURN-over-TCP زنده می‌شود (تحقیق P123-R2) ═══
       ...(opts.tun ? { inbounds: [
@@ -11919,6 +11946,7 @@ function buildShards(account, host, opts = {}) {
       // v1.6.0: تنظیمات گیمینگ mihomo — تأخیر واقعی + اتصال TCP همزمان + keepalive
       "unified-delay: true",
       "tcp-concurrent: true",
+      "ipv6: false",           // P137 «تندر خودکار»: v4-first — تلاش v6 مردهٔ موبایل ایران حذف شد
       "keep-alive-interval: 15",
       "keep-alive-idle: 30",      // فاز ۹: جفتِ کامل keep-alive — اتصال‌های گرم می‌مانند (mihomo)
       // P133 فاز ۴ (zq-mukgpwb1): TUN خودکار بدون گزینش — همتراز singbox (P127)؛
@@ -12254,7 +12282,7 @@ function buildShards(account, host, opts = {}) {
           // P127 «فلاش‌پلاس»: یوتیوب/استریم روی لاین گیمینگ — شروع پخش سریع‌تر
           { type: "field", outboundTag: "game", domain: FX.BOOT.ytSuffixes.map((d) => "domain:" + d) },   // P127:ytspeed
           // P130 «جمنای زنده»: خانوادهٔ گوگل/جمنای → WARP مستقیم کلاینت (خروجی = IP مصرف‌کننده کلادفلر؛ گوگل دیگر sorry نمی‌دهد)
-          ...(warpOutX ? [{ type: "field", outboundTag: "warp", domain: FX.BOOT.aiDirectDomains.map((d) => "domain:" + d) }] : []),
+          // P136 «روش زئوس»: جمنای از همان تونل عادی — مسیر WARP مرده (UDP ایران) حذف شد؛ قانون ai پایین‌تر صادر می‌کند
           // v2.6.1: AI/Google domains → the Gemini-optimized colo first, main tunnel as fallback
           { type: "field", outboundTag: "ai", domain: FX.BOOT.aiDomains.map((d) => "domain:" + d) },
           // v2.7.0 «سیمرغ»: DNS (UDP :53) rides the tunnel's TCP-DNS bridge —
