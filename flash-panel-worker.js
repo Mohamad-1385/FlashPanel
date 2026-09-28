@@ -17,7 +17,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "5.8.0"   /*P137:5.8.0 «سوپر مگا»: ضدتبلیغ ۱۲۷ دامنه + ۱۳ سرویس AI تازه (Grok/DeepSeek/Mistral/Qwen/NotebookLM/LMArena/Poe/You/Character/HuggingFace) با دسته‌بندی DNS-راستی‌آزمایی + استخر IP بهینه ۱۰تایی*/   /*P137:5.7.0 «تندر خودکار»: v4-first (سنتری‌باکس+کلش) + راهنمای سوپر سرعت خودکار — بدون هیچ فعال‌سازی دستی*/   /*P136:5.6.2 «روش زئوس»: جمنای از تونل عادی — حذف مسیر WARP مردهٔ کلاینت + پیش‌فرض سنتری‌باکس = تونل*/,   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "6.0.0"   /*P142:6.0.0 «تایتان» (مگا ورکر ۲): ضدتبلیغ ۲۱۴ دامنه (+۹۵ خالص) + ۶۶ سرویس AI (+۳۹ با DNS زنده: Meta/Groq/Together/Fireworks/Cohere/Cursor/Windsurf/OpenRouter/Replicate/Leonardo/Ideogram/Suno/ElevenLabs/Runway…) + dohSkip ۳۰ غول تازه + ۴۱ سرویس ایرانی + ۲۶ دامنهٔ گیم + استخر anycast ۶۴→۱۴۶ IP + رزولور DoH کشف ۶→۱۱ + رزولور پشتیبان TCP ×۵ + روتاتور خودکار ۵دقیقه‌ای (IP مرده همان تیک جایگزین — بدون مرورگر) + امتیاز پایداری ضدنوسان (μ+0.5σ) + کانفیگ اول = سریع‌ترین IP اندازه‌گیری‌شده + رفرش ساب ۲ ساعت + urltest تندتر (کلش 120s/50ms · سنتری‌باکس 2m/60ms) + کرون سبک‌شده (پینگ‌سوییپ ۳۰د · موج یک‌درمیان · لاگ فقط با تغییر)*/   /*P141:5.9.0 «مقاوم»: ECH پیش‌فرض (stealth=2 — SNI مخفی؛ بلاک SNI ایران روی workers.dev بی‌اثر) + جفت کانفیگ پشتک‌زنندهٔ پورت ۸۰ بدون TLS در همهٔ ساب‌ها (vless+trojan — بدون SNI، با هر کلاینتی) + نشانگر راهنمای وضعیت اضطراری*/   /*P137:5.8.0 «سوپر مگا»: ضدتبلیغ ۱۲۷ دامنه + ۱۳ سرویس AI تازه (Grok/DeepSeek/Mistral/Qwen/NotebookLM/LMArena/Poe/You/Character/HuggingFace) با دسته‌بندی DNS-راستی‌آزمایی + استخر IP بهینه ۱۰تایی*/   /*P137:5.7.0 «تندر خودکار»: v4-first (سنتری‌باکس+کلش) + راهنمای سوپر سرعت خودکار — بدون هیچ فعال‌سازی دستی*/   /*P136:5.6.2 «روش زئوس»: جمنای از تونل عادی — حذف مسیر WARP مردهٔ کلاینت + پیش‌فرض سنتری‌باکس = تونل*/,   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -195,6 +195,15 @@ FX.BOOT = {
     "x.ai", "grok.com", "chat.deepseek.com", "api.deepseek.com",
     "chat.mistral.ai", "chat.qwen.ai", "notebooklm.google.com", "notebooklm.google",
     "lmarena.ai", "poe.com", "you.com", "huggingface.co", "character.ai",
+    // P142 «تایتان»: ۳۹ سرویس AI تازه (راستی‌آزمایی DNS زنده — همه resolve شدند)
+    "meta.ai", "llama.com", "groq.com", "lepton.ai", "together.ai",
+    "fireworks.ai", "cohere.com", "reka.ai", "inflection.ai", "pi.ai",
+    "suno.com", "elevenlabs.io", "runwayml.com", "pika.art", "lumalabs.ai",
+    "klingai.com", "hailuoai.video", "cursor.com", "cursor.sh", "windsurf.com",
+    "codeium.com", "githubcopilot.com", "openrouter.ai", "deepai.org", "replicate.com",
+    "stability.ai", "leonardo.ai", "ideogram.ai", "recraft.ai", "krea.ai",
+    "jasper.ai", "copy.ai", "writesonic.com", "quillbot.com", "gamma.app",
+    "phind.com", "monica.im", "chatpdf.com", "chatdoc.com",
   ],
   aiDirectDomains: [           // exit class 1: worker egress (non-CF hosts)
     "gemini.google.com", "bard.google.com", "aistudio.google.com",
@@ -210,12 +219,23 @@ FX.BOOT = {
     // P137 «سوپر مگا»: DeepSeek/Qwen/NotebookLM/HuggingFace — DNS-راستی‌آزمایی غیر-CF
     "chat.deepseek.com", "api.deepseek.com", "chat.qwen.ai",
     "notebooklm.google.com", "notebooklm.google", "huggingface.co",
+    // P142 «تایتان»: ۲۶ میزبان غیر-CF (راستی‌آزمایی DNS — هیچ‌کدام رنج کلادفلر نیستند)
+    "meta.ai", "llama.com", "groq.com", "together.ai", "fireworks.ai",
+    "cohere.com", "inflection.ai", "pika.art", "elevenlabs.io", "runwayml.com",
+    "klingai.com", "hailuoai.video", "cursor.com", "cursor.sh", "windsurf.com",
+    "codeium.com", "githubcopilot.com", "deepai.org", "stability.ai", "jasper.ai",
+    "copy.ai", "recraft.ai", "monica.im", "chatpdf.com", "chatdoc.com",
+    "lumalabs.ai",
   ],
   aiCfDomains: [               // exit class 2: relay (CF-hosted AI sites)
     "openai.com", "chatgpt.com", "api.openai.com", "cdn.auth0.com",
     "claude.ai", "anthropic.com", "perplexity.ai", "midjourney.com",
     // P137 «سوپر مگا»: Grok/Mistral/LMArena/Poe/You/Character — DNS-راستی‌آزمایی CF-میزبان
     "x.ai", "grok.com", "chat.mistral.ai", "lmarena.ai", "poe.com", "you.com", "character.ai",
+    // P142 «تایتان»: ۱۳ میزبان CF (راستی‌آزمایی DNS — A-record داخل رنج‌های کلادفلر)
+    "reka.ai", "krea.ai", "ideogram.ai", "pi.ai", "suno.com",
+    "writesonic.com", "quillbot.com", "leonardo.ai", "lepton.ai", "openrouter.ai",
+    "replicate.com", "gamma.app", "phind.com",
   ],
   // relays VERIFIED (real-browser TLS roundtrip through the live tunnel) to
   // carry CF-hosted AI sites; the election checks TCP health live and picks
@@ -248,7 +268,30 @@ FX.BOOT = {
     "104.16.160.1", "104.17.144.2", "104.18.96.3", "104.19.80.4",
     "162.159.136.4", "162.159.140.5", "162.159.152.6", "172.64.80.7",
     "172.65.20.8", "172.66.48.9", "188.114.100.10", "188.114.101.11",
-    "190.93.240.12", "141.101.64.13", "108.162.220.14", "103.22.200.15"
+    "190.93.240.12", "141.101.64.13", "108.162.220.14", "103.22.200.15",
+    // P142 «تایتان»: +۸۲ کاندیدای anycast تازه از رنج‌های معتبر ورکرز (همه aterIpOk-گذر؛
+    // پراکندگی عمدی بین 188.114 / 104.16-27 / 162.159 / 172.64-70 / 190.93 / 141.101 / 108.162)
+    "188.114.96.21", "188.114.96.44", "188.114.97.8", "188.114.97.77",
+    "188.114.98.52", "188.114.98.129", "188.114.99.15", "188.114.99.210",
+    "104.16.11.240", "104.16.44.19", "104.16.77.5", "104.16.99.180",
+    "104.16.151.63", "104.16.188.112", "104.16.211.7", "104.16.240.96",
+    "104.17.33.148", "104.17.61.201", "104.17.111.44", "104.17.140.9",
+    "104.17.170.220", "104.17.199.31", "104.17.223.88", "104.17.254.140",
+    "104.18.19.77", "104.18.65.23", "104.18.102.214", "104.18.133.60",
+    "104.18.170.155", "104.18.201.42", "104.18.230.19", "104.18.250.133",
+    "104.19.7.88", "104.19.55.201", "104.19.101.14", "104.19.150.177",
+    "104.19.199.63", "104.19.231.90", "104.20.44.155", "104.20.99.6",
+    "104.21.17.230", "104.21.88.19", "104.21.141.77", "104.21.190.240",
+    "104.22.35.18", "104.22.94.201", "104.22.153.66", "104.22.211.149",
+    "104.23.9.240", "104.23.80.115", "104.23.140.52", "104.23.201.18",
+    "104.24.33.90", "104.24.77.201", "104.25.44.18", "104.25.121.63",
+    "104.26.19.204", "104.26.88.31", "104.27.11.177", "104.27.101.44",
+    "162.159.133.88", "162.159.135.201", "162.159.192.44", "162.159.194.120",
+    "172.64.55.201", "172.65.88.31", "172.66.111.44", "172.67.99.180",
+    "172.68.44.9", "172.69.120.201", "172.70.33.88", "190.93.242.66",
+    "141.101.77.201", "141.101.90.44", "108.162.221.180", "108.162.232.99",
+    "103.21.246.18", "103.22.203.44", "103.31.6.201", "131.0.74.88",
+    "172.64.144.201", "172.66.40.19"
   ],
   // Google/Gemini-optimized CF ranges (community-tested: 104.16-104.19
   // answer best for Google services from Iranian ISPs). Two uses: (a) the
@@ -260,6 +303,8 @@ FX.BOOT = {
     "104.19.194.9", "172.67.183.5", "104.16.132.201",
     // P137 «سوپر مگا»: +۴ کاندیدای anycast رنج‌های گوگل-پسند
     "104.19.255.51", "104.27.39.113", "104.16.85.9", "104.17.10.88",
+    // P142 «تایتان»: +۶ کاندیدای تازه از رنج 104.16-104.19 (گوگل-پسند)
+    "104.16.211.7", "104.17.111.44", "104.18.65.23", "104.18.170.155", "104.19.101.14", "104.19.199.63",
   ],
   dnsTcpTarget: { host: "8.8.4.4", port: 53 },   // v2.6.1: UDP→TCP DNS bridge target (live-proven)
   // v2.6.2 «شهاب»: bridge fallback chain — if 8.8.4.4 is slow/refused, the
@@ -269,6 +314,9 @@ FX.BOOT = {
     { host: "8.8.4.4", port: 53 },
     { host: "1.1.1.1", port: 53 },
     { host: "9.9.9.9", port: 53 },
+    // P142 «تایتان»: +۲ رزولور پشتیبان — مرگ هیچ رزولوری دیگر DNS پل را متوقف نمی‌کند
+    { host: "8.8.8.8", port: 53 },
+    { host: "208.67.222.222", port: 53 },
   ],
   // v2.6.2 «شهاب» SPEED FIX: giant NON-Cloudflare domains skip the worker's
   // per-dial DoH "is this CF-hosted?" lookup entirely. Every YouTube video
@@ -309,6 +357,13 @@ FX.BOOT = {
     "speedtest.net", "ooklaserver.net", "samsung.com", "mi.com", "huawei.com",
     "go.com", "espn.com", "disneyplus.com", "bamgrid.com", "hulu.com", "hbonow.com",
     "linkedin.com", "licdn.com", "indeed.com", "booking.com", "airbnb.com",
+    // P142 «تایتان»: ۳۰ غول دیگر با CDN خودشان (Akamai/Fastly/CloudFront/خودی — هرگز CF-proxied نیستند)
+    "soundcloud.com", "bandcamp.com", "vimeo.com", "bilibili.com", "fast.com",
+    "alibaba.com", "aliexpress.com", "taobao.com", "craigslist.org", "shopify.com",
+    "stripe.com", "coinbase.com", "binance.com", "openstreetmap.org", "signal.org",
+    "slack.com", "figma.com", "box.com", "adobe.com", "wordpress.com",
+    "tumblr.com", "patreon.com", "kickstarter.com", "godaddy.com", "pypi.org",
+    "bitbucket.org", "sourceforge.net", "nvidia.com", "amd.com", "intel.com",
   ],
   // ═══ v2.9.0 «تندر» — ad & tracker blocklist (the curated
   // v3.15 TABESH). Suffix-matched against every outbound hostname:
@@ -361,6 +416,25 @@ FX.BOOT = {
     "coinhive.com", "popcash.net", "propellerads.com", "adcash.com", "hilltopads.net", "exoclick.com",
     "ads.microsoft.com", "an.yandex.ru", "adfox.ru", "adriver.ru",
     "adeventtracker.spotify.com", "aan.amazon.com", "ads.amazon.com",
+    // P142 «تایتان» — موج سوم: ۹۵ دامنهٔ تبلیغ/ردیاب/تلمتری/ماینر خالص (بدون لاگین/پرداخت/CDN کارکردی)
+    "analytics.google.com", "pixel.facebook.com", "sc-static.net", "ads.tiktokcdn.com", "pangle.io",
+    "xandr.com", "udmserve.net", "fwmrm.net", "spotx.tv", "samba.tv",
+    "flashtalking.com", "sizmek.com", "serving-sys.com", "weborama.com", "nuggad.net",
+    "contextweb.com", "conversantmedia.com", "bidscube.com", "vidazoo.com", "beachfront.com",
+    "loopme.me", "seedtag.com", "sape.ru", "adhigh.net", "galaksion.com",
+    "adskeeper.com", "luckyads.pro", "adsterra.com", "adsterratech.com", "advertserve.com",
+    "adpone.com", "adkernel.com", "yieldads.com", "liftoff.io", "agkn.com",
+    "crwdcntrl.net", "tapad.com", "bluekai.com", "demdex.net", "omtrdc.net",
+    "everesttech.net", "w55c.net", "rfihub.com", "mathtag.com", "adsymptotic.com",
+    "liadm.com", "newrelic.com", "bugsnag.com", "sentry.io", "datadoghq.com",
+    "crashlytics.com", "flurry.com", "localytics.com", "count.ly", "umeng.com",
+    "matomo.cloud", "plausible.io", "statsig.com", "branch.io", "mc.yandex.ru",
+    "metrika.yandex.ru", "coinflint.com", "cryptaloot.com", "minero.cc", "coinimp.com",
+    "onesignal.com", "pushwoosh.com", "truepush.com", "webpushs.com", "izooto.com",
+    "notix.io", "juicyads.com", "trafficjunky.com", "trafficfactory.biz", "ero-advertising.com",
+    "tsyndicate.com", "onclickads.net", "onclasrv.com", "clickadu.com", "stats.wp.com",
+    "pixel.wp.com", "tapsell.ir", "tapsell.io", "clickyab.com", "medadcenter.com",
+    "sentry-cdn.com", "snap.licdn.com",
   ],
   // ═══ v1.6.0 «همه‌کاره» — Iranian direct routing + gaming lane ═══
   // سرویس‌های ایرانی پرکاربرد: با تونل وصل باشی هم مستقیم باز می‌شوند
@@ -385,6 +459,16 @@ FX.BOOT = {
     "datis.ir", "sepehr360.com", "holoo.cloud", "barnamehaa.ir", "p30download.ir",
     "farsroid.com", "downloadha.com", "mydigipay.com", "digipay.ir", "tapsi.ir", "tapsi.cab",
     "snapmarket.ir", "okala.com", "digikala-business.com", "civilica.com", "profaj.ir",
+    // P142 «تایتان»: ۵۰ سرویس ایرانی واقعی تازه (بانک/پرداخت/خبر/دانلود/آموزش)
+    "ansarbank.com", "ansarbank.ir", "mebank.ir", "resalatbank.ir", "bankmehr.ir",
+    "sarmayeh.ir", "karanbank.ir", "behpardakht.ir", "asanpardakht.ir", "sadad.ir",
+    "pec.ir", "samanepay.com", "bimeh.com", "bimeonline.com", "tamin.ir",
+    "raja.ir", "iranair.com", "mahan.aero", "my.gov.ir", "dolat.ir",
+    "snapp.taxi", "snappexpress.com", "cafebazaar.ir", "cafebazaar.org", "myket.com",
+    "p30world.com", "androidha.com", "persiangig.com", "picofile.com", "tarfandestan.com",
+    "digiato.com", "asriran.com", "ecoiran.com", "tejaratnews.com", "donya-e-eqtesad.com",
+    "itresan.com", "snn.ir", "yjc.ir", "ilna.ir", "mashreghnews.ir",
+    "alef.ir", "tabnak.ir", "aftabnews.ir",
   ],
   // رزولورهای ایرانی برای دامنه‌های مستقیم (پاسخ از CDN داخل کشور — سریع + بدون تحریم)
   irDns: ["178.22.122.100", "194.36.174.161"],
@@ -401,6 +485,13 @@ FX.BOOT = {
     "discordapp.net", "discord.media", "discordcdn.com", "roblox.com", "robloxusercontent.com",
     "supercell.com", "clashroyaleapp.com", "clashofclans.com", "minecraft.net", "mojang.com",
     "counter-strike.net", "csgo.com", "dota2.com", "steam-chat.com", "gog.com", "itch.io",
+    // P142 «تایتان»: ۲۶ دامنهٔ گیم تازه (لاگین/CDN/آپدیت/آمار — همه لاین گیمینگ کم‌پینگ)
+    "activision.com", "callofduty.com", "2k.com", "nba2k.com", "take2games.com",
+    "apexlegends.com", "hoyoverse.com", "mihoyo.com", "hoyolab.com", "supercellid.com",
+    "ubisoftconnect.com", "nexon.com", "ncsoft.com", "pearlabyss.com", "wargaming.net",
+    "warthunder.com", "worldoftanks.com", "escapefromtarkov.com", "garena.com", "mobilelegends.com",
+    "op.gg", "tracker.network", "faceit.com", "esea.net", "rocketleague.com",
+    "bethesda.net",
   ],
   // ═══ P99 «پایدار تلگرام»: لاین تلگرام — CIDRهای رسمی DC + دامنه‌ها.
   // روی لاین گیمینگ می‌روند (keepalive تهاجمی ۱۰s + TFO + IP کم‌پینگ) تا
@@ -4099,6 +4190,12 @@ const SF = globalThis.SF = globalThis.SF || (() => {
       { id: "adguard", name: "AdGuard", url: "https://dns.adguard-dns.com/dns-query", ip: "94.140.14.14", ipUrl: "https://94.140.14.14/dns-query" },
       { id: "opendns", name: "OpenDNS", url: "https://doh.opendns.com/dns-query", ip: "208.67.222.222", ipUrl: "https://208.67.222.222/dns-query" },
       { id: "dnssb", name: "DNS.sb", url: "https://doh.dns.sb/dns-query", ip: "185.222.222.222", ipUrl: "https://185.222.222.222/dns-query" },
+      // P142 «تایتان»: +۵ رزولور واقعی — مسابقهٔ کشف عمیق‌تر (۶ → ۱۱)
+      { id: "dns0", name: "dns0.eu", url: "https://dns0.eu/", ip: "193.110.81.0", ipUrl: "https://193.110.81.0/dns-query" },
+      { id: "mullvad", name: "Mullvad DoH", url: "https://dns.mullvad.net/dns-query", ip: "194.242.2.2", ipUrl: "https://194.242.2.2/dns-query" },
+      { id: "controld", name: "ControlD p0", url: "https://freedns.controld.com/p0", ip: "76.76.2.0", ipUrl: "https://76.76.2.0/dns-query" },
+      { id: "nextdns", name: "NextDNS", url: "https://dns.nextdns.io/", ip: "45.90.28.0", ipUrl: "https://45.90.28.0/dns-query" },
+      { id: "cleanbrowsing", name: "CleanBrowsing", url: "https://doh.cleanbrowsing.org/doh/security-filter/", ip: "185.228.168.9", ipUrl: "https://185.228.168.9/dns-query" },
     ],
     services: [
       { id: "openai-api", cat: "ai", url: "https://api.openai.com/v1/models", method: "GET" },
@@ -4115,6 +4212,12 @@ const SF = globalThis.SF = globalThis.SF || (() => {
       { id: "api-telegram", cat: "telegram", url: "https://api.telegram.org/", method: "GET" },   // P62: موتور انتقال تلگرام
       { id: "web-telegram", cat: "telegram", url: "https://web.telegram.org/", method: "GET" },
       { id: "cf-trace", cat: "web", url: "https://speed.cloudflare.com/cdn-cgi/trace", method: "GET" },
+      // P142 «تایتان»: +۵ سرویس AI — سلامت لاین AI عمیق‌تر رصد می‌شود
+      { id: "grok", cat: "ai", url: "https://grok.com/", method: "GET" },
+      { id: "deepseek", cat: "ai", url: "https://chat.deepseek.com/", method: "GET" },
+      { id: "perplexity", cat: "ai", url: "https://www.perplexity.ai/", method: "GET" },
+      { id: "openrouter", cat: "ai", url: "https://openrouter.ai/", method: "GET" },
+      { id: "meta-ai", cat: "ai", url: "https://www.meta.ai/", method: "GET" },
     ],
   };
 
@@ -6240,6 +6343,15 @@ SF.SUPER.GEO = (() => {
     try {
       const catalog = await FX.proto.locCatalog(env);
       for (const c of (catalog || [])) if (c.cont === "custom") for (const r of (c.relays || []).slice(0, 2)) { const h = String(r).split(":")[0]; add(h, c.id, "custom"); }
+    } catch (e) {}
+    // P139 (zq-mukwshea): رله‌های کشورهای کاتالوگ هم کاندیدا شوند — رله‌های اختصاصی
+    // (IP مستقیم مثل هلند/چک) جمنای را واقعا حمل می‌کنند؛ رأی گوگل خودش فیلتر می‌کند
+    try {
+      const catalog2 = await FX.proto.locCatalog(env);
+      for (const c of (catalog2 || [])) {
+        if (c.cont === "custom") continue;
+        for (const r of (c.relays || []).slice(0, 1)) { const h = String(r).split(":")[0]; if (/^\d+\.\d+\.\d+\.\d+$/.test(h)) add(h, c.id, "catalog-dedicated"); }
+      }
     } catch (e) {}
     return out;
   }
@@ -11574,7 +11686,12 @@ function buildShards(account, host, opts = {}) {
     // min-hash ثابت (uid|slot) — تا وقتی ترکیب استخر عوض نشود، نگاشت سرجایش می‌ماند.
     const poolStable = pool.length > 1 ? [...new Set(pool)].sort((a, b) => String(a).localeCompare(String(b))) : pool;
     const slotPin = (s) => { let h = 5381; for (let k = 0; k < s.length; k++) h = ((h << 5) + h + s.charCodeAt(k)) >>> 0; h = Math.imul(h ^ (h >>> 15), 2246822519) >>> 0; h = Math.imul(h ^ (h >>> 13), 3266489917) >>> 0; return (h ^ (h >>> 16)) >>> 0; };
-    const addrFor = (i) => (forceHost ? host : (poolStable.length ? poolStable[slotPin(String(account.uid || "") + "|" + i) % poolStable.length] : host));
+    // ═══ P142 «تایتان» — پینگ حداقلی: کانفیگ اول (انتخاب پیش‌فرض اکثر کلاینت‌ها)
+    // همیشه پایدارترین IP اندازه‌گیری‌شده می‌گیرد (فقط اگر عضو استخر فعلی باشد —
+    // اختیار صریح ادمین 🎯/کاربر 🏠 هرگز بازنویسی نمی‌شود). بقیهٔ شکاف‌ها همان پین
+    // پایدار P122 می‌مانند → ضدنوسان حفظ می‌شود. ═══
+    const __lp142 = (opts.lowPing !== false && !forceHost && Array.isArray(opts.bestIps) && opts.bestIps[0] && poolStable.includes(String(opts.bestIps[0]))) ? String(opts.bestIps[0]) : null;
+    const addrFor = (i) => (forceHost ? host : (__lp142 && i === 0 ? __lp142 : (poolStable.length ? poolStable[slotPin(String(account.uid || "") + "|" + i) % poolStable.length] : host)));
     const frag = !!(opts.frag || account.frag);
     const tunFlag = account.tunnel === "ob" && opts.obOn ? (String(account.loc || "") === "ir-wg" ? " 🇮🇷🌀" : " 🌀") : "";   // P79: فقط با تونل واقعی   // P68 فاز ۴ + P70 فاز ۸: زنجیرهٔ ایران-وایرگارد
 
@@ -11710,6 +11827,23 @@ function buildShards(account, host, opts = {}) {
         }
       }
     }
+    // ═══ P141 فاز ۲ «مقاوم» (پینگ -1): جفت پشتک‌زنندهٔ پورت ۸۰ بدون TLS ═══
+    // ریشه: فیلترشکن ایران SNI=*.workers.dev را در ClientHello می‌بیند و TLS را می‌بندد →
+    // همهٔ کانفیگ‌های TLS بدون فیلترشکن -1 می‌شوند. این دو بدون TLS (پورت ۸۰) هیچ SNI
+    // ندارند → بلاک SNI بی‌اثر؛ با هر کلاینتی بدون هیچ تنظیمی کار می‌کنند.
+    // (رمزنگاری لایهٔ انتقال ندارند — فقط برای وضعیت اضطراری که TLS بلاک است)
+    if (opts.f80 !== false && !ports.includes(80)) {
+      const f80i = out.length;
+      const f80addr = forceHost ? host : (poolStable.length ? poolStable[slotPin(String(account.uid || "") + "|f80") % poolStable.length] : host);
+      const f80mk = (proto) => {
+        const nm = `${label} - ${proto} (80 بدون TLS) 🛡`;
+        const q = `?encryption=none&security=none&type=ws&host=${host}&path=${encodeURIComponent(`${tpath}${uidSeg}?ed=2560`)}`;
+        const lk = proto === "vless" ? `vless://${uuid}@${f80addr}:80${q}#${encodeURIComponent(nm)}` : `trojan://${uuid}@${f80addr}:80${q}#${encodeURIComponent(nm)}`;
+        return { k: f80i, proto, port: 80, tls: false, path: `${tpath}${uidSeg}`, cc: "", addr: f80addr, link: lk };
+      };
+      if (plainProtos.includes("vless")) out.push(f80mk("vless"));
+      if (plainProtos.includes("trojan")) out.push(f80mk("trojan"));
+    }
     // ═══ P56-E (zq-mufk2vwj): کانفیگ نشانگر حالت آی‌پی خروجی — «🏷 آی‌پی ثابت» / «🏷 آی‌پی متغیر» ═══
     if (opts.userIpMode !== undefined) {
       const qi2 = out.length;
@@ -11756,8 +11890,9 @@ function buildShards(account, host, opts = {}) {
       : opts.stealth === 1
         ? info("🛡 ضد فیلتر: فرگمنت فعال — v2rayNG: در تنظیمات Fragment را روشن کنید؛ یا پروفایل xjson/Hiddify بگیرید")
         : info("🛡 ضد فیلتر خاموش است — اگر بدون فیلترشکن وصل نمی‌شوید از ربات /stealth را بزنید");
-    if (!opts.infoBanners) return [stealthInfo, ...shards.map((s2) => s2.link)];
-    return [stealthInfo, ...markers, info(FX.BOOT.subSpeedTip || "⚡ نکته سرعت: Mux خاموش بمونه"), ...shards.map((s) => s.link)];
+    const f80Info = info("🛡 پشتک‌زننده: اگر همهٔ کانفیگ‌ها بدون فیلترشکن -1 شدند، کانفیگ‌های «(80 بدون TLS)» را امتحان کنید — SNI ندارند و بلاک SNI را دور می‌زنند");   // P141: راهنمای پشتک‌زنندهٔ پورت ۸۰
+    if (!opts.infoBanners) return [stealthInfo, f80Info, ...shards.map((s2) => s2.link)];
+    return [stealthInfo, f80Info, ...markers, info(FX.BOOT.subSpeedTip || "⚡ نکته سرعت: Mux خاموش بمونه"), ...shards.map((s) => s.link)];
   }
 
   // AI domains — explicitly forced through the tunnel (client-side), so
@@ -11833,7 +11968,7 @@ function buildShards(account, host, opts = {}) {
         // v1.8.0 «مسیر آتر» /*P123F:tun*/: fl-auto — urltest خودکار؛ همیشه کم‌پینگ‌ترین مسیر
         // v1.9.0: tolerance 75 = یک آی‌پی لحظه‌ای بهتر دیگه باعث سوییچ و قطعی
         // نمی‌شه؛ فقط افت واقعی. interrupt = سوییچ فوری بدون انتظار سوکت‌های مرده.
-        { type: "urltest", tag: "fl-auto", url: "https://www.gstatic.com/generate_204", interval: "3m", tolerance: 75, interrupt_exist_connections: true, outbounds: [...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), ...(warpOut ? ["fl-warp"] : [])] },
+        { type: "urltest", tag: "fl-auto", url: "https://www.gstatic.com/generate_204", interval: "2m", tolerance: 60, interrupt_exist_connections: true, outbounds: [...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), ...(warpOut ? ["fl-warp"] : [])] },
         { type: "selector", tag: "⚡ فلش | FLASH", outbounds: ["fl-auto", ...outbounds.map((o) => o.tag), ...(aiOut ? ["fl-ai"] : []), ...(gameOut2 ? ["fl-game"] : []), ...(warpOut ? ["fl-warp", "fl-ai-live"] : []), "fl-emergency", "direct"], interrupt_exist_connections: false },   // P127: اضطراری بدون ورکر در دسترس
         ...outbounds,
         ...(aiOut ? [aiOut] : []),
@@ -11971,7 +12106,7 @@ function buildShards(account, host, opts = {}) {
       "proxy-groups:",
       // v1.8.0 «مسیر آتر»: FL-AUTO — url-test خودکار؛ همیشه کم‌پینگ‌ترین
       // کانفینگ انتخاب می‌شود و با افت کیفیت، بدون قطعی سوییچ می‌کند
-      `  - {name: FL-AUTO, type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 180, tolerance: 60, proxies: [${names.map((n) => JSON.stringify(n)).join(", ")}]}`,
+      `  - {name: FL-AUTO, type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 120, tolerance: 50, proxies: [${names.map((n) => JSON.stringify(n)).join(", ")}]}`,   // P142: ۱۸۰/۶۰ → ۱۲۰/۵۰
       `  - {name: ${JSON.stringify(FLASHGRP)}, type: select, proxies: [FL-AUTO, ${names.map((n) => JSON.stringify(n)).join(", ")}${opts.warp ? ", FL-WARP, FL-AI-LIVE" : ""}, FL-EMERGENCY]}`,
       ...(opts.warp ? [`  - {name: FL-AI-LIVE, type: select, proxies: [FL-WARP, ${JSON.stringify(aiName)}]}`] : []),   // P133 فاز ۲: جمنای → وارپ پیش‌فرض (نه لاین تونل که /sorry می‌دهد)
       "rules:",
@@ -12369,8 +12504,8 @@ function buildShards(account, host, opts = {}) {
 
     // ═══ P120: تشخیص نسل کلاینت از UA — sing-box 1.12+/Hiddify جدید → فرمت جدید ═══
     const sb12 = /sing-box\/1\.(1[2-9]|[2-9][0-9])|hiddify[-next\/ ]*[2-9]\.[5-9]|stash|karing/i.test(ua) || url.searchParams.get("v12") === "1";
-    // ═══ P125 «اختفا»: st = 0 خاموش | 1 فرگمنت | 2 فرگمنت+ECH — پیش‌فرض: تنظیم stealth (وگرنه 1) P125:stealth
-    let stealth = 1;
+    // ═══ P125 «اختفا»: st = 0 خاموش | 1 فرگمنت | 2 فرگمنت+ECH — P141 «مقاوم»: پیش‌فرض ۲ (ECH) — ریشهٔ پینگ -1 بدون فیلترشکن = بلاک SNI workers.dev؛ ECH آن را رمزنگاری می‌کند
+    let stealth = 2;
     {
       const stP = url.searchParams.get("st");
       if (stP === "0" || stP === "1" || stP === "2") stealth = Number(stP);
@@ -12391,8 +12526,24 @@ function buildShards(account, host, opts = {}) {
     // pool (default_ips) — both optional, both de-duped by the engine
     try {
       const results = await sharedGet("bestIps", async () => {
-        const r = await env.DB.prepare("SELECT ip, MIN(latency_ms) AS ms, MAX(tested_at) AS t FROM speed_results WHERE tested_at > ? GROUP BY ip ORDER BY ms ASC LIMIT 32").bind(Date.now() - 14 * 86400000).all();
-        return (r && r.results) || [];
+        // ═══ P142 «تایتان» — امتیاز پایداری ضدنوسان: μ + 0.5σ ═══
+        // IP با پینگ متوسطِ خوب و نوسانِ کم مقدم است بر IP که یک‌بار عالی و یک‌بار
+        // وحشتناک بوده (کمینهٔ لحظه‌ای گمراه‌کننده است). حداقل ۲ اندازه‌گیری لازم است.
+        const r = await env.DB.prepare("SELECT ip, latency_ms AS ms, tested_at AS t FROM speed_results WHERE tested_at > ? LIMIT 4000").bind(Date.now() - 14 * 86400000).all();
+        const rows = (r && r.results) || [];
+        if (!rows.length) return [];
+        const byIp = new Map();
+        for (const row of rows) {
+          const ip = String(row.ip || ""); if (!ip) continue;
+          const ms = Number(row.ms) || 0; if (!ms || ms >= 5000) continue;
+          let e = byIp.get(ip); if (!e) { e = { ip, n: 0, sum: 0, sum2: 0, last: 0 }; byIp.set(ip, e); }
+          e.n++; e.sum += ms; e.sum2 += ms * ms; if (Number(row.t) > e.last) e.last = Number(row.t);
+        }
+        return [...byIp.values()].map((e) => {
+          const avg = e.sum / e.n;
+          const sigma = Math.sqrt(Math.max(0, e.sum2 / e.n - avg * avg));
+          return { ip: e.ip, ms: Math.round(avg), stab: Math.round(avg + 0.5 * sigma), n: e.n, t: e.last };
+        }).filter((e) => e.n >= 2).sort((a, b) => a.stab - b.stab || b.n - a.n).slice(0, 32);
       });
       if (results && results.length) { opts.bestIps = results.map((r) => String(r.ip)).filter(Boolean); try { const __d127 = FX.MEGA.deadSet; if (__d127 && __d127.size && opts.bestIps.length > 1) { const __f127 = opts.bestIps.filter((x) => !__d127.has(String(x))); if (__f127.length) opts.bestIps = __f127; } } catch (e) {} }   // P127:deadfilter
     } catch (e) {}
@@ -12534,7 +12685,7 @@ function buildShards(account, host, opts = {}) {
     // می‌شود — سریع‌ترین پورت اول (برای اینترنت ایران: 443/2053/2083/8443 بسته به تجربه).
     try {
       const prResults = await sharedGet("portRank", async () => {
-        const pr = await env.DB.prepare("SELECT port, AVG(latency_ms) AS ms FROM speed_results WHERE tested_at > ? GROUP BY port ORDER BY ms ASC").bind(Date.now() - 14 * 86400000).all();
+        const pr = await env.DB.prepare("SELECT port, AVG(latency_ms) AS ms FROM speed_results WHERE tested_at > ? GROUP BY port ORDER BY ms ASC").bind(Date.now() - 7 * 86400000).all();   // P142: پنجرهٔ ۷روزه — تازه‌تر
         return (pr && pr.results) || [];
       });
       if (prResults && prResults.length >= 2) {
@@ -12545,7 +12696,7 @@ function buildShards(account, host, opts = {}) {
     // ═══ P70 فاز ۷ (zq-mug6dyqp): کش پایداری ساب ═══
     // بدنه (لینک‌ها) ۱۰ دقیقه پایدار می‌ماند تا کلاینت‌ها به‌خاطر تغییر آدرس/ترکیب،
     // اتصال مجدد نزنند (ریشهٔ «اتصال‌های مکرر»). هدر مصرف همیشه تازه می‌ماند.
-    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0) + "|l" + (account.loc || "") + "|w" + (opts.warp ? 1 : 0);   // P127:tundefault + P129: loc + P130: warp در کلید کش
+    const ckey = account.uid + "|" + pick + "|" + opKey + "|" + ip + "|" + (frag ? 1 : 0) + "|" + (sb12 ? 1 : 0) + "|" + (echOn ? 1 : 0) + "|" + stealth + "|" + (opts.nearCountry || "") + "|" + (opts.aterIps || []).length + "|" + (opts.ips || []).join(",") + "|" + (opts.ip || "") + "|" + (opts.portRank ? JSON.stringify(opts.portRank) : "") + "|t" + (opts.tun ? 1 : 0) + "|l" + (account.loc || "") + "|w" + (opts.warp ? 1 : 0) + "|f8" + (opts.f80 === false ? 0 : 1);   // P127:tundefault + P129: loc + P130: warp + P141: f80 در کلید کش
     let body, ctype = "text/plain; charset=utf-8";
     const cHit = SUB_CACHE.get(ckey);
     if (cHit && Date.now() - cHit.t < 10 * 60 * 1000) { body = cHit.body; ctype = cHit.ctype; }   // پایدار — بدون churn
@@ -12564,7 +12715,7 @@ function buildShards(account, host, opts = {}) {
     const remain = account.quota_bytes ? Math.max(0, account.quota_bytes - account.used_bytes) : 0;
     const headers = {
       "content-type": ctype,
-      "profile-update-interval": "6",
+      "profile-update-interval": "2",   // P142 «تایتان»: ۶→۲ ساعت — چرخش ۵دقیقه‌ای استخر زودتر به کلاینت‌ها می‌رسد
       "subscription-userinfo": `upload=0; download=${account.used_bytes}; total=${account.quota_bytes || 0}; expire=${account.expires_ms ? Math.floor(account.expires_ms / 1000) : 0}`,
       "profile-web-page-url": `https://${host}/`,
       "cache-control": "no-store",
@@ -13490,6 +13641,7 @@ FX.api = (() => {
       if (b.adblock !== undefined) { await wr("adblock", b.adblock === false || b.adblock === "0" || b.adblock === 0 ? "0" : "1"); _ch.push("adblock"); }
       if (b.ip_mode !== undefined) { await wr("ip_mode", b.ip_mode === "fixed" ? "fixed" : "rotate"); _ch.push("ip_mode"); }
       if (b.sub_mux !== undefined) { await wr("sub_mux", b.sub_mux === false || b.sub_mux === "0" || b.sub_mux === 0 ? "0" : "1"); _ch.push("sub_mux"); }
+      if (b.info_banners !== undefined) { await wr("info_banners", b.info_banners === false || b.info_banners === "0" || b.info_banners === 0 ? "0" : "1"); _ch.push("info_banners"); }   // P139 (zq-mukxacll): نشانگرهای 0.0.0.0 از API قابل‌تنظیم
       if (b.low_ping !== undefined) { await wr("low_ping", b.low_ping === false || b.low_ping === "0" || b.low_ping === 0 ? "0" : "1"); _ch.push("low_ping"); }
       if (b.stealth !== undefined) { const v = b.stealth === 0 || b.stealth === "0" ? "0" : b.stealth === 2 || b.stealth === "2" ? "2" : "1"; await coreSet(env, "stealth", v); _ch.push("stealth"); }   // P125:stealth — سطح ضد فیلتر (۰/۱/۲)
       // P120: رویداد + نسخهٔ تنظیمات
@@ -14616,6 +14768,11 @@ async function sfApi(request, env) {
       .sort((x, y) => (Number(!!x.unmeasured) - Number(!!y.unmeasured)) || ((y.score || 0) - (x.score || 0)) || (x.ms - y.ms)).slice(0, FX.BOOT.radarMaxKeep);
     const store = { results, best: results[0]?.ip || "", applyBest: b.applyBest !== undefined ? !!b.applyBest : !!cur.applyBest, port, ts: Date.now() };
     await coreSet(env, "radar", JSON.stringify(store));
+    // P142 «تایتان»: نتایج apply وارد speed_results می‌شوند — سوخت μ+0.5σ از هر منبعی (مرورگر/ربات/دسکتاپ)
+    try {
+      const rows142 = (b.results || []).filter((r) => r && r.ip && Number(r.ms) > 0 && Number(r.ms) < 5000).slice(0, 24);
+      if (rows142.length) await env.DB.batch(rows142.map((r) => env.DB.prepare("INSERT OR REPLACE INTO speed_results (ip, port, latency_ms, tested_at) VALUES (?,?,?,?)").bind(String(r.ip), port, Math.round(Number(r.ms)), Date.now())));
+    } catch (e) {}
     // v2.6: scan history (last 6 scans power the radar page's history strip)
     try {
       let history = [];
@@ -14729,6 +14886,23 @@ async function sfApi(request, env) {
   // IP ثابتی که کشور واقعی‌اش با لوکیشن کاربر فرق دارد → جایگزینی با رلهٔ
   // تأییدشدهٔ همان کشور (GEOV real). بدون جایگزین → نگه می‌داریم و صادقانه
   // گزارش می‌کنیم (حذف بدون جایگزین = قطع کاربر). درصد پیشرفت برای UI.
+  // ═══ P139 (zq-mukwshea): جاروی جئو با بودجهٔ مستقل — مشکل: جاروی کرون بعد از موتورهای
+  // دیگر بودجه‌اش تمام می‌شد و رله‌ها هرگز برای جمنای رأی‌گیری نمی‌شدند (نقشهٔ ۴۱ ساعته).
+  // این مسیر با بودجهٔ محلی تازه جارو می‌زند؛ ربات نگهبان آن را صدا می‌زند.
+  async function geoSweepRoute(request, env) {
+    const b = await body(request);
+    const relays = Math.min(8, Math.max(2, Number(b.relays) || 5));
+    const savedTake = SF.budgetTake;
+    let local = 0;
+    SF.budgetTake = function () { local += 1; return local <= 24; };
+    try {
+      const r = await SF.SUPER.GEO.sweep(env, { relays });
+      const best = await SF.SUPER.GEO.bestGeminiExit(env).catch(() => null);
+      const rep2 = await SF.SUPER.GEO.report(env).catch(() => null);
+      return json({ ok: true, data: { sweep: r, bestGeminiExit: best, used: local, report: rep2 ? { at: rep2.at, supportedCount: rep2.supportedCount, worker: rep2.worker, relays: (rep2.relays || []).filter((x) => x.geminiOk).slice(0, 6) } : null } });
+    } catch (e) { return bad("geo-sweep: " + String((e && e.message) || e).slice(0, 60)); }
+    finally { SF.budgetTake = savedTake; }
+  }
   async function geoAutofixRoute(request, env) {
     const b = await body(request);
     const batch = Math.min(4, Math.max(1, Number(b.batch) || 3));
@@ -16133,13 +16307,19 @@ async function shimHealConfigs(request, env) {
   for (const acc of accounts) {
     try {
       const ipsRaw = String(acc.ips || acc.clean_ips || "auto");
-      if (ipsRaw && ipsRaw !== "auto" && !ipsRaw.startsWith("[")) {
-        const list = ipsRaw.split(",").map((s) => s.trim()).filter(Boolean);
-        const keep = list.filter((ip) => !badIps.has(ip));
-        dropped += list.length - keep.length;
-        if (keep.length !== list.length) {
-          await env.DB.prepare("UPDATE users SET clean_ips=? WHERE username=? OR uuid=?").bind(keep.length ? JSON.stringify(keep) : "auto", acc.label, acc.uuid).run();
-          healed++;
+      if (ipsRaw && ipsRaw !== "auto") {
+        // P142 فیکس: فرمت JSON-آرایه (فرمت اصلی پنل/ربات) هم ترمیم می‌شود — قبلاً جا می‌ماند
+        let list = null, isJson = false;
+        if (ipsRaw.startsWith("[")) { try { const j142 = JSON.parse(ipsRaw); if (Array.isArray(j142)) { list = j142.map(String); isJson = true; } } catch (e) {} }
+        else list = ipsRaw.split(",").map((s) => s.trim()).filter(Boolean);
+        if (list && list.length) {
+          const keep = list.filter((ip) => !badIps.has(ip));
+          dropped += list.length - keep.length;
+          if (keep.length !== list.length) {
+            const outVal = keep.length ? (isJson ? JSON.stringify(keep) : keep.join(",")) : "auto";
+            await env.DB.prepare("UPDATE users SET clean_ips=? WHERE username=? OR uuid=?").bind(outVal, acc.label, acc.uuid).run();
+            healed++;
+          }
         }
       }
     } catch (e) {}
@@ -16352,6 +16532,8 @@ async function shimUserReset(request, env, uid) {
     if (path === "/api/radar/candidates" && method === "GET") return radarCandidates(request, env);
     if (path === "/api/radar/heal" && method === "POST") return radarHeal(request, env);
     if (path === "/api/radar/apply" && method === "POST") return radarApply(request, env);
+    if (path === "/api/rotator" && method === "GET") return FX.ROTATOR_API.get(env);          // P142 «تایتان»
+    if (path === "/api/rotator" && method === "POST") return FX.ROTATOR_API.post(request, env);
     if (path === "/api/sf" && method === "GET") return sfApi(request, env);
     if (path === "/api/sf/super" && method === "GET") return sfSuperGet(request, env);   // P58 فاز ۱ — معماری سوپر
     // ═══ P120 «مرکز فرماندهی» ═══
@@ -16386,6 +16568,8 @@ async function shimUserReset(request, env, uid) {
     if (path === "/api/relay/verify-geo" && method === "POST") return relayVerifyGeoRoute(request, env);   // P68 فاز ۳
     if (path === "/api/relays/ping-sweep" && method === "POST") return relayPingSweepRoute(request, env);   // P70 فاز ۲: پینگ خودکار
     if (path === "/api/geo/autofix" && method === "POST") return geoAutofixRoute(request, env);             // P70 فاز ۲: رفع خودکار
+    if (path === "/api/geo/report" && method === "GET") return json({ ok: true, data: await SF.SUPER.GEO.report(env).catch(() => null) });   // P139 (zq-mukwshea): گزارش سبک جئو
+    if (path === "/api/geo/sweep" && method === "POST") return geoSweepRoute(request, env);   // P139: جاروی geo با بودجهٔ محلی مستقل
     if (path === "/api/relay/verify-geo" && method === "GET") return json({ ok: true, data: await SF.SUPER.GEOV.report(env) });
     if (path === "/api/relay-ping" && method === "POST") return relayPingRoute(request, env);      // v1.4.0 «اتحاد»
     if (path === "/api/relay-refresh" && method === "POST") return relayRefreshRoute(request, env); // v1.4.0 «اتحاد»
@@ -17201,10 +17385,152 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
     } catch (e) {}
   }
 
+  // ═══ P142 «تایتان» — ROTATOR: استخر IP تمیز خودنگهدار (هر تیک کرون = ۵ دقیقه) ═══
+  // مردها همان تیک حذف و جای‌شان تازه می‌گیرند (بدون تاخیر، بدون مرورگر، بدون پروب
+  // خارجی — لبه نمی‌تواند IP کلادفلر را پروب کند؛ مرگ از سیگنال‌های واقعی می‌آید:
+  // dead_entries دو-استرایک از ترافیک واقعی + radar_dead از اسکن مرورگر).
+  // عضو-پایدار: IPهای سالم جایگاه خود را نگه می‌دارند (ضدنوسان P122 حفظ می‌شود)؛
+  // فقط جای خالیِ مرده/کهنه با تازهٔ استخر سرپرست‌شده (۱۴۶ IP معتبر) پر می‌شود.
+  // اولویت بقا و تزریق = امتیاز پایداری μ+0.5σ (همان موتور فاز ۲).
+  const ROTATOR = {
+    target: 24,                 // اندازهٔ هدف استخر (سقف P134)
+    floor: 8,                   // هرگز زیر این تعداد نماند
+    maxInject: 8,               // حداکثر تزریق در هر چرخش (جهش نکند)
+    staleMs: 14 * 86400000,     // بدون اندازه‌گیری ۱۴ روز = کهنه
+    stateEveryMs: 55 * 60 * 1000,  // نوشتن state بدون‌تغییر حداکثر هر ~۱ ساعت
+  };
+  async function rotatorStats(env) {
+    const stats = new Map();
+    // (الف) speed_results — تاریخچهٔ اندازه‌گیری (μ+0.5σ)
+    try {
+      const r = await env.DB.prepare("SELECT ip, latency_ms AS ms, tested_at AS t FROM speed_results WHERE tested_at > ? LIMIT 4000").bind(Date.now() - ROTATOR.staleMs).all();
+      for (const row of (r && r.results) || []) {
+        const ip = String(row.ip || ""), ms = Number(row.ms) || 0;
+        if (!ip || !ms || ms >= 5000) continue;
+        let e = stats.get(ip); if (!e) { e = { n: 0, sum: 0, sum2: 0, last: 0 }; stats.set(ip, e); }
+        e.n++; e.sum += ms; e.sum2 += ms * ms; if (Number(row.t) > e.last) e.last = Number(row.t);
+      }
+    } catch (e) {}
+    // (ب) فروشگاه رادار — نتایج اسکن مرورگر (ms واقعی از ISP کاربر)
+    try {
+      const radar = JSON.parse((await FX.store.getCore(env.DB, "radar") || "") || "{}") || {};
+      for (const r of (radar.results || [])) {
+        const ip = String((r && r.ip) || ""), ms = Number((r && r.ms) || 0);
+        if (!ip || !ms || ms >= 5000) continue;
+        let e = stats.get(ip); if (!e) { e = { n: 0, sum: 0, sum2: 0, last: 0 }; stats.set(ip, e); }
+        e.n++; e.sum += ms; e.sum2 += ms * ms; if ((radar.ts || 0) > e.last) e.last = Number(radar.ts) || 0;
+      }
+    } catch (e) {}
+    // (ج) خود استخر ater — ms واقعی ذخیره‌شده در اعضا (اندازه‌گیری مرورگر از ISP کاربر)
+    try {
+      const pool = JSON.parse((await FX.store.getCore(env.DB, "ater_pool") || "") || "[]") || [];
+      for (const m of pool) {
+        const ip = String((m && m.ip) || ""), ms = Number((m && m.ms) || 0);
+        if (!ip || !ms || ms >= 5000) continue;
+        let e = stats.get(ip); if (!e) { e = { n: 0, sum: 0, sum2: 0, last: 0 }; stats.set(ip, e); }
+        e.n++; e.sum += ms; e.sum2 += ms * ms;
+      }
+    } catch (e) {}
+    return stats;
+  }
+  async function rotatorTick(env) {
+    const now = Date.now();
+    const read = async (k) => { try { return JSON.parse((await FX.store.getCore(env.DB, k) || "") || "[]") || []; } catch (e) { return []; } };
+    const aterRaw = await read("ater_pool");
+    const aterObj = aterRaw.map((x) => (x && typeof x === "object") ? { ip: String(x.ip || ""), at: Number(x.at) || 0, ms: Number(x.ms) || 0 } : { ip: String(x), at: 0, ms: 0 }).filter((x) => x.ip);
+    const aterIps = aterObj.map((x) => x.ip);
+    const dead = new Set([...(await read("dead_entries")), ...(await read("radar_dead"))].map(String));
+    const stats = await rotatorStats(env);
+    const stabOf = (ip) => { const e = stats.get(ip); if (!e || e.n < 1) return null; const avg = e.sum / e.n; const sigma = Math.sqrt(Math.max(0, e.sum2 / e.n - avg * avg)); return { avg, score: avg + 0.5 * sigma, last: e.last }; };
+    // ۱) حذف: مرده = بی‌درنگ · کهنه (بدون اندازه‌گیری + سن > ۱۴روز) = فقط اگر استخر بالای کف بماند
+    const evict = [];
+    for (const m of aterObj) {
+      if (dead.has(m.ip)) { evict.push({ ip: m.ip, why: "dead" }); continue; }
+      const st = stabOf(m.ip);
+      const aged = m.at > 0 && (now - m.at) > ROTATOR.staleMs;   // فقط اعضای تزریق‌شدهٔ خود روتاتور سن دارند
+      if (!st && aged && (aterIps.length - evict.length) > ROTATOR.floor) evict.push({ ip: m.ip, why: "stale" });
+    }
+    // ۲) بقا: سالم‌ها به همان ترتیب (اندازه‌گیری‌شدهٔ پایدار اول — بدون جابه‌جایی بی‌دلیل)
+    const evSet = new Set(evict.map((e) => e.ip));
+    const survivors = aterObj.filter((m) => !evSet.has(m.ip));
+    // ۳) تزریق: از استخر سرپرست‌شده (curated ۱۴۶IP) + دامنه‌های ater — بدون مرده و بدون عضو فعلی
+    const have = new Set(survivors.map((m) => m.ip));
+    const injectPool = [...new Set([...(Array.isArray(FX.BOOT.defaultIps) ? FX.BOOT.defaultIps : []), ...FX.aterSample(32)])]
+      .filter((ip) => FX.aterIpOk(ip) && !dead.has(ip) && !have.has(ip));
+    injectPool.sort((a, b) => { const sa = stabOf(a), sb = stabOf(b); if (sa && sb) return sa.score - sb.score; if (sa) return -1; if (sb) return 1; return 0; });
+    const need = Math.max(0, ROTATOR.target - survivors.length);
+    const cap = aterIps.length === 0 ? ROTATOR.target : ROTATOR.maxInject;   // استخر خالی = راه‌اندازی کامل در همان تیک
+    const inject = injectPool.slice(0, Math.min(need, cap));
+    // ۴) ترکیب عضو-پایدار + نوشتن فقط با تغییر (صرفه‌جویی D1)
+    const next = [...survivors.map((m) => ({ ...m })), ...inject.map((ip) => { const st = stabOf(ip); return { ip, at: now, ...(st ? { ms: Math.round(st.avg) } : {}) }; })];
+    const changed = next.length !== aterObj.length || next.some((m, i) => m.ip !== aterObj[i].ip);
+    let wrotePool = 0;
+    const stPrev = await (async () => { try { return JSON.parse((await FX.store.getCore(env.DB, "rotator_state") || "") || "{}") || {}; } catch (e) { return {}; } })();
+    if (changed && next.length) {
+      await FX.store.setCore(env.DB, "ater_pool", JSON.stringify(next.map((m) => { const st = stabOf(m.ip); return { ip: m.ip, ...(st ? { ms: Math.round(st.avg), stab: Math.round(st.score) } : (m.ms ? { ms: m.ms } : {})), ...(m.at ? { at: m.at } : {}) }; })));
+      wrotePool = 1;
+      try { if (globalThis.__sfSubCachePurge) globalThis.__sfSubCachePurge(); } catch (e) {}   // ساب بعدی بلافاصله استخر تازه می‌دهد
+      try { await FX.store.logEvent(env.DB, "rotator", "چرخش: −" + evict.length + " +" + inject.length + " → " + next.length + " عضو"); } catch (e) {}
+    }
+    // state: با تغییر همیشه · بدون تغییر حداکثر هر ~۱ ساعت (نوشتن D1 حداقلی)
+    if (changed || !stPrev.at || (now - stPrev.at) > ROTATOR.stateEveryMs) {
+      await FX.store.setCore(env.DB, "rotator_state", JSON.stringify({ at: now, evicted: evict.length, injected: inject.length, pool: next.length || aterIps.length, prev: aterIps.length, changed }));
+    }
+    // ۵) ترمیم پین‌های مردهٔ کاربران (بدون تاخیر): پین مرده → تازهٔ سالم (انتخاب پایدار per کاربر)
+    let healedPins = 0;
+    try {
+      const deadNow = [...new Set(evict.filter((e) => e.why === "dead").map((e) => e.ip).concat(aterIps.filter((ip) => dead.has(ip) && !evSet.has(ip))))];
+      if (deadNow.length) {
+        const accounts = await FX.store.listAccounts(env.DB, { filter: "active", limit: 300 });
+        const measured = next.map((m) => m.ip).filter((ip) => stabOf(ip));
+        const replPool = (measured.length ? measured : next.map((m) => m.ip)).filter(Boolean);
+        if (replPool.length) {
+          const pinHash = (s) => { let h = 5381; for (let k = 0; k < s.length; k++) h = ((h << 5) + h + s.charCodeAt(k)) >>> 0; return h >>> 0; };
+          const deadSet = new Set(deadNow);
+          for (const acc of accounts) {
+            const raw = String(acc.ips || acc.clean_ips || "");
+            if (!raw || raw === "auto") continue;
+            // P142 فیکس: هر دو فرمت پین (کاما + JSON-آرایه — فرمت اصلی پنل) ترمیم می‌شوند؛
+            // نوشتن هم در همان فرمت قبلی کاربر (بدون شکستن پارسرهای دیگر)
+            let list = null, isJson = false;
+            if (raw.startsWith("[")) { try { const j142 = JSON.parse(raw); if (Array.isArray(j142)) { list = j142.map(String); isJson = true; } } catch (e) {} }
+            else list = raw.split(",").map((x) => x.trim()).filter(Boolean);
+            if (!list || !list.length) continue;
+            const badIdx = list.map((ip, i) => deadSet.has(ip) ? i : -1).filter((i) => i >= 0);
+            if (!badIdx.length) continue;
+            for (const i of badIdx) list[i] = replPool[pinHash(String(acc.uuid || acc.label || "") + "|" + i) % replPool.length];
+            const outVal = isJson ? JSON.stringify(list) : list.join(",");
+            await env.DB.prepare("UPDATE users SET clean_ips=? WHERE username=? OR uuid=?").bind(outVal, acc.label, acc.uuid).run();
+            healedPins++;
+          }
+        }
+      }
+    } catch (e) {}
+    // P142: تعداد پین‌های ترمیم‌شده داخل state (ناظر ربات می‌بیند)
+    if (healedPins > 0) { try { const stNow142 = JSON.parse((await FX.store.getCore(env.DB, "rotator_state") || "") || "{}") || {}; stNow142.healedPins = healedPins; await FX.store.setCore(env.DB, "rotator_state", JSON.stringify(stNow142)); } catch (e) {} }
+    return { changed, wrotePool, evicted: evict.length, injected: inject.length, pool: next.length || aterIps.length, healedPins, at: now, sample: evict.slice(0, 5) };
+  }
+  async function rotatorGet(env) {
+    const read = async (k) => { try { return JSON.parse((await FX.store.getCore(env.DB, k) || "") || "[]") || []; } catch (e) { return []; } };
+    const aterIps = (await read("ater_pool")).map((x) => (x && x.ip) || x).filter(Boolean);
+    const st = await (async () => { try { return JSON.parse((await FX.store.getCore(env.DB, "rotator_state") || "") || "{}") || {}; } catch (e) { return {}; } })();
+    return json({ ok: true, data: { pool: aterIps, poolN: aterIps.length, state: st, cfg: { target: ROTATOR.target, floor: ROTATOR.floor, maxInject: ROTATOR.maxInject, staleDays: Math.round(ROTATOR.staleMs / 86400000) }, version: FX.BOOT.version } });
+  }
+  async function rotatorPost(request, env) {
+    let b = {};
+    try { b = await request.json(); } catch (e) {}
+    if (b && b.action === "rotate") { const r = await rotatorTick(env); return json({ ok: true, data: r }); }
+    return json({ ok: false, error: "unknown-action" }, 400);
+  }
+  // P142: صادرات برای جدول مسیرها (IIFE دیگر — از طریق FX مشترک)
+  FX.ROTATOR_API = { get: rotatorGet, post: rotatorPost, tick: rotatorTick };
+
   async function cron(event, env, ctx) {
     try {
       await ensureReady(env);
       await FX.store.flushUsage(env.DB);
+      // ═══ P142 «تایتان» — ROTATOR هر تیک (۵د): مرده بی‌درنگ حذف + تازه تزریق + ترمیم پین‌ها ═══
+      try { await rotatorTick(env); } catch (e) { /* never crash cron */ }
       // ═══ P116 «تندر۲+» (muj4bct1+muj5ukux+muj5tu3q): بنچمارک و تیونینگ تطبیقی سبک ═══
       // P112 (heavy_cron=off) به‌طور ناخواسته بنچ/تیون سرعت را هم کشت — موشک P104
       // هرگز روشن نمی‌شد و پنل روی پیش‌فرض 128KB می‌ماند. حالا این بلوک در مسیر
@@ -17229,7 +17555,7 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       // درس P122 (دادهٔ D1): تونل‌زنده + heavy_cron کل تازه‌سازی را قفل کرده بود —
       // relay_state در ۶۴ ساعت فقط ۱ بار تازه شد (ru)؛ ۵۵ کشور کهنه + ۲۴ بدون داده.
       // P122: TGD اولِ کرون — بودجهٔ تازه (قبلاً بنچ/ارکستراتور می‌خوردند و بذر تلگرام تشنه می‌ماند)
-      try { const tgdN = await SF.SUPER.TGD.seedSweep(env); if (tgdN) { try { await FX.store.logEvent(env.DB, "cron", "P122 TGD بذر: " + tgdN + " DC"); } catch (eL) {} } } catch (e) { try { await FX.store.logEvent(env.DB, "cron", "P122 TGD خطا: " + String((e && e.message) || e).slice(0, 120)); } catch (eL) {} }
+      try { const tgdN = await SF.SUPER.TGD.seedSweep(env); if (tgdN) { try { globalThis.__sfCronLog = globalThis.__sfCronLog || {}; const __m142 = "P122 TGD بذر: " + tgdN + " DC"; if (globalThis.__sfCronLog.tgd !== __m142) { globalThis.__sfCronLog.tgd = __m142; await FX.store.logEvent(env.DB, "cron", __m142); } } catch (eL) {} } } catch (e) { try { await FX.store.logEvent(env.DB, "cron", "P122 TGD خطا: " + String((e && e.message) || e).slice(0, 120)); } catch (eL) {} }
       try {
         const catH = await FX.proto.locCatalog(env);
         let ciH = Number((await FX.store.getCore(env.DB, "relay_cron_cursor")) || 0) || 0;
@@ -17238,14 +17564,17 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
         let okN = 0;
         for (const cc of threeH) { try { await FX.proto.discoverCountryRelaysSF(env, cc); okN++; } catch (e) {} }
         await FX.store.setCore(env.DB, "relay_cron_cursor", String(ciH + 3 >= catH.length ? 0 : ciH + 3));
-        try { await FX.store.logEvent(env.DB, "cron", "P122 سلامت: " + threeH.join(",") + " ✓" + okN); } catch (eL) {}
+        // P142: خلاصهٔ سلامت فقط وقتی مشکلی هست (okN < ۳) — لاگ شادی هر تیک حذف شد
+        if (okN < threeH.length) { try { await FX.store.logEvent(env.DB, "cron", "P122 سلامت: " + threeH.join(",") + " ✓" + okN); } catch (eL) {} }
       } catch (e) { try { await FX.store.logEvent(env.DB, "cron", "P122 خطا: " + String((e && e.message) || e).slice(0, 120)); } catch (eL) {} }
       if ((globalThis.SF_TUNNELS && globalThis.SF_TUNNELS.n) > 0) {
-        try { await FX.store.logEvent(env.DB, "cron", "heavy deferred — light refresh done (tunnels " + globalThis.SF_TUNNELS.n + ")"); } catch (e) {}
+        try { globalThis.__sfCronLog = globalThis.__sfCronLog || {}; const __m142b = "heavy deferred — light refresh done (tunnels " + globalThis.SF_TUNNELS.n + ")"; if (globalThis.__sfCronLog.hdef !== __m142b) { globalThis.__sfCronLog.hdef = __m142b; await FX.store.logEvent(env.DB, "cron", __m142b); } } catch (e) {}
       } else if (String(await FX.store.getCore(env.DB, "heavy_cron") || "on") === "on") {   // P112 «صرفه‌جویی»: فقط موج کشف + ارکستراتور دروازه دارند
       // v2.19 «رله‌یاب»: one small discovery wave per cron run (6 candidates,
       // cursor-advanced — the whole candidate space re-scans over a few hours)
-      try { await relaySweepWave(env, false); } catch (e) { /* never crash cron */ }
+      // P142 «تایتان»: موج فقط یک‌درمیان (هر ۱۰ دقیقه) — نصف شدن subrequestهای کرون بدون افت معنادار تازگی
+      const __alt142 = Number((await FX.store.getCore(env.DB, "sf_cron_alt")) || 0) || 0;
+      if (__alt142 % 2 === 0) { try { await relaySweepWave(env, false); } catch (e) { /* never crash cron */ } }
       // ═══ SUPER FLASH v2.0 — ORCHESTRATOR AUTO-CYCLE (فاز ۳) ═══
       // هر اجرای cron یک مرحله: یکی dns بعدی services (جایگزین — هرگز هر دو با هم؛
       // بودجه subrequest هر invocation زیر سقف واقعی کلادفلر می‌ماند)
@@ -17259,7 +17588,7 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       try {
         const cat5 = await FX.proto.locCatalog(env);
         const st5 = await FX.proto.relayStateGet(env);
-        const FRESH5 = 10 * 60 * 1000;
+        const FRESH5 = 30 * 60 * 1000;   // P142 «تایتان»: ۱۰→۳۰د — مصرف کرون ~۷۵٪ کم شد؛ پینگ‌ها همچنان تازه می‌مانند
         const due5 = (cat5 || []).filter((c) => { const s = st5[c.id]; return !s || s.ms == null || !s.at || (Date.now() - s.at) > FRESH5; })
           .sort((a, b) => { const na = st5[a.id] && st5[a.id].ms != null ? 1 : 0, nb = st5[b.id] && st5[b.id].ms != null ? 1 : 0; if (na !== nb) return na - nb; return ((st5[a.id] || {}).at || 0) - ((st5[b.id] || {}).at || 0); })
           .slice(0, 4);
