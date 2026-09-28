@@ -17435,6 +17435,7 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
   //     و صفر subrequest اضافه (DoH فقط میزبانِ سردِ بی‌کش، سوار بر کش dohJson).
   SF.SUPER.EGR = (() => {
     const T = { dnsTtl: 300000, dnsKeep: 24 * 3600000, warmTtl: 45000, warmMax: 4, hotMin: 3, hotWin: 600000, stagger: 70, dialCap: 3500, probeCap: 8, hostsCap: 24 };
+    let lastFlush = 0;         // P143: فلاش فرصت‌طلب — حداکثر ۱ نوشتن در ۵دقیقه per isolate (الگوی flushUsage)
     const dns = new Map();   // host → { ips:[], t }
     const lat = new Map();   // host → Map(route → {n,sum,sum2})
     const hot = new Map();   // host → { n, t0, win }
@@ -17620,6 +17621,11 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
         else { st.ipWins++; hh.win = r.c.host; st.avgWinMs = Math.round((st.avgWinMs * 0.8) + (r.ms * 0.2)); }
         // (۵) وارم مقصد داغ
         if (hh.n >= T.hotMin && port === 443 && !opts.halfOpen) { try { replenish(env, host, port); } catch (e) {} }
+        // (۶) فلاش فرصت‌طلب — ایزولهٔ کثیف قبل از مرگ نقشه‌اش را می‌نویسد (حداکثر ۱/۵دقیقه — الگوی flushUsage؛ صفر بلاک روی مسیر کاربر)
+        if (dirty && opts.ctx && opts.ctx.waitUntil && Date.now() - lastFlush > T.dnsTtl) {
+          lastFlush = Date.now();
+          try { opts.ctx.waitUntil(flush(env).catch(() => {})); } catch (e) {}
+        }
         return { socket: r.sock, via: r.c.host === host ? "egr:host" : "egr:ip:" + r.c.host };
       } catch (e) { return null; }
     }
@@ -17640,6 +17646,7 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       });
       rows.sort((a, b) => (a.ms || 9e9) - (b.ms || 9e9));
       const okRows = rows.filter((x) => x.ok);
+      try { if (dirty) await flush(env); } catch (e) {}   // P143: پروب ادمین — یادگیری همان‌جا مانا می‌شود
       return {
         host, port: p, answers: ips, rows, tookMs: Date.now() - t0,
         best: okRows[0] || null,
