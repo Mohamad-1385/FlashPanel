@@ -17,7 +17,7 @@ const DESKTOP_CFG = {"LOC_GROUPS":[{"id":"irancell","fa":"ایرانسل (MTN)",
 FX.BOOT = {
   name: "flash",
   faName: "فلش",
-  version: "6.0.0"   /*P142:6.0.0 «تایتان» (مگا ورکر ۲): ضدتبلیغ ۲۱۴ دامنه (+۹۵ خالص) + ۶۶ سرویس AI (+۳۹ با DNS زنده: Meta/Groq/Together/Fireworks/Cohere/Cursor/Windsurf/OpenRouter/Replicate/Leonardo/Ideogram/Suno/ElevenLabs/Runway…) + dohSkip ۳۰ غول تازه + ۴۱ سرویس ایرانی + ۲۶ دامنهٔ گیم + استخر anycast ۶۴→۱۴۶ IP + رزولور DoH کشف ۶→۱۱ + رزولور پشتیبان TCP ×۵ + روتاتور خودکار ۵دقیقه‌ای (IP مرده همان تیک جایگزین — بدون مرورگر) + امتیاز پایداری ضدنوسان (μ+0.5σ) + کانفیگ اول = سریع‌ترین IP اندازه‌گیری‌شده + رفرش ساب ۲ ساعت + urltest تندتر (کلش 120s/50ms · سنتری‌باکس 2m/60ms) + کرون سبک‌شده (پینگ‌سوییپ ۳۰د · موج یک‌درمیان · لاگ فقط با تغییر)*/   /*P141:5.9.0 «مقاوم»: ECH پیش‌فرض (stealth=2 — SNI مخفی؛ بلاک SNI ایران روی workers.dev بی‌اثر) + جفت کانفیگ پشتک‌زنندهٔ پورت ۸۰ بدون TLS در همهٔ ساب‌ها (vless+trojan — بدون SNI، با هر کلاینتی) + نشانگر راهنمای وضعیت اضطراری*/   /*P137:5.8.0 «سوپر مگا»: ضدتبلیغ ۱۲۷ دامنه + ۱۳ سرویس AI تازه (Grok/DeepSeek/Mistral/Qwen/NotebookLM/LMArena/Poe/You/Character/HuggingFace) با دسته‌بندی DNS-راستی‌آزمایی + استخر IP بهینه ۱۰تایی*/   /*P137:5.7.0 «تندر خودکار»: v4-first (سنتری‌باکس+کلش) + راهنمای سوپر سرعت خودکار — بدون هیچ فعال‌سازی دستی*/   /*P136:5.6.2 «روش زئوس»: جمنای از تونل عادی — حذف مسیر WARP مردهٔ کلاینت + پیش‌فرض سنتری‌باکس = تونل*/,   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
+  version: "6.1.0"   /*P143:6.1.0 «سیمرغ» (مسیریاب بهترین خروجی): EGR — مسابقهٔ زندهٔ همهٔ مسیرهای خروجی (پاسخ‌های DNS + نام میزبان — اولین سوکت باز برنده) + یادگیری پایداری μ+0.5σ از اندازه‌گیری واقعی لبه + چسبندگی با هسترزیس ۲۵٪ (ضدنوسان خروجی) + وارم‌پول سوکت از پیش باز برای مقاصد داغ (DNS+TCP صفر) + کش DNS با TTL + فلاش D1 فقط با تغییر در همان تیک کرون · فیکس پینگ -1: جفت پشتک‌زنندهٔ ۸۰ همیشه روی IP تمیز (نه دامنه — دقیقاً در بلاک DNS/SNI باید زنده بماند؛ الگوی BPB اثبات‌شده) + تنزل ECH از پیش‌فرض (cloudflare-ech.com مشترک/بلاک‌پذیر — تحقیق ۲۰۲۶: ECH در ایران خراب است؛ فرگمنت پیش‌فرض می‌ماند) + /api/egr (GET نقشهٔ مسیرها · POST probe مسابقهٔ زندهٔ رتبه‌بندی‌شده)*/   /*P142:6.0.0 «تایتان» (مگا ورکر ۲): ضدتبلیغ ۲۱۴ دامنه (+۹۵ خالص) + ۶۶ سرویس AI (+۳۹ با DNS زنده: Meta/Groq/Together/Fireworks/Cohere/Cursor/Windsurf/OpenRouter/Replicate/Leonardo/Ideogram/Suno/ElevenLabs/Runway…) + dohSkip ۳۰ غول تازه + ۴۱ سرویس ایرانی + ۲۶ دامنهٔ گیم + استخر anycast ۶۴→۱۴۶ IP + رزولور DoH کشف ۶→۱۱ + رزولور پشتیبان TCP ×۵ + روتاتور خودکار ۵دقیقه‌ای (IP مرده همان تیک جایگزین — بدون مرورگر) + امتیاز پایداری ضدنوسان (μ+0.5σ) + کانفیگ اول = سریع‌ترین IP اندازه‌گیری‌شده + رفرش ساب ۲ ساعت + urltest تندتر (کلش 120s/50ms · سنتری‌باکس 2m/60ms) + کرون سبک‌شده (پینگ‌سوییپ ۳۰د · موج یک‌درمیان · لاگ فقط با تغییر)*/   /*P141:5.9.0 «مقاوم»: ECH پیش‌فرض (stealth=2 — SNI مخفی؛ بلاک SNI ایران روی workers.dev بی‌اثر) + جفت کانفیگ پشتک‌زنندهٔ پورت ۸۰ بدون TLS در همهٔ ساب‌ها (vless+trojan — بدون SNI، با هر کلاینتی) + نشانگر راهنمای وضعیت اضطراری*/   /*P137:5.8.0 «سوپر مگا»: ضدتبلیغ ۱۲۷ دامنه + ۱۳ سرویس AI تازه (Grok/DeepSeek/Mistral/Qwen/NotebookLM/LMArena/Poe/You/Character/HuggingFace) با دسته‌بندی DNS-راستی‌آزمایی + استخر IP بهینه ۱۰تایی*/   /*P137:5.7.0 «تندر خودکار»: v4-first (سنتری‌باکس+کلش) + راهنمای سوپر سرعت خودکار — بدون هیچ فعال‌سازی دستی*/   /*P136:5.6.2 «روش زئوس»: جمنای از تونل عادی — حذف مسیر WARP مردهٔ کلاینت + پیش‌فرض سنتری‌باکس = تونل*/,   /*P134:5.6.1: pinHeal دیگر IPهای CF را پروب مستقیم نمی‌کند (فروپاشی استخر) · کف ۴ در جایگزینی*/ /*P134:version — سقف IP از ۸ به ۲۴ در همهٔ لایه‌ها (پایان پینگ -۱: تنوع حداکثری IP زنده)*/   /*P131:version — رفع بهینه‌ساز OPT: حلقهٔ بی‌نهایت aterSample (کرش 503) + مسیر درست نتایج رادار (speed_results)*/   /*P130:version — جمنای زنده: WARP per-user داخل ساب + ریشه‌ای «وارپ وصل نشد» (حذف Reserved متن wg/awg + reserved آرایه‌ای singbox + اندپوینت فقط IP خام)*/   // P122 «فقط کانفیگ سالم»: خودکار = ۸ کشور برترِ تازه (نه ۵۵) + فیلتر تازگی ۲۴س/سقف ۸۰۰ms همهٔ کانفیگ‌های کشوری + پین پایدار IP ورودی per (کاربر، شکاف) + اولویت 🏠 آدرس ورکر کاربر قبل از استخر ater (تاگل زنده شد) + کرون نگهبان سلامت (رفرش ۳ کشور/تیک حتی با تونل زنده — پایان قحطی ۶۴ساعته relay_state) + بذر TGD (tgd:best همیشه تازه) + حذف مرکز فرماندهی + اسکنر IP در داک + دکمهٔ WARP در اندپوینت + خواندن مستقیم addrmode (رفع تأخیر ۵دقیقه‌ای)   // P120 «هستهٔ سوپر» (SUPER CORE): تلگرام مستقیم (رفع ریشه‌ای درحال‌اتصال) + قطع‌کنندهٔ Envoy + sing-box 1.12 + مرکز فرماندهی + جستجوی سراسری + رویدادها + نسخه‌های تنظیمات: WARP/WireGuard/AmneziaWG — مولد کانفیگ رایگان + فرمت رسمی امزینگ (vpn://) + ۵ خروجی   // P118 فاز ۶ «pyip»: سوپر ارتقای ورکر — رلهٔ اختصاصی هر کانفیگ (روش yonggekkk ★16K): پیشنهاد ۲ (نمودار ثانیه‌شمار زنده در پنل اصلی) + ۴ (PWA) + ۸ (صفحهٔ وضعیت عمومی)   // P117 فاز ۷ (muj4ggdf): خودکارسازی تست تونل — دکمه حذف؛ باز کردن تنظیمات خودش تست می‌کند و پر می‌کند   // P117 «تندر۳» فاز ۶ (mujcftsv+mujghzzl+mujay5ba+mujazf38): روش نوا — پیش‌فرض آدرس‌دهی = استخر IP anycast (FX.BOOT.defaultIps بالاخره زنده شد؛ دامنهٔ workers.dev در ایران DNS-بلاک است = ریشهٔ قطعی تلگرام/جمنای) + پورت‌های نوایی 443/8443   // P117 (muj48x5n): لوگوی تلگرام/گیت‌هاب در موبایل — ستون عمودی کنار + مخفی روی مودال/دراور   // P116 «تندر۲» (muj4axvi+muj5qy3k+muj7bcn3+muj78fd4): پایان خطای ارسال جمنای — نگهبان حامل ob (WARP از ورکر loop-block؛ زنجیرهٔ مرده هر اتصال AI را می‌کشت) + AI_DIRECT گوگل-گسترده + تست‌های صادقانهٔ ob/auto-ob   // P105 «پشتیبان» (zq-mui7n9hv): دکمهٔ ربات فلش در پالت فرمان + اطلاع هوش مصنوعی مدیریت خودکار هنگام ثبت‌نام کاربر   // P104 «موشک» (zq-mui7esr4 + zq-mui2p8yc): فریم‌های بزرگ‌تر + رمپ‌آپ سریع — سقف دانلود ۲۵۶KB + شروع ۱۲۸KB + آپلود ۶۴KB؛ امن با فشار-برگشتی P103   // P103 «رودبار» (zq-mui7yz5i): فیکس قطع کامل آپلود/دانلود — مرگ خاموش ادغام‌گر دانلود (guard ۲MB→۱۲MB + kill بااطلاع) + فشار-برگشتی پمپ (HWM 768KB → هم‌ترازی سرعت سوکت با WS)   // P99 «پایدار» (5rc00+5rdfh+5rekm+5rfrp+5smaw): پایان چرخهٔ درحال‌اتصال تلگرام + AI-IPs چسبان + حذف کارت‌های دستی طوفان/آدرس‌دهی (موتور همیشه‌بهینه)   // P95 «سوپر سرعت» (zq-mui03hoi): تحقیق BPB + فرگمنت ۱ms + UDP Noise + happyEyeballs   // P93 (zq-mui0seew): کلید یکتا per build + ۲۰ اندپوینت + تست واقعی مرورگری   // P89 (zq-muhybhih): حذف کامل بخش سرویس‌ها از UI پنل (ناوبری+صفحه+چیدمان)؛ موتور پشت‌صحنه خفته ماند   // P85-F5: فیکس خودکار‌تست CF + حذف کامل بخش سایر امکانات پیشرفته   // P84-T «بدون تلگرام» (zq-muhqpidy): حذف کامل بخش پروکسی تلگرام از UI پنل (ناوبری + صفحه + کارت‌ها)؛ موتور پشت‌صحنه خفته ماند   // P84 «جهانی»: فیکس ریشه‌ای vmess (base64 استاندارد — import در همهٔ v2rayها) + جستجوی منابع جهانی کامل (۴۳ پورت رسمی WARP + ۳۴ مرز — تا ۳۰ نتیجه) + حذف کانفیگ آمادهٔ Oblivion از تنظیمات + پایان «رله پاسخ نداد» برای اندپوینت‌های CF   // P83 «صرفه‌جویی+»: فاصلهٔ flush ترافیک ۳۰s → ۳min (نوشتن‌های D1 ~۸۶٪ کم شد — سقف ۱۰۰k/day دیروز ۸۲٪ پر شده بود): کش مشترک ۵ دقیقه‌ای مسیر ساب — هر fetch از ~۲۰ کوئری D1 به ~۱: از 3.9.1 به بعد (P79→P81c) ویژگی‌ها آمدند ولی شمارهٔ نسخه جا مانده بود
   codename: "superflash",   // v1.0.0 «نسخهٔ بتا»: بازگشت کامل UI به نسخهٔ سادهٔ فلش + بنر بتا · v2.0.0 «سوپر فلش» (SUPER FLASH): the orchestrated super-core architecture — every engine under one orchestrator, real measurements only    // v1.11.0 «عین عکس»: home+dock rebuilt pixel-exact from measured photo data     // v1.9.0 «فلاش رید»: the Flash-Roid home (both reference photos applied 0-100) + ater path on the worker address + turbo speed pack: the Ater/WireGuard low-ping path (WARP ingress ranges) applied to every config: the About section — copied EXACTLY from ORION-FLASH v1.2.0 (the real-phone about)   // v1.3.0 ORIN HOME (خانهٔ اورین): the home screen rebuilt 0-100 from the reference image — 4x2 squircle gradient grid, LTR hero flow, section header with 4-dot icon + blue underline
   // v2.10 «هسته فلش» (FLASH CORE) — the consolidated super-engine, same
   // generation: every technique the open-source core ecosystem
@@ -8490,7 +8490,17 @@ FX.MEGA = MEGA;
         }
       } catch (e) {}
     }
-    return { socket: FX.MEGA.emptyDuplexGuard(SOCKS(`${host}:${port}`, { secureTransport: "off", allowHalfOpen: !!opts.halfOpen }), () => megaBridgeRetry(host, port, opts)), via: "direct+guard" }; /*P123:emptyguard*/
+    // ═══ P143 «سیمرغ» — (۷.۵) مسیریاب بهترین خروجی (EGR) ═══
+    // فقط نام‌های میزبان (IPها بالاتر مدیریت شدند؛ DCهای تلگرام با TGD). مسابقهٔ
+    // پاسخ‌های DNS + خودِ نام + وارم‌پول + یادگیری پایداری — هیچ‌وقت کندتر از
+    // مسیر مستقیم قبلی نیست (نام میزبان از همان لحظهٔ صفر در مسابقه است).
+    if (globalThis.SF && globalThis.SF.SUPER && globalThis.SF.SUPER.EGR && !isIpV4(host)) {
+      try {
+        const ed = await SF.SUPER.EGR.dial(env, host, port, { halfOpen: !!opts.halfOpen, ctx: (typeof ctx !== "undefined" ? ctx : null) });
+        if (ed && ed.socket) return { socket: ed.socket, via: ed.via };
+      } catch (e) {}
+    }
+    return { socket: FX.MEGA.emptyDuplexGuard(SOCKS(`${host}:${port}`, { secureTransport: "off", allowHalfOpen: !!opts.halfOpen }), () => megaBridgeRetry(host, port, opts)), via: "direct+guard" }; /*P123:emptyguard*/ /*P143:egrhook*/
   }
 
   // P120: بهترین پورت اتصال به DC تلگرام — پوشش TGD (مسابقهٔ 443/80/5222) با fallback امن
@@ -11834,7 +11844,23 @@ function buildShards(account, host, opts = {}) {
     // (رمزنگاری لایهٔ انتقال ندارند — فقط برای وضعیت اضطراری که TLS بلاک است)
     if (opts.f80 !== false && !ports.includes(80)) {
       const f80i = out.length;
-      const f80addr = forceHost ? host : (poolStable.length ? poolStable[slotPin(String(account.uid || "") + "|f80") % poolStable.length] : host);
+      // ═══ P143 (zq-mul9flzk ریشهٔ پینگ -1): پشتک‌زنندهٔ اضطراری هرگز روی دامنه نمی‌نشیند ═══
+      // سناریوی وجودی این جفت: بلاک DNS/SNI دامنهٔ workers.dev. اگر آدرس خودش دامنه
+      // باشد، دقیقاً در همان سناریو در مرحلهٔ DNS می‌میرد (پیش از رسیدن به SNI!).
+      // IP تمیز + Host=دامنه (پورت ۸۰ بدون TLS) از هر دو بلاک رد می‌شود — الگوی
+      // اثبات‌شدهٔ BPB. حتی برای کاربر wa=1 (دامنهٔ صریح — ۴۳ کانفیگش محترم است)،
+      // این دو کانفیب اضطراری روی IP استخر می‌نشیند: استخر → ater → curated → پیش‌فرض.
+      const f80pool = (() => {
+        const srcs = poolStable.length ? poolStable
+          : (Array.isArray(opts.aterIps) && opts.aterIps.length ? opts.aterIps
+          : (Array.isArray(opts.ips) && opts.ips.length ? opts.ips
+          : (Array.isArray(opts.committedIps) && opts.committedIps.length ? opts.committedIps
+          : (Array.isArray(FX.BOOT.defaultIps) ? FX.BOOT.defaultIps : []))));
+        const uniq = [...new Set(srcs.map(String).filter((x) => x && /^[0-9.]+$/.test(x)))].sort((a, b) => String(a).localeCompare(String(b)));
+        try { const dl = FX.MEGA.deadSet; if (dl && dl.size) { const flt = uniq.filter((x) => !dl.has(x)); if (flt.length) return flt; } } catch (e) {}
+        return uniq;
+      })();
+      const f80addr = f80pool.length ? f80pool[slotPin(String(account.uid || "") + "|f80") % f80pool.length] : host;   /*P143:f80fix*/
       const f80mk = (proto) => {
         const nm = `${label} - ${proto} (80 بدون TLS) 🛡`;
         const q = `?encryption=none&security=none&type=ws&host=${host}&path=${encodeURIComponent(`${tpath}${uidSeg}?ed=2560`)}`;
@@ -12504,12 +12530,16 @@ function buildShards(account, host, opts = {}) {
 
     // ═══ P120: تشخیص نسل کلاینت از UA — sing-box 1.12+/Hiddify جدید → فرمت جدید ═══
     const sb12 = /sing-box\/1\.(1[2-9]|[2-9][0-9])|hiddify[-next\/ ]*[2-9]\.[5-9]|stash|karing/i.test(ua) || url.searchParams.get("v12") === "1";
-    // ═══ P125 «اختفا»: st = 0 خاموش | 1 فرگمنت | 2 فرگمنت+ECH — P141 «مقاوم»: پیش‌فرض ۲ (ECH) — ریشهٔ پینگ -1 بدون فیلترشکن = بلاک SNI workers.dev؛ ECH آن را رمزنگاری می‌کند
-    let stealth = 2;
+    // ═══ P125 «اختفا»: st = 0 خاموش | 1 فرگمنت | 2 فرگمنت+ECH ═══
+    // P143 «سیمرغ» (zq-mul9flzk): پیش‌فرض از ۲ به ۱ برگشت — تحقیق زندهٔ ۲۰۲۶ (BPB/
+    // net4people): ECH کلادفلر روی cloudflare-ech.com «مشترک» است و بلاک‌پذیر؛
+    // فعالان گزارش می‌دهند ECH در ایران = قطعی کامل. فرگمنت (تنظیم پیش‌فرض) زنده
+    // است؛ ECH فقط اختیاری (?st=2 یا تنظیم) — نه پیش‌فرضِ همه.
+    let stealth = 1;
     {
       const stP = url.searchParams.get("st");
       if (stP === "0" || stP === "1" || stP === "2") stealth = Number(stP);
-      else { try { const sv = await gc(env, "stealth"); if (sv === "0" || sv === "2") stealth = Number(sv); } catch (e) {} }
+      else { try { const sv = await gc(env, "stealth"); if (sv === "0" || sv === "1" || sv === "2") stealth = Number(sv); } catch (e) {} }
     }
     const echOn = url.searchParams.get("ech") === "1" || stealth >= 2;   // P125: ech=1 قدیمی حفظ شد
     // P127 «فلاش‌پلاس»: TUN (تنظیم تلگرام خودکار) بدون گزینش — پیش‌فرض روشن روی فرمت sing-box؛ ?tun=0 خاموش می‌کند
@@ -16534,6 +16564,8 @@ async function shimUserReset(request, env, uid) {
     if (path === "/api/radar/apply" && method === "POST") return radarApply(request, env);
     if (path === "/api/rotator" && method === "GET") return FX.ROTATOR_API.get(env);          // P142 «تایتان»
     if (path === "/api/rotator" && method === "POST") return FX.ROTATOR_API.post(request, env);
+    if (path === "/api/egr" && method === "GET") return SF.SUPER.EGR.apiGet(request, env);      // P143 «سیمرغ» — نقشهٔ مسیرهای خروجی
+    if (path === "/api/egr" && method === "POST") return SF.SUPER.EGR.apiPost(request, env);    // P143 — probe مسابقهٔ زندهٔ رتبه‌بندی‌شده
     if (path === "/api/sf" && method === "GET") return sfApi(request, env);
     if (path === "/api/sf/super" && method === "GET") return sfSuperGet(request, env);   // P58 فاز ۱ — معماری سوپر
     // ═══ P120 «مرکز فرماندهی» ═══
@@ -17385,6 +17417,272 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
     } catch (e) {}
   }
 
+  // ═══ P143 «سیمرغ» — EGR: مسیریاب بهترین خروجی (Egress Route Optimizer) ═══
+  // مسیر کامل تونل: کاربر → IP تمیز → لبهٔ CF → ورکر → connect() خروجی → مقصد.
+  // تا 6.0.0 دیال خروجیِ «نام میزبان» یک مسیر ناشناخته بود (DNS داخلی CF تصمیم
+  // می‌گرفت و هیچ یادگیری‌ای نبود — منبع پینگ ۸۰۱ms تونل). سیمرغ شش لایه اضافه می‌کند:
+  // (۱) مسابقهٔ زنده: همهٔ پاسخ‌های A + خودِ نام میزبان — اولین سوکتِ باز برنده
+  //     (الگوی اثبات‌شدهٔ raceDialVerified — بازنده‌ها بسته می‌شوند، هرگز کرش نکن)
+  // (۲) یادگیری پایداری μ+0.5σ (همان موتور ضدنوسان P142 فاز ۲) از اندازه‌گیریِ
+  //     واقعی همین لبه — هر مسابقه همهٔ کاندیداها را می‌آموزد (شامل جریمهٔ شکست)
+  // (۳) چسبندگی با هسترزیس ۲۵٪: برندهٔ فعلی تا وقتی بدترِ از ۲۵٪ِ بهترین رقیب
+  //     نشده عوض نمی‌شود — خروجیِ سالم هرگز جابه‌جا نمی‌شود (ضدنوسان خروجی)
+  // (۴) وارم‌پول: مقصد داغ (≥۳ دیال در ۱۰ دقیقه) = یک سوکت از پیش باز — دیال
+  //     بعدی DNS+TCP را صفر می‌کند (بزرگ‌ترین برد: کل تأخیر برقراری اتصال حذف)
+  // (۵) کش DNS با TTL + فیلتر IPهای کلادفلر (loop-block خودکشی است) + هیدرات
+  //     از D1 (ایزولهٔ سرد بدون DoH دوباره شروع نمی‌کند)
+  // (۶) فلاش D1 فقط با تغییر و فقط در همان تیک کرون — روی مسیر کاربر صفر نوشتن
+  //     و صفر subrequest اضافه (DoH فقط میزبانِ سردِ بی‌کش، سوار بر کش dohJson).
+  SF.SUPER.EGR = (() => {
+    const T = { dnsTtl: 300000, dnsKeep: 24 * 3600000, warmTtl: 45000, warmMax: 4, hotMin: 3, hotWin: 600000, stagger: 70, dialCap: 3500, probeCap: 8, hostsCap: 24 };
+    const dns = new Map();   // host → { ips:[], t }
+    const lat = new Map();   // host → Map(route → {n,sum,sum2})
+    const hot = new Map();   // host → { n, t0, win }
+    const warm = new Map();  // "host:port" → { sock, at, ready, ip }
+    let hydrated = false, dirty = false;
+    const st = { dials: 0, warmHits: 0, warmMiss: 0, ipWins: 0, hostWins: 0, doh: 0, avgWinMs: 0 };
+    const isIpRe = /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/;
+    const _sl = (ms) => new Promise((z) => setTimeout(z, ms));
+
+    // ── دیال امن: باز شدن سوکت را «منتظر» می‌ماند؛ تایم‌اوت = رها کردن امن ═══
+    // (درس v2.12: بستن سوکت با opened معلق = کرش workerd — اول settle بعد close)
+    function mkDial(host, port, halfOpen) {
+      return new Promise((res) => {
+        let sock, done = false;
+        try { sock = connect(host + ":" + (port || 443), { secureTransport: "off", allowHalfOpen: !!halfOpen }); }
+        catch (e) { return res(null); }
+        const t0 = Date.now();
+        const abandon = () => { try { sock.opened.then(() => { try { sock.close(); } catch (e2) {} }, () => { try { sock.close(); } catch (e2) {} }); } catch (e2) { try { sock.close(); } catch (e3) {} } };
+        const to = setTimeout(() => { if (done) return; done = true; abandon(); res(null); }, T.dialCap);
+        sock.opened.then(() => {
+          if (done) { try { sock.close(); } catch (e) {} return; }
+          done = true; clearTimeout(to);
+          res({ sock, ms: Date.now() - t0 });
+        }).catch(() => { if (done) return; done = true; clearTimeout(to); res(null); });
+      });
+    }
+
+    // ── مسابقه: add() کاندید اضافه می‌کند (با تاخیر پلکانی)؛ اولین سوکتِ باز برنده ═══
+    function openRace(halfOpen, onDone) {
+      const S = { settled: false, failed: 0, total: 0 };
+      const prom = new Promise((resolve) => { S.resolve = resolve; });
+      const start = (c) => {
+        if (S.settled) return;
+        S.total++;
+        mkDial(c.host, c.port, halfOpen).then((r) => {
+          try { if (onDone) onDone(c, r); } catch (e) {}
+          if (r && r.sock && !S.settled) { S.settled = true; S.resolve({ sock: r.sock, ms: r.ms, c }); }
+          else if (r && r.sock) { try { r.sock.close(); } catch (e) {} }
+          else { S.failed++; if (S.failed >= S.total && !S.settled) { S.settled = true; S.resolve(null); } }
+        }).catch(() => { S.failed++; if (S.failed >= S.total && !S.settled) { S.settled = true; S.resolve(null); } });
+      };
+      return {
+        add: (c, delayMs) => { if (delayMs > 0) setTimeout(() => start(c), delayMs); else start(c); },
+        promise: prom,
+      };
+    }
+
+    // ── یادگیری: μ+0.5σ per (مقصد، مسیر) — شکست = جریمهٔ کامل dialCap ═══
+    function note(host, route, ms, ok) {
+      try {
+        let m = lat.get(host); if (!m) { m = new Map(); lat.set(host, m); }
+        let e = m.get(route); if (!e) { e = { n: 0, sum: 0, sum2: 0 }; m.set(route, e); }
+        const v = (!ok || !ms || ms <= 0 || ms > T.dialCap) ? T.dialCap : ms;
+        e.n++; e.sum += v; e.sum2 += v * v;
+        dirty = true;
+      } catch (e) {}
+    }
+    function score(host, route) {
+      try {
+        const m = lat.get(host); if (!m) return null;
+        const e = m.get(route); if (!e || e.n < 1) return null;
+        const avg = e.sum / e.n;
+        const sig = Math.sqrt(Math.max(0, e.sum2 / e.n - avg * avg));
+        return avg + 0.5 * sig;
+      } catch (e) { return null; }
+    }
+    // ── چسبندگی + هسترزیس ۲۵٪ (ضدنوسان — برندهٔ سالم عوض نمی‌شود) ═══
+    function sticky(host, ips) {
+      const h = hot.get(host);
+      const scored = ips.map((ip) => ({ ip, sc: score(host, ip) })).filter((x) => x.sc != null).sort((a, b) => a.sc - b.sc);
+      if (h && h.win && ips.includes(h.win)) {
+        const wsc = score(host, h.win);
+        if (wsc != null && (!scored.length || wsc <= scored[0].sc * 1.25)) return h.win;
+      }
+      return scored.length ? scored[0].ip : (h && h.win && ips.includes(h.win) ? h.win : ips[0]);
+    }
+
+    // ── DNS: کش → DoH (سوار بر کش dohJson) → فیلتر IPهای CF (loop-block) ═══
+    function dnsGet(host) {
+      const c = dns.get(host);
+      if (c && c.ips && c.ips.length && Date.now() - c.t < T.dnsTtl) return c.ips;
+      return null;
+    }
+    async function resolve(env, host) {
+      try {
+        let ips = [];
+        try { ips = await FX.MEGA.dohResolve(host); } catch (e) { ips = []; }
+        if (!ips || !ips.length) { const c = dns.get(host); return (c && c.ips) || []; }
+        ips = ips.filter((ip) => { try { return !FX.proto.ipInCfRanges(ip); } catch (e) { return true; } });
+        if (!ips.length) return [];
+        dns.set(host, { ips, t: Date.now() });
+        st.doh++;
+        dirty = true;
+        return ips;
+      } catch (e) { return []; }
+    }
+
+    // ── هیدرات/فلاش: D1 یک‌بار per isolate — خواندن تنبل، نوشتن فقط با تغییر ═══
+    async function hydrate(env) {
+      if (hydrated) return;
+      hydrated = true;
+      try {
+        const raw = await FX.store.getCore(env.DB, "egr_map");
+        const j = raw ? JSON.parse(raw) : null;
+        if (j && j.dns) for (const [h, c] of Object.entries(j.dns)) if (c && Array.isArray(c.ips) && c.ips.length && Date.now() - (c.t || 0) < T.dnsKeep) dns.set(h, c);
+        if (j && j.lat) for (const [h, m] of Object.entries(j.lat)) { const mm = new Map(); for (const [r, e] of Object.entries(m || {})) if (e && e.n > 0) mm.set(r, e); if (mm.size) lat.set(h, mm); }
+      } catch (e) {}
+    }
+    async function flush(env) {
+      try {
+        for (const [k, w] of warm) if (Date.now() - w.at > T.warmTtl) { warm.delete(k); if (w.ready) { try { w.sock.close(); } catch (e) {} } }
+        if (!dirty) return { wrote: false };
+        dirty = false;
+        const now = Date.now();
+        const dnsOut = {};
+        for (const [h, c] of dns) if (c && c.ips && c.ips.length && now - (c.t || 0) < T.dnsKeep) dnsOut[h] = c;
+        const latOut = {};
+        const hosts = [...lat.keys()].sort((a, b) => ((hot.get(b) || {}).n || 0) - ((hot.get(a) || {}).n || 0)).slice(0, T.hostsCap);
+        for (const h of hosts) {
+          const m = lat.get(h); const o = {};
+          for (const [r, e] of m) if (e && e.n > 0) o[r] = { n: e.n, sum: Math.round(e.sum), sum2: Math.round(e.sum2) };
+          latOut[h] = o;
+        }
+        await FX.store.setCore(env.DB, "egr_map", JSON.stringify({ at: now, dns: dnsOut, lat: latOut }));
+        return { wrote: true, hosts: Object.keys(latOut).length };
+      } catch (e) { dirty = true; return { wrote: false, err: String((e && e.message) || e).slice(0, 60) }; }
+    }
+
+    // ── وارم‌پول: سوکت از پیش باز برای مقصد داغ (۴۴۳ فقط — بدون halfOpen) ═══
+    function replenish(env, host, port) {
+      try {
+        if (port !== 443 || warm.size >= T.warmMax) return;
+        const key = host + ":" + port;
+        if (warm.has(key)) return;
+        const ips = dnsGet(host) || [];
+        const h = hot.get(host);
+        const ip = (h && h.win && ips.includes(h.win)) ? h.win : (ips[0] || null);
+        if (!ip) return;
+        let sock;
+        try { sock = connect(ip + ":" + port, { secureTransport: "off", allowHalfOpen: false }); }
+        catch (e) { return; }
+        const rec = { sock, at: Date.now(), ready: false, ip };
+        warm.set(key, rec);
+        sock.opened.then(() => { rec.ready = true; }, () => { try { warm.delete(key); } catch (e) {} });
+      } catch (e) {}
+    }
+
+    // ═══ دیال هوشمند — قلب سیمرغ ═══
+    async function dial(env, host, port, opts = {}) {
+      try {
+        if (!host || isIpRe.test(host) || !host.includes(".")) return null;   // فقط نام میزبان
+        st.dials++;
+        const key = host + ":" + port;
+        // (۱) وارم‌پول — DNS+TCP صفر
+        const w = warm.get(key);
+        if (w) {
+          if (!w.ready || Date.now() - w.at > T.warmTtl) { warm.delete(key); if (w.ready) { try { w.sock.close(); } catch (e) {} } }
+          else if (!opts.halfOpen) {
+            warm.delete(key);
+            st.warmHits++;
+            try { replenish(env, host, port); } catch (e) {}
+            return { socket: w.sock, via: "egr:warm:" + w.ip };
+          }
+        } else st.warmMiss++;
+        // (۲) هیدرات تنبل (پس‌زمینه — دیال فعلی منتظر نمی‌ماند)
+        if (!hydrated) { try { const hp = hydrate(env); if (opts.ctx && opts.ctx.waitUntil) opts.ctx.waitUntil(hp.catch(() => {})); } catch (e) {} }
+        // (۳) کش DNS — سرد: مسابقه فوراً با نام میزبان شروع می‌شود؛ DoH موازی می‌پیوندد
+        let ips = dnsGet(host);
+        const dohP = ips ? null : resolve(env, host);
+        const hh = (() => { let h = hot.get(host); const now = Date.now(); if (!h || now - h.t0 > T.hotWin) { h = { n: 0, t0: now, win: "" }; hot.set(host, h); } h.n++; return h; })();
+        const win = ips ? sticky(host, ips) : (hh.win || "");
+        const race = openRace(!!opts.halfOpen, (c, r) => note(host, c.host, r ? r.ms : T.dialCap, !!r));
+        const seen = new Set();
+        const add = (h2, delay) => { if (h2 && !seen.has(h2)) { seen.add(h2); race.add({ host: h2, port }, delay); } };
+        add(win, 0);                                   // برندهٔ چسبنده — شروع فوری
+        if (ips) for (const ip of ips.slice(0, 3)) if (ip !== win) add(ip, T.stagger);   // رقبا با تاخیر پلکانی (برندهٔ چسبنده مزیت شروع دارد)
+        add(host, 0);                                  // نام میزبان از صفر (مسیر امروز — هیچ‌وقت کندتر)
+        if (dohP) dohP.then((fresh) => { for (const ip of (fresh || []).slice(0, 3)) add(ip, T.stagger); }).catch(() => {});
+        const r = await race.promise;
+        if (!r) return null;                           // همه مردند → مسیر مستقیم قبلی (با گارد)
+        // (۴) ثبت برنده + آمار
+        if (r.c.host === host) st.hostWins++;
+        else { st.ipWins++; hh.win = r.c.host; st.avgWinMs = Math.round((st.avgWinMs * 0.8) + (r.ms * 0.2)); }
+        // (۵) وارم مقصد داغ
+        if (hh.n >= T.hotMin && port === 443 && !opts.halfOpen) { try { replenish(env, host, port); } catch (e) {} }
+        return { socket: r.sock, via: r.c.host === host ? "egr:host" : "egr:ip:" + r.c.host };
+      } catch (e) { return null; }
+    }
+
+    // ═══ پروب زندهٔ رتبه‌بندی‌شده — «بهترین مسیر را پیدا کن» ═══
+    async function probe(env, host, port) {
+      const p = Number(port) || 443;
+      const t0 = Date.now();
+      const ips = (await resolve(env, host)) || [];
+      const routes = [{ h: host, label: host + " (DNS داخلی CF)", kind: "host" },
+        ...ips.slice(0, T.probeCap).map((ip) => ({ h: ip, label: ip, kind: "ip" }))];
+      const rs = await Promise.all(routes.map((rt) => mkDial(rt.h, p, false)));
+      const rows = routes.map((rt, i) => {
+        const r = rs[i];
+        if (r) { try { r.sock.close(); } catch (e) {} }
+        note(host, rt.h, r ? r.ms : T.dialCap, !!r);
+        return { route: rt.label, kind: rt.kind, ok: !!r, ms: r ? r.ms : null };
+      });
+      rows.sort((a, b) => (a.ms || 9e9) - (b.ms || 9e9));
+      const okRows = rows.filter((x) => x.ok);
+      return {
+        host, port: p, answers: ips, rows, tookMs: Date.now() - t0,
+        best: okRows[0] || null,
+        verdict: okRows.length
+          ? "بهترین مسیر: " + okRows[0].route + " — " + okRows[0].ms + "ms (از " + okRows.length + " مسیر باز از " + rows.length + ")"
+          : "هیچ مسیری باز نشد — مقصد یا بلاک است یا از این لبه در دسترس نیست",
+      };
+    }
+
+    // ═══ گزارش — نقشهٔ مسیرهای آموخته‌شده ═══
+    async function report(env) {
+      try { await hydrate(env); } catch (e) {}
+      const hosts = [];
+      for (const [h, hh] of hot) {
+        const m = lat.get(h) || new Map();
+        const routes = [...m.entries()].map(([r, e]) => ({ route: r, n: e.n, ms: Math.round(e.sum / Math.max(1, e.n)), stab: Math.round(score(h, r) || 9e9) }))
+          .sort((a, b) => a.stab - b.stab).slice(0, 4);
+        hosts.push({ host: h, dials: hh.n, win: hh.win || "", routes });
+      }
+      hosts.sort((a, b) => b.dials - a.dials);
+      return {
+        stats: st,
+        hosts: hosts.slice(0, 10),
+        warm: [...warm.entries()].map(([k, w]) => ({ dst: k, ip: w.ip, ready: w.ready, ageMs: Date.now() - w.at })),
+        dnsN: dns.size, latN: lat.size, hydrated,
+        cfg: { dnsTtlMin: Math.round(T.dnsTtl / 60000), warmTtlSec: Math.round(T.warmTtl / 1000), warmMax: T.warmMax, hotMin: T.hotMin, staggerMs: T.stagger, hysteresis: "25%" },
+      };
+    }
+
+    // ═══ API ═══
+    const J = (data, status) => new Response(JSON.stringify(data), { status: status || 200, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
+    async function apiGet(request, env) { return J({ ok: true, data: await report(env) }); }
+    async function apiPost(request, env) {
+      let b = {};
+      try { b = await request.json(); } catch (e) {}
+      if (b && b.action === "probe" && b.host) return J({ ok: true, data: await probe(env, String(b.host), Number(b.port) || 443) });
+      if (b && b.action === "flush") return J({ ok: true, data: await flush(env) });
+      return J({ ok: false, error: "unknown-action (probe|flush)" }, 400);
+    }
+
+    return { dial, probe, report, flush, hydrate, apiGet, apiPost, stats: st };
+  })();
+
   // ═══ P142 «تایتان» — ROTATOR: استخر IP تمیز خودنگهدار (هر تیک کرون = ۵ دقیقه) ═══
   // مردها همان تیک حذف و جای‌شان تازه می‌گیرند (بدون تاخیر، بدون مرورگر، بدون پروب
   // خارجی — لبه نمی‌تواند IP کلادفلر را پروب کند؛ مرگ از سیگنال‌های واقعی می‌آید:
@@ -17531,6 +17829,8 @@ if (path === FX.BOOT.healthPath) return await FX.mirage.serve(request, env, url)
       await FX.store.flushUsage(env.DB);
       // ═══ P142 «تایتان» — ROTATOR هر تیک (۵د): مرده بی‌درنگ حذف + تازه تزریق + ترمیم پین‌ها ═══
       try { await rotatorTick(env); } catch (e) { /* never crash cron */ }
+      // ═══ P143 «سیمرغ» — فلاش نقشهٔ مسیرهای خروجی (فقط با تغییر) + هیدرات ایزوله‌های تازه ═══
+      try { await SF.SUPER.EGR.flush(env); } catch (e) { /* never crash cron */ }
       // ═══ P116 «تندر۲+» (muj4bct1+muj5ukux+muj5tu3q): بنچمارک و تیونینگ تطبیقی سبک ═══
       // P112 (heavy_cron=off) به‌طور ناخواسته بنچ/تیون سرعت را هم کشت — موشک P104
       // هرگز روشن نمی‌شد و پنل روی پیش‌فرض 128KB می‌ماند. حالا این بلوک در مسیر
