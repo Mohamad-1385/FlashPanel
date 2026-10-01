@@ -11,7 +11,7 @@
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
 [![D1 Database](https://img.shields.io/badge/Cloudflare-D1-0051C3?style=flat-square&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/d1/)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/Mohamadaghilibot)
-[![Version](https://img.shields.io/badge/build-7.9.28-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
+[![Version](https://img.shields.io/badge/build-v7.9.29-00D4AA?style=flat-square)](https://github.com/Mohamad-1385/FlashPanel/releases)
 [![License: Proprietary](https://img.shields.io/badge/license-FLASH%20Panel-red?style=flat-square)](LICENSE)
 
 [فارسی 🇮🇷](#-فارسی) · [English 🇬🇧](#-english)
@@ -26,7 +26,7 @@
 
 ### ✨ Highlights
 
-**🚀 NEW in 7.9.28 — Mega Speed Engine:** relays ranked by *measured real throughput* (Mbps) instead of TCP-milliseconds. Live-measured through the tunnel: Italy **145** / Germany **241** / flagless **145 Mbps** on Cloudflare-hosted sites (was ~16), 268 Mbps / 571 peak direct egress, 4-parallel browser load: 35MB in **1.8s**. Gemini on flagless configs verified on all 4 panels.
+**🚀 NEW in v7.9.29 — Mega Speed Engine:** relays ranked by *measured real throughput* (Mbps) instead of TCP-milliseconds. Live-measured through the tunnel: Italy **145** / Germany **241** / flagless **145 Mbps** on Cloudflare-hosted sites (was ~16), 268 Mbps / 571 peak direct egress, 4-parallel browser load: 35MB in **1.8s**. Gemini on flagless configs verified on all 4 panels.
 
 | | Feature | What you get |
 |---|---|---|
