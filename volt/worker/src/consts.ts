@@ -2,8 +2,8 @@
 // FLASH CORE catalog), ad-block list, ports, frag profiles, version.
 import type { LocCountry } from "./types";
 
-export const VERSION = "1.0.0";
-export const CODENAME = "جرقه";
+export const VERSION = "1.0.1";
+export const CODENAME = "تپش";   // «ضربان زنده» — location relays came alive
 export const BUILD = `VOLT ${VERSION} «${CODENAME}»`;
 export const CORE_ID = "VOLT-GO/1.0";          // Go-powered generation
 export const SESSION_TTL = 12 * 3600 * 1000;
@@ -21,6 +21,42 @@ export const FRAG_PROFILES: Record<string, { l: string; label: string }> = {
   fixed: { l: "100-200", label: "ثابت" },
 };
 
+// Cloudflare IPv4 ranges — a worker's connect() can NEVER reach these
+// (CF blocks worker→CF); every CF-hosted target must ride a relay.
+export const CF_RANGES: string[] = [
+  "173.245.48.0/20", "103.21.244.0/22", "103.22.200.0/22", "103.31.4.0/22",
+  "141.101.64.0/18", "108.162.192.0/18", "190.93.240.0/20", "188.114.96.0/20",
+  "197.234.240.0/22", "198.41.128.0/17", "162.158.0.0/15", "104.16.0.0/13",
+  "104.24.0.0/14", "172.64.0.0/13", "131.0.72.0/22",
+];
+
+// provably NON-Cloudflare giants (own CDNs) — skip the DoH roundtrip for them
+// (YouTube chunk hosts are fresh random subdomains: the cache never hits —
+// every new stream would pay a full DNS lookup before the dial otherwise)
+export const DOH_SKIP_SUFFIXES: string[] = [
+  "google.com", "googlevideo.com", "youtube.com", "youtube-nocookie.com",
+  "ytimg.com", "ggpht.com", "gstatic.com", "googleapis.com",
+  "googleusercontent.com", "gvt1.com", "gvt2.com", "withgoogle.com",
+  "microsoft.com", "live.com", "office.com", "office365.com", "msn.com", "bing.com",
+  "apple.com", "icloud.com", "mzstatic.com",
+  "netflix.com", "nflxvideo.net", "nflximg.net", "nflxext.com",
+  "facebook.com", "fbcdn.net", "instagram.com", "cdninstagram.com",
+  "tiktok.com", "tiktokcdn.com", "tiktokv.com", "ttwstatic.com",
+  "telegram.org", "t.me", "telesco.pe",
+  "twitter.com", "x.com", "twimg.com", "t.co",
+  "amazon.com", "amazonaws.com", "cloudfront.net", "media-amazon.com",
+  "spotify.com", "scdn.co", "spotifycdn.com",
+  "discord.com", "discordapp.com", "discord.gg", "discord.media",
+  "reddit.com", "redd.it", "redditstatic.com",
+  "pinterest.com", "pinimg.com",
+  "steamcontent.com", "steamserver.net", "steampowered.com", "steamstatic.com",
+];
+
+// verified dual-port (80+443) relays — the last-resort bridge for CF-hosted
+// port-80 targets when the proxyip pool can't forward plain HTTP (measured:
+// most community pools are TLS/SNI-only on 443)
+export const PORT80_FALLBACK: string[] = ["179.255.190.4", "179.255.190.3", "179.255.190.5"];
+
 // ad & tracker suffixes (curated — googlevideo untouched: in-stream ads ride
 // the same servers as the video itself)
 export const AD_BLOCK_SUFFIXES: string[] = [
@@ -37,42 +73,39 @@ export const AD_BLOCK_SUFFIXES: string[] = [
   "yektanet.com", "sabavision.com", "anetwork.ir", "adro.co",
 ];
 
-// locations — verified exit relays (ported from the live catalog)
+// locations — LIVE-VERIFIED exit relays (tunnel-matrix tested through the
+// worker: cp.cloudflare.com 443 must answer). v1.0.1 «تپش» purge:
+//   REMOVED 14 dead entries — tr/ae/gr/cy/es/at/ro/rs/az/am/ge/kz (their
+//   proxyip.<cc>.workers.dev relays are Cloudflare-hosted: a worker can never
+//   connect() to them — 100% dead tunnels) + tw/nl (pools dead through the
+//   worker). Community pools are SNI-pass-throughs: they carry CF-hosted TLS
+//   traffic of that country; non-CF sites go via the worker's own fast egress.
+//   Candidates lv/md/me/th ship pending their live verification tick.
 export const LOCATIONS: LocCountry[] = [
-  { id: "it", fa: "ایتالیا", en: "Italy", flag: "🇮🇹", cont: "eu", city: "میلان / رم", relays: ["179.255.190.4", "179.255.190.3", "179.255.190.5"], note: "استریم و دانلود + جمنای" },
+  { id: "it", fa: "ایتالیا", en: "Italy", flag: "🇮🇹", cont: "eu", city: "میلان / رم", relays: ["179.255.190.4", "179.255.190.3", "179.255.190.5"], note: "نزدیک‌ترین خروجی به ایران — هر دو پورت", p80: true },
   { id: "de", fa: "آلمان", en: "Germany", flag: "🇩🇪", cont: "eu", city: "فرانکفورت", relays: ["proxyip.de.cmliussss.net"], note: "پینگ پایین اروپا، دانلود و استریم" },
-  { id: "nl", fa: "هلند", en: "Netherlands", flag: "🇳🇱", cont: "eu", city: "آمستردام", relays: ["2.27.169.118", "178.253.23.53", "proxyip.nl.cmliussss.net"], note: "۲ رله اختصاصی + استخر کمونیتی" },
-  { id: "tr", fa: "ترکیه", en: "Turkey", flag: "🇹🇷", cont: "me", city: "استانبول", relays: ["proxyip.tr.workers.dev"], note: "نزدیک‌ترین خروجی به ایران — پینگ عالی" },
-  { id: "ae", fa: "امارات", en: "UAE", flag: "🇦🇪", cont: "me", city: "دبی", relays: ["proxyip.ae.workers.dev"], note: "هاب خاورمیانه — نزدیک ایران" },
   { id: "us", fa: "آمریکا", en: "United States", flag: "🇺🇸", cont: "am", city: "چند شهر", relays: ["proxyip.us.fxxk.dedyn.io", "proxyip.us.cmliussss.net"], note: "سرویس‌های آمریکایی و Gemini" },
   { id: "gb", fa: "انگلیس", en: "United Kingdom", flag: "🇬🇧", cont: "eu", city: "لندن", relays: ["proxyip.gb.cmliussss.net"], note: "Gemini و سرویس‌های انگلیسی" },
   { id: "fr", fa: "فرانسه", en: "France", flag: "🇫🇷", cont: "eu", city: "پاریس", relays: ["proxyip.fr.cmliussss.net"], note: "رله پایدار و تست‌شده" },
   { id: "ch", fa: "سوئیس", en: "Switzerland", flag: "🇨🇭", cont: "eu", city: "زوریخ", relays: ["proxyip.ch.cmliussss.net"], note: "مناسب حریم خصوصی" },
-  { id: "se", fa: "سوئد", en: "Sweden", flag: "🇸🇪", cont: "eu", city: "استکهلم", relays: ["proxyip.se.cmliussss.net"], note: "اسکاندیناوی، پایدار" },
-  { id: "fi", fa: "فنلاند", en: "Finland", flag: "🇫🇮", cont: "eu", city: "هلسینکی", relays: ["proxyip.fi.cmliussss.net"], note: "نوردیک کم‌ترافیک" },
+  { id: "se", fa: "سوئد", en: "Sweden", flag: "🇸🇪", cont: "eu", city: "استکهلم", relays: ["proxyip.se.cmliussss.net"], note: "اسکاندیناوی — هر دو پورت" },
+  { id: "fi", fa: "فنلاند", en: "Finland", flag: "🇫🇮", cont: "eu", city: "هلسینکی", relays: ["proxyip.fi.cmliussss.net"], note: "نوردیک کم‌ترافیک — هر دو پورت" },
   { id: "pl", fa: "لهستان", en: "Poland", flag: "🇵🇱", cont: "eu", city: "ورشو", relays: ["proxyip.pl.cmliussss.net"], note: "گیت‌وی اروپای شرقی" },
   { id: "cz", fa: "چک", en: "Czechia", flag: "🇨🇿", cont: "eu", city: "پراگ", relays: ["46.8.218.100"], note: "رله اختصاصی اروپای مرکزی" },
   { id: "lu", fa: "لوکزامبورگ", en: "Luxembourg", flag: "🇱🇺", cont: "eu", city: "بیسن", relays: ["107.189.30.77"], note: "رله اختصاصی و کم‌ترافیک" },
   { id: "ru", fa: "روسیه", en: "Russia", flag: "🇷🇺", cont: "eu", city: "مسکو", relays: ["proxyip.ru.cmliussss.net"], note: "سرویس‌های روسی و گیم" },
-  { id: "gr", fa: "یونان", en: "Greece", flag: "🇬🇷", cont: "eu", city: "آتن", relays: ["proxyip.gr.workers.dev"], note: "نزدیک‌ترین نقطهٔ اروپا به ایران" },
-  { id: "cy", fa: "قبرس", en: "Cyprus", flag: "🇨🇾", cont: "eu", city: "نیکوزیا", relays: ["proxyip.cy.workers.dev"], note: "مدیترانه — پینگ خوب از ایران" },
-  { id: "es", fa: "اسپانیا", en: "Spain", flag: "🇪🇸", cont: "eu", city: "مادرید", relays: ["proxyip.es.workers.dev"], note: "جنوب اروپا" },
-  { id: "at", fa: "اتریش", en: "Austria", flag: "🇦🇹", cont: "eu", city: "وین", relays: ["proxyip.at.workers.dev"], note: "اروپای مرکزی — پایدار" },
-  { id: "ro", fa: "رومانی", en: "Romania", flag: "🇷🇴", cont: "eu", city: "بخارست", relays: ["proxyip.ro.workers.dev"], note: "اروپای شرقی — سرعت خوب" },
-  { id: "rs", fa: "صربستان", en: "Serbia", flag: "🇷🇸", cont: "eu", city: "بلگراد", relays: ["proxyip.rs.workers.dev"], note: "بالکان" },
-  { id: "az", fa: "آذربایجان", en: "Azerbaijan", flag: "🇦🇿", cont: "asia", city: "باکو", relays: ["proxyip.az.workers.dev"], note: "همسایهٔ شمالی — پینگ بسیار کم" },
-  { id: "am", fa: "ارمنستان", en: "Armenia", flag: "🇦🇲", cont: "asia", city: "ایروان", relays: ["proxyip.am.workers.dev"], note: "همسایه — نزدیک‌ترین خروجی" },
-  { id: "ge", fa: "گرجستان", en: "Georgia", flag: "🇬🇪", cont: "asia", city: "تفلیس", relays: ["proxyip.ge.workers.dev"], note: "قفقاز — مسیر شمال" },
-  { id: "kz", fa: "قزاقستان", en: "Kazakhstan", flag: "🇰🇿", cont: "asia", city: "آلماتی", relays: ["proxyip.kz.workers.dev"], note: "آسیای میانه — نزدیک خزر" },
-  { id: "in", fa: "هند", en: "India", flag: "🇮🇳", cont: "asia", city: "بمبئی", relays: ["proxyip.in.cmliussss.net"], note: "خروجی نزدیک" },
+  { id: "in", fa: "هند", en: "India", flag: "🇮🇳", cont: "asia", city: "بمبئی", relays: ["proxyip.in.cmliussss.net"], note: "خروجی نزدیک — هر دو پورت" },
   { id: "sg", fa: "سنگاپور", en: "Singapore", flag: "🇸🇬", cont: "asia", city: "سنگاپور", relays: ["140.245.127.48", "166.108.238.41"], note: "۲ رله اختصاصی، هاب پرسرعت آسیا" },
   { id: "hk", fa: "هنگ‌کنگ", en: "Hong Kong", flag: "🇭🇰", cont: "asia", city: "هنگ‌کنگ", relays: ["proxyip.hk.fxxk.dedyn.io", "45.202.248.172", "proxyip.hk.cmliussss.net"], note: "خروجی آسیای شرقی" },
-  { id: "jp", fa: "ژاپن", en: "Japan", flag: "🇯🇵", cont: "asia", city: "توکیو", relays: ["proxyip.jp.cmliussss.net", "proxyip.jp.fxxk.dedyn.io"], note: "گیم و سرویس‌های ژاپنی" },
+  { id: "jp", fa: "ژاپن", en: "Japan", flag: "🇯🇵", cont: "asia", city: "توکیو", relays: ["proxyip.jp.cmliussss.net", "proxyip.jp.fxxk.dedyn.io"], note: "گیم و سرویس‌های ژاپنی — هر دو پورت" },
   { id: "kr", fa: "کره جنوبی", en: "South Korea", flag: "🇰🇷", cont: "asia", city: "سئول", relays: ["proxyip.kr.cmliussss.net", "proxyip.kr.fxxk.dedyn.io"], note: "مناسب گیم" },
-  { id: "tw", fa: "تایوان", en: "Taiwan", flag: "🇹🇼", cont: "asia", city: "تایپه", relays: ["proxyip.tw.cmliussss.net"], note: "آسیای شرقی" },
   { id: "ca", fa: "کانادا", en: "Canada", flag: "🇨🇦", cont: "am", city: "تورنتو", relays: ["proxyip.ca.cmliussss.net"], note: "آمریکای شمالی" },
-  { id: "br", fa: "برزیل", en: "Brazil", flag: "🇧🇷", cont: "am", city: "سائوپائولو", relays: ["38.180.78.255", "38.180.79.9"], note: "آمریکای جنوبی" },
+  { id: "br", fa: "برزیل", en: "Brazil", flag: "🇧🇷", cont: "am", city: "سائوپائولو", relays: ["38.180.78.255", "38.180.79.9"], note: "آمریکای جنوبی — هر دو پورت", p80: true },
   { id: "au", fa: "استرالیا", en: "Australia", flag: "🇦🇺", cont: "oc", city: "سیدنی", relays: ["proxyip.au.cmliussss.net"], note: "اقیانوسیه" },
+  { id: "lv", fa: "لتونی", en: "Latvia", flag: "🇱🇻", cont: "eu", city: "ریگا", relays: ["proxyip.lv.cmliussss.net"], note: "اروپای شمالی" },
+  { id: "md", fa: "مولداوی", en: "Moldova", flag: "🇲🇩", cont: "eu", city: "کیشیناو", relays: ["94.103.0.67"], note: "اروپای شرقی" },
+  { id: "me", fa: "مونته‌نگرو", en: "Montenegro", flag: "🇲🇪", cont: "eu", city: "پودگوریتسا", relays: ["147.90.229.163"], note: "بالکان" },
+  { id: "th", fa: "تایلند", en: "Thailand", flag: "🇹🇭", cont: "asia", city: "بانکوک", relays: ["38.244.150.113"], note: "آسیای شرقی" },
 ];
 
 export const DEFAULT_PROXYIP = "proxyip.us.fxxk.dedyn.io";
@@ -87,14 +120,21 @@ export function hostInAdList(host: string): boolean {
   const h = host.toLowerCase();
   return AD_BLOCK_SUFFIXES.some((s) => h === s || h.endsWith("." + s));
 }
-// workers cannot connect() to Cloudflare-fronted hosts — they need a relay
+// workers cannot connect() to Cloudflare-fronted hosts — they need a relay.
+// Suffix FAST-PATH only; the general detection is DoH + CF ranges (dial.ts
+// isCfTarget) — this list can never cover every CF zone (v1.0.0's gap:
+// cp.cloudflare.com — the v2rayNG ping URL — wasn't in it and died direct).
 export function isCfHosted(host: string): boolean {
   const h = host.toLowerCase();
   if (h.endsWith(".workers.dev") || h.endsWith(".pages.dev")) return true;
   if (h.endsWith(".workers.cloudflare.com") || h === "workers.dev") return true;
-  // cloudflare zones commonly fronted on CF edge (community list)
-  if (/(^|\.)(trycloudflare\.com|cf\.vc\.cn|ip\.cdt\.one)$/.test(h)) return true;
+  if (/(^|\.)(cloudflare\.com|cloudflare-dns\.com|cloudflareinsights\.com|cloudflarestream\.com|cloudflaressl\.com|trycloudflare\.com|cf\.vc\.cn|ip\.cdt\.one)$/.test(h)) return true;
   return false;
+}
+export function dohSkip(host: string): boolean {
+  const h = host.toLowerCase();
+  if (!h) return false;
+  return DOH_SKIP_SUFFIXES.some((s) => h === s || h.endsWith("." + s));
 }
 // telegram DC ranges (MTProto must never ride a relay)
 export function isTgDcIp(host: string): boolean {
