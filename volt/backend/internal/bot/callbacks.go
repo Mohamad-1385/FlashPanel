@@ -25,7 +25,7 @@ func Menu() [][]telegram.InlineButton {
 
 // locPicker builds the location picker (top countries + بدون لوکیشن).
 func (e *Engine) locPicker() [][]telegram.InlineButton {
-        ids := []string{"it", "de", "nl", "tr", "ae", "us", "gb", "fr", "ru", "jp", "sg", "az"}
+        ids := []string{"it", "de", "us", "gb", "fr", "se", "ru", "in", "sg", "jp", "br", "ch"}
         var rows [][]telegram.InlineButton
         var row []telegram.InlineButton
         for _, id := range ids {
