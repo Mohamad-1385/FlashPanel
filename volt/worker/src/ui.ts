@@ -159,7 +159,7 @@ export function locationsHTML(env: Env): string {
   }).join("");
   return shell(env, "locations", `
   <div class="mb-2"><h2 class="text-lg font-extrabold">لوکیشن‌ها</h2>
-  <p class="text-[12.5px] text-zinc-500 mt-1">خروجی هر کشور از رله‌های تأییدشده عبور می‌کند — برای هر کلید از بخش کلیدها قابل انتخاب است.</p></div>${rows}`, "لوکیشن‌ها");
+  <p class="text-[12.5px] text-zinc-500 mt-1">ترافیک سایت‌های پشت کلودفلر (بشتر وب) از رلهٔ تأیید‌شدهٔ همان کشور خارج می‌شود؛ سایت‌های دیگر (گوگل، تلگرام، نتفلیکس…) از مسیر مستقیم پرسرعت می‌روند. انتخاب برای هر کلید از بخش کلیدها.</p></div>${rows}`, "لوکیشن‌ها");
 }
 
 export function keysHTML(env: Env, keys: Key[], host: string): string {
