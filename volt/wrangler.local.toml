@@ -1,0 +1,13 @@
+name = "volt-local"
+main = "worker/dist/worker.js"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "volt-local"
+database_id = "local-volt"
+
+[vars]
+GATE = "localgate123"
+BOTKEY = "vtk_local_test_key"
+TPATH = "localtp"
