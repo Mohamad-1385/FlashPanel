@@ -28,6 +28,7 @@ export interface Key {
 export interface LocCountry {
   id: string; fa: string; en: string; flag: string; cont: string; city: string;
   relays: string[]; note: string;
+  p80?: boolean;   // dual-port verified (dedicated relays that forward BOTH 80+443)
 }
 
 export interface PanelSettings {
